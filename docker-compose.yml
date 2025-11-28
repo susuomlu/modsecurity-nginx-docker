@@ -1,0 +1,25 @@
+version: "3.8"
+services:
+  modsec:
+    build: .
+    container_name: modsec
+    ports:
+      - "8080:80"
+      - "8443:443"
+    volumes:
+      - ./modsec-data/modsecurity.conf:/usr/local/nginx/conf/modsec/modsecurity.conf
+      - ./modsec-data/custom-rules.conf:/usr/local/nginx/conf/modsec/custom-rules.conf
+      - ./modsec-data/certs:/usr/local/nginx/conf/modsec/certs
+      - ./modsec-data/crs:/usr/local/nginx/conf/modsec/crs
+      - ./modsec-data/logs:/var/log/modsec
+      - ./modsec-data/nginx.conf:/usr/local/nginx/conf/nginx.conf
+      - ./modsec-data/www:/var/www
+    depends_on:
+      - nodeapp
+    restart: unless-stopped
+
+  nodeapp:
+    build: ./nodeapp
+    container_name: nodeapp
+    expose:
+      - "3000"
