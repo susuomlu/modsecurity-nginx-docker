@@ -6,7 +6,7 @@ CRS_DIR="./modsec-data/crs"
 TMP_DIR="./tmp-crs"
 
 echo "[+] Downloading latest CRS..."
-git clone --depth 1 https://github.com/coreruleset/coreruleset "$TMP_DIR"
+git clone https://github.com/coreruleset/coreruleset.git "$TMP_DIR"
 
 echo "[+] Backing up old CRS rules..."
 cp -r "$CRS_DIR" "$CRS_DIR.bak.$(date +%s)"
