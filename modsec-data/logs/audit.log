@@ -1,0 +1,3359 @@
+---IrHNKUDO---A--
+[16/Jun/2025:05:36:08 +0000] 175005216849.844682 172.19.0.1 45454 172.19.0.2 443
+---IrHNKUDO---B--
+GET / HTTP/1.1
+Host: localhost:8443
+User-Agent: curl/7.81.0
+Accept: */*
+
+---IrHNKUDO---D--
+
+---IrHNKUDO---F--
+HTTP/1.1 403
+
+---IrHNKUDO---H--
+ModSecurity: Access denied with code 403 (phase 1). Matched "Operator `Contains' with parameter `curl' against variable `REQUEST_HEADERS:User-Agent' (Value: `curl/7.81.0' ) [file "/usr/local/nginx/conf/modsec/custom-rules.conf"] [line "1"] [id "999001"] [rev ""] [msg "Blocked curl request"] [data ""] [severity "0"] [ver ""] [maturity "0"] [accuracy "0"] [hostname "172.19.0.2"] [uri "/"] [unique_id "175005216849.844682"] [ref "o0,4v48,11"]
+
+---IrHNKUDO---I--
+
+---IrHNKUDO---J--
+
+---IrHNKUDO---Z--
+
+---cI5in2Az---A--
+[16/Jun/2025:05:46:05 +0000] 175005276597.127114 103.250.147.78 60510 172.19.0.2 443
+---cI5in2Az---B--
+GET / HTTP/1.1
+Sec-Fetch-User: ?1
+Sec-Fetch-Site: none
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:139.0) Gecko/20100101 Firefox/139.0
+Upgrade-Insecure-Requests: 1
+Connection: keep-alive
+Sec-Fetch-Mode: navigate
+Accept-Encoding: gzip, deflate, br, zstd
+Accept-Language: en-US,en;q=0.5
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+Sec-Fetch-Dest: document
+Host: 13.234.29.148:8443
+Priority: u=0, i
+
+---cI5in2Az---D--
+
+---cI5in2Az---E--
+<!DOCTYPE html>\x0a<html>\x0a<head>\x0a<title>Welcome to nginx!</title>\x0a<style>\x0ahtml { color-scheme: light dark; }\x0abody { width: 35em; margin: 0 auto;\x0afont-family: Tahoma, Verdana, Arial, sans-serif; }\x0a</style>\x0a</head>\x0a<body>\x0a<h1>Welcome to nginx!</h1>\x0a<p>If you see this page, the nginx web server is successfully installed and\x0aworking. Further configuration is required.</p>\x0a\x0a<p>For online documentation and support please refer to\x0a<a href="http://nginx.org/">nginx.org</a>.<br/>\x0aCommercial support is available at\x0a<a href="http://nginx.com/">nginx.com</a>.</p>\x0a\x0a<p><em>Thank you for using nginx.</em></p>\x0a</body>\x0a</html>\x0a
+
+---cI5in2Az---F--
+HTTP/1.1 200
+Server: nginx/1.24.0
+Date: Mon, 16 Jun 2025 05:46:05 GMT
+Content-Length: 615
+Content-Type: text/html
+Last-Modified: Mon, 16 Jun 2025 05:35:31 GMT
+Connection: keep-alive
+ETag: "684fad23-267"
+
+---cI5in2Az---H--
+ModSecurity: Warning. Matched "Operator `Rx' with parameter `(?:^([\d.]+|\[[\da-f:]+\]|[\da-f:]+)(:[\d]+)?$)' against variable `REQUEST_HEADERS:Host' (Value: `13.234.29.148:8443' ) [file "/usr/local/nginx/conf/modsec/crs/rules/REQUEST-920-PROTOCOL-ENFORCEMENT.conf"] [line "712"] [id "920350"] [rev ""] [msg "Host header is a numeric IP address"] [data "13.234.29.148:8443"] [severity "4"] [ver "OWASP_CRS/4.16.0-dev"] [maturity "0"] [accuracy "0"] [tag "application-multi"] [tag "language-multi"] [tag "platform-multi"] [tag "attack-protocol"] [tag "paranoia-level/1"] [tag "OWASP_CRS"] [tag "OWASP_CRS/PROTOCOL-ENFORCEMENT"] [tag "capec/1000/210/272"] [tag "PCI/6.5.10"] [hostname "172.19.0.2"] [uri "/"] [unique_id "175005276597.127114"] [ref "o0,18o0,13o13,5v21,18"]
+
+---cI5in2Az---I--
+
+---cI5in2Az---J--
+
+---cI5in2Az---Z--
+
+---wx0FSLeF---A--
+[16/Jun/2025:05:46:05 +0000] 175005276587.546540 103.250.147.78 60510 172.19.0.2 443
+---wx0FSLeF---B--
+GET /favicon.ico HTTP/1.1
+Host: 13.234.29.148:8443
+Sec-Fetch-Dest: image
+Sec-Fetch-Mode: no-cors
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:139.0) Gecko/20100101 Firefox/139.0
+Priority: u=6
+Accept: image/avif,image/webp,image/png,image/svg+xml,image/*;q=0.8,*/*;q=0.5
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate, br, zstd
+Connection: keep-alive
+Referer: https://13.234.29.148:8443/
+Sec-Fetch-Site: same-origin
+
+---wx0FSLeF---D--
+
+---wx0FSLeF---E--
+<html>\x0d\x0a<head><title>404 Not Found</title></head>\x0d\x0a<body>\x0d\x0a<center><h1>404 Not Found</h1></center>\x0d\x0a<hr><center>nginx/1.24.0</center>\x0d\x0a</body>\x0d\x0a</html>\x0d\x0a
+
+---wx0FSLeF---F--
+HTTP/1.1 404
+Server: nginx/1.24.0
+Date: Mon, 16 Jun 2025 05:46:05 GMT
+Content-Length: 153
+Content-Type: text/html
+Connection: keep-alive
+
+---wx0FSLeF---H--
+ModSecurity: Warning. Matched "Operator `Rx' with parameter `(?:^([\d.]+|\[[\da-f:]+\]|[\da-f:]+)(:[\d]+)?$)' against variable `REQUEST_HEADERS:Host' (Value: `13.234.29.148:8443' ) [file "/usr/local/nginx/conf/modsec/crs/rules/REQUEST-920-PROTOCOL-ENFORCEMENT.conf"] [line "712"] [id "920350"] [rev ""] [msg "Host header is a numeric IP address"] [data "13.234.29.148:8443"] [severity "4"] [ver "OWASP_CRS/4.16.0-dev"] [maturity "0"] [accuracy "0"] [tag "application-multi"] [tag "language-multi"] [tag "platform-multi"] [tag "attack-protocol"] [tag "paranoia-level/1"] [tag "OWASP_CRS"] [tag "OWASP_CRS/PROTOCOL-ENFORCEMENT"] [tag "capec/1000/210/272"] [tag "PCI/6.5.10"] [hostname "172.19.0.2"] [uri "/favicon.ico"] [unique_id "175005276587.546540"] [ref "o0,18o0,13o13,5v32,18"]
+
+---wx0FSLeF---I--
+
+---wx0FSLeF---J--
+
+---wx0FSLeF---Z--
+
+---YKWidTE4---A--
+[16/Jun/2025:05:46:12 +0000] 175005277285.130394 172.19.0.1 41534 172.19.0.2 443
+---YKWidTE4---B--
+GET / HTTP/1.1
+Host: localhost:8443
+User-Agent: curl/7.81.0
+Accept: */*
+
+---YKWidTE4---D--
+
+---YKWidTE4---F--
+HTTP/1.1 403
+
+---YKWidTE4---H--
+ModSecurity: Access denied with code 403 (phase 1). Matched "Operator `Contains' with parameter `curl' against variable `REQUEST_HEADERS:User-Agent' (Value: `curl/7.81.0' ) [file "/usr/local/nginx/conf/modsec/custom-rules.conf"] [line "1"] [id "999001"] [rev ""] [msg "Blocked curl request"] [data ""] [severity "0"] [ver ""] [maturity "0"] [accuracy "0"] [hostname "172.19.0.2"] [uri "/"] [unique_id "175005277285.130394"] [ref "o0,4v48,11"]
+
+---YKWidTE4---I--
+
+---YKWidTE4---J--
+
+---YKWidTE4---Z--
+
+---wIbLZyjL---A--
+[16/Jun/2025:05:46:17 +0000] 175005277734.297664 103.250.147.78 60510 172.19.0.2 443
+---wIbLZyjL---B--
+GET / HTTP/1.1
+Sec-Fetch-User: ?1
+Sec-Fetch-Site: none
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:139.0) Gecko/20100101 Firefox/139.0
+Upgrade-Insecure-Requests: 1
+If-None-Match: "684fad23-267"
+Connection: keep-alive
+Sec-Fetch-Mode: navigate
+Accept-Encoding: gzip, deflate, br, zstd
+Accept-Language: en-US,en;q=0.5
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+Sec-Fetch-Dest: document
+Host: 13.234.29.148:8443
+If-Modified-Since: Mon, 16 Jun 2025 05:35:31 GMT
+Priority: u=0, i
+
+---wIbLZyjL---D--
+
+---wIbLZyjL---F--
+HTTP/1.1 304
+Server: nginx/1.24.0
+Date: Mon, 16 Jun 2025 05:46:17 GMT
+Last-Modified: Mon, 16 Jun 2025 05:35:31 GMT
+Connection: keep-alive
+ETag: "684fad23-267"
+
+---wIbLZyjL---H--
+ModSecurity: Warning. Matched "Operator `Rx' with parameter `(?:^([\d.]+|\[[\da-f:]+\]|[\da-f:]+)(:[\d]+)?$)' against variable `REQUEST_HEADERS:Host' (Value: `13.234.29.148:8443' ) [file "/usr/local/nginx/conf/modsec/crs/rules/REQUEST-920-PROTOCOL-ENFORCEMENT.conf"] [line "712"] [id "920350"] [rev ""] [msg "Host header is a numeric IP address"] [data "13.234.29.148:8443"] [severity "4"] [ver "OWASP_CRS/4.16.0-dev"] [maturity "0"] [accuracy "0"] [tag "application-multi"] [tag "language-multi"] [tag "platform-multi"] [tag "attack-protocol"] [tag "paranoia-level/1"] [tag "OWASP_CRS"] [tag "OWASP_CRS/PROTOCOL-ENFORCEMENT"] [tag "capec/1000/210/272"] [tag "PCI/6.5.10"] [hostname "172.19.0.2"] [uri "/"] [unique_id "175005277734.297664"] [ref "o0,18o0,13o13,5v21,18"]
+
+---wIbLZyjL---I--
+
+---wIbLZyjL---J--
+
+---wIbLZyjL---Z--
+
+---ZAQJALK7---A--
+[16/Jun/2025:05:47:17 +0000] 175005283786.473028 103.250.147.78 60510 172.19.0.2 443
+---ZAQJALK7---B--
+GET /?testparam=test%22 HTTP/1.1
+Sec-Fetch-User: ?1
+Sec-Fetch-Site: none
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:139.0) Gecko/20100101 Firefox/139.0
+Upgrade-Insecure-Requests: 1
+Connection: keep-alive
+Sec-Fetch-Mode: navigate
+Accept-Encoding: gzip, deflate, br, zstd
+Accept-Language: en-US,en;q=0.5
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+Sec-Fetch-Dest: document
+Host: 13.234.29.148:8443
+Priority: u=0, i
+
+---ZAQJALK7---D--
+
+---ZAQJALK7---E--
+<html>\x0d\x0a<head><title>403 Forbidden</title></head>\x0d\x0a<body>\x0d\x0a<center><h1>403 Forbidden</h1></center>\x0d\x0a<hr><center>nginx/1.24.0</center>\x0d\x0a</body>\x0d\x0a</html>\x0d\x0a
+
+---ZAQJALK7---F--
+HTTP/1.1 403
+Server: nginx/1.24.0
+Date: Mon, 16 Jun 2025 05:47:17 GMT
+Content-Length: 153
+Content-Type: text/html
+Connection: keep-alive
+
+---ZAQJALK7---H--
+ModSecurity: Warning. Matched "Operator `Rx' with parameter `(?:^([\d.]+|\[[\da-f:]+\]|[\da-f:]+)(:[\d]+)?$)' against variable `REQUEST_HEADERS:Host' (Value: `13.234.29.148:8443' ) [file "/usr/local/nginx/conf/modsec/crs/rules/REQUEST-920-PROTOCOL-ENFORCEMENT.conf"] [line "712"] [id "920350"] [rev ""] [msg "Host header is a numeric IP address"] [data "13.234.29.148:8443"] [severity "4"] [ver "OWASP_CRS/4.16.0-dev"] [maturity "0"] [accuracy "0"] [tag "application-multi"] [tag "language-multi"] [tag "platform-multi"] [tag "attack-protocol"] [tag "paranoia-level/1"] [tag "OWASP_CRS"] [tag "OWASP_CRS/PROTOCOL-ENFORCEMENT"] [tag "capec/1000/210/272"] [tag "PCI/6.5.10"] [hostname "172.19.0.2"] [uri "/"] [unique_id "175005283786.473028"] [ref "o0,18o0,13o13,5v39,18"]
+ModSecurity: Access denied with code 403 (phase 2). Matched "Operator `Contains' with parameter `test' against variable `ARGS:testparam' (Value: `test"' ) [file "/usr/local/nginx/conf/modsec/modsecurity.conf"] [line "9"] [id "12345"] [rev ""] [msg "Test param blocked"] [data ""] [severity "0"] [ver ""] [maturity "0"] [accuracy "0"] [hostname "172.19.0.2"] [uri "/"] [unique_id "175005283786.473028"] [ref "o0,4v16,5"]
+
+---ZAQJALK7---I--
+
+---ZAQJALK7---J--
+
+---ZAQJALK7---Z--
+
+---qfKUWrM8---A--
+[16/Jun/2025:05:47:34 +0000] 175005285435.440299 103.250.147.78 60510 172.19.0.2 443
+---qfKUWrM8---B--
+GET / HTTP/1.1
+Sec-Fetch-User: ?1
+Sec-Fetch-Site: none
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:139.0) Gecko/20100101 Firefox/139.0
+Upgrade-Insecure-Requests: 1
+If-None-Match: "684fad23-267"
+Connection: keep-alive
+Sec-Fetch-Mode: navigate
+Accept-Encoding: gzip, deflate, br, zstd
+Accept-Language: en-US,en;q=0.5
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+Sec-Fetch-Dest: document
+Host: 13.234.29.148:8443
+If-Modified-Since: Mon, 16 Jun 2025 05:35:31 GMT
+Priority: u=0, i
+
+---qfKUWrM8---D--
+
+---qfKUWrM8---F--
+HTTP/1.1 304
+Server: nginx/1.24.0
+Date: Mon, 16 Jun 2025 05:47:34 GMT
+Last-Modified: Mon, 16 Jun 2025 05:35:31 GMT
+Connection: keep-alive
+ETag: "684fad23-267"
+
+---qfKUWrM8---H--
+ModSecurity: Warning. Matched "Operator `Rx' with parameter `(?:^([\d.]+|\[[\da-f:]+\]|[\da-f:]+)(:[\d]+)?$)' against variable `REQUEST_HEADERS:Host' (Value: `13.234.29.148:8443' ) [file "/usr/local/nginx/conf/modsec/crs/rules/REQUEST-920-PROTOCOL-ENFORCEMENT.conf"] [line "712"] [id "920350"] [rev ""] [msg "Host header is a numeric IP address"] [data "13.234.29.148:8443"] [severity "4"] [ver "OWASP_CRS/4.16.0-dev"] [maturity "0"] [accuracy "0"] [tag "application-multi"] [tag "language-multi"] [tag "platform-multi"] [tag "attack-protocol"] [tag "paranoia-level/1"] [tag "OWASP_CRS"] [tag "OWASP_CRS/PROTOCOL-ENFORCEMENT"] [tag "capec/1000/210/272"] [tag "PCI/6.5.10"] [hostname "172.19.0.2"] [uri "/"] [unique_id "175005285435.440299"] [ref "o0,18o0,13o13,5v21,18"]
+
+---qfKUWrM8---I--
+
+---qfKUWrM8---J--
+
+---qfKUWrM8---Z--
+
+---dwstAwc3---A--
+[16/Jun/2025:05:57:26 +0000] 175005344675.143932 103.250.147.78 60537 172.19.0.2 443
+---dwstAwc3---B--
+GET / HTTP/1.1
+Sec-Fetch-User: ?1
+Sec-Fetch-Site: none
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:139.0) Gecko/20100101 Firefox/139.0
+Upgrade-Insecure-Requests: 1
+If-None-Match: "684fad23-267"
+Connection: keep-alive
+Sec-Fetch-Mode: navigate
+Accept-Encoding: gzip, deflate, br, zstd
+Accept-Language: en-US,en;q=0.5
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+Sec-Fetch-Dest: document
+Host: 13.234.29.148:8443
+If-Modified-Since: Mon, 16 Jun 2025 05:35:31 GMT
+Priority: u=0, i
+
+---dwstAwc3---D--
+
+---dwstAwc3---F--
+HTTP/1.1 403
+
+---dwstAwc3---H--
+ModSecurity: Access denied with code 403 (phase 1). Matched "Operator `Rx' with parameter `^/(?!healthz|api/).*' against variable `REQUEST_URI' (Value: `/' ) [file "/usr/local/nginx/conf/modsec/custom-rules.conf"] [line "9"] [id "900003"] [rev ""] [msg "Restricted access to non-API route"] [data ""] [severity "0"] [ver ""] [maturity "0"] [accuracy "0"] [hostname "172.19.0.2"] [uri "/"] [unique_id "175005344675.143932"] [ref "o0,1v4,1"]
+
+---dwstAwc3---I--
+
+---dwstAwc3---J--
+
+---dwstAwc3---Z--
+
+---GjBMH9Bo---A--
+[16/Jun/2025:05:57:26 +0000] 175005344660.625979 103.250.147.78 60537 172.19.0.2 443
+---GjBMH9Bo---B--
+GET /favicon.ico HTTP/1.1
+Host: 13.234.29.148:8443
+Sec-Fetch-Dest: image
+Sec-Fetch-Mode: no-cors
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:139.0) Gecko/20100101 Firefox/139.0
+Priority: u=6
+Accept: image/avif,image/webp,image/png,image/svg+xml,image/*;q=0.8,*/*;q=0.5
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate, br, zstd
+Connection: keep-alive
+Referer: https://13.234.29.148:8443/
+Sec-Fetch-Site: same-origin
+
+---GjBMH9Bo---D--
+
+---GjBMH9Bo---F--
+HTTP/1.1 403
+
+---GjBMH9Bo---H--
+ModSecurity: Access denied with code 403 (phase 1). Matched "Operator `Rx' with parameter `^/(?!healthz|api/).*' against variable `REQUEST_URI' (Value: `/favicon.ico' ) [file "/usr/local/nginx/conf/modsec/custom-rules.conf"] [line "9"] [id "900003"] [rev ""] [msg "Restricted access to non-API route"] [data ""] [severity "0"] [ver ""] [maturity "0"] [accuracy "0"] [hostname "172.19.0.2"] [uri "/favicon.ico"] [unique_id "175005344660.625979"] [ref "o0,12v4,12"]
+
+---GjBMH9Bo---I--
+
+---GjBMH9Bo---J--
+
+---GjBMH9Bo---Z--
+
+---cRwGs9XN---A--
+[16/Jun/2025:05:57:28 +0000] 175005344819.769882 103.250.147.78 60538 172.19.0.2 443
+---cRwGs9XN---B--
+GET / HTTP/1.1
+Sec-Fetch-User: ?1
+Sec-Fetch-Site: none
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:139.0) Gecko/20100101 Firefox/139.0
+Upgrade-Insecure-Requests: 1
+Connection: keep-alive
+Sec-Fetch-Mode: navigate
+Accept-Encoding: gzip, deflate, br, zstd
+Accept-Language: en-US,en;q=0.5
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+Sec-Fetch-Dest: document
+Host: 13.234.29.148:8443
+Priority: u=0, i
+
+---cRwGs9XN---D--
+
+---cRwGs9XN---F--
+HTTP/1.1 403
+
+---cRwGs9XN---H--
+ModSecurity: Access denied with code 403 (phase 1). Matched "Operator `Rx' with parameter `^/(?!healthz|api/).*' against variable `REQUEST_URI' (Value: `/' ) [file "/usr/local/nginx/conf/modsec/custom-rules.conf"] [line "9"] [id "900003"] [rev ""] [msg "Restricted access to non-API route"] [data ""] [severity "0"] [ver ""] [maturity "0"] [accuracy "0"] [hostname "172.19.0.2"] [uri "/"] [unique_id "175005344819.769882"] [ref "o0,1v4,1"]
+
+---cRwGs9XN---I--
+
+---cRwGs9XN---J--
+
+---cRwGs9XN---Z--
+
+---5AKcdHS3---A--
+[16/Jun/2025:05:57:28 +0000] 175005344826.350732 103.250.147.78 60538 172.19.0.2 443
+---5AKcdHS3---B--
+GET /favicon.ico HTTP/1.1
+Host: 13.234.29.148:8443
+Sec-Fetch-Dest: image
+Sec-Fetch-Mode: no-cors
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:139.0) Gecko/20100101 Firefox/139.0
+Priority: u=6
+Accept: image/avif,image/webp,image/png,image/svg+xml,image/*;q=0.8,*/*;q=0.5
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate, br, zstd
+Connection: keep-alive
+Referer: https://13.234.29.148:8443/
+Sec-Fetch-Site: same-origin
+
+---5AKcdHS3---D--
+
+---5AKcdHS3---F--
+HTTP/1.1 403
+
+---5AKcdHS3---H--
+ModSecurity: Access denied with code 403 (phase 1). Matched "Operator `Rx' with parameter `^/(?!healthz|api/).*' against variable `REQUEST_URI' (Value: `/favicon.ico' ) [file "/usr/local/nginx/conf/modsec/custom-rules.conf"] [line "9"] [id "900003"] [rev ""] [msg "Restricted access to non-API route"] [data ""] [severity "0"] [ver ""] [maturity "0"] [accuracy "0"] [hostname "172.19.0.2"] [uri "/favicon.ico"] [unique_id "175005344826.350732"] [ref "o0,12v4,12"]
+
+---5AKcdHS3---I--
+
+---5AKcdHS3---J--
+
+---5AKcdHS3---Z--
+
+---YuaDsIPQ---A--
+[16/Jun/2025:05:57:31 +0000] 175005345168.922966 103.250.147.78 60543 172.19.0.2 443
+---YuaDsIPQ---B--
+GET //api HTTP/1.1
+Sec-Fetch-User: ?1
+Sec-Fetch-Site: none
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:139.0) Gecko/20100101 Firefox/139.0
+Upgrade-Insecure-Requests: 1
+Connection: keep-alive
+Sec-Fetch-Mode: navigate
+Accept-Encoding: gzip, deflate, br, zstd
+Accept-Language: en-US,en;q=0.5
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+Sec-Fetch-Dest: document
+Host: 13.234.29.148:8443
+Priority: u=0, i
+
+---YuaDsIPQ---D--
+
+---YuaDsIPQ---F--
+HTTP/1.1 403
+
+---YuaDsIPQ---H--
+ModSecurity: Access denied with code 403 (phase 1). Matched "Operator `Rx' with parameter `^/(?!healthz|api/).*' against variable `REQUEST_URI' (Value: `//api' ) [file "/usr/local/nginx/conf/modsec/custom-rules.conf"] [line "9"] [id "900003"] [rev ""] [msg "Restricted access to non-API route"] [data ""] [severity "0"] [ver ""] [maturity "0"] [accuracy "0"] [hostname "172.19.0.2"] [uri "//api"] [unique_id "175005345168.922966"] [ref "o0,5v4,5"]
+
+---YuaDsIPQ---I--
+
+---YuaDsIPQ---J--
+
+---YuaDsIPQ---Z--
+
+---cqS9zAPC---A--
+[16/Jun/2025:05:57:50 +0000] 175005347049.210812 103.250.147.78 60543 172.19.0.2 443
+---cqS9zAPC---B--
+GET /api HTTP/1.1
+Sec-Fetch-User: ?1
+Sec-Fetch-Site: none
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:139.0) Gecko/20100101 Firefox/139.0
+Upgrade-Insecure-Requests: 1
+Connection: keep-alive
+Sec-Fetch-Mode: navigate
+Accept-Encoding: gzip, deflate, br, zstd
+Accept-Language: en-US,en;q=0.5
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+Sec-Fetch-Dest: document
+Host: 13.234.29.148:8443
+Priority: u=0, i
+
+---cqS9zAPC---D--
+
+---cqS9zAPC---F--
+HTTP/1.1 403
+
+---cqS9zAPC---H--
+ModSecurity: Access denied with code 403 (phase 1). Matched "Operator `Rx' with parameter `^/(?!healthz|api/).*' against variable `REQUEST_URI' (Value: `/api' ) [file "/usr/local/nginx/conf/modsec/custom-rules.conf"] [line "9"] [id "900003"] [rev ""] [msg "Restricted access to non-API route"] [data ""] [severity "0"] [ver ""] [maturity "0"] [accuracy "0"] [hostname "172.19.0.2"] [uri "/api"] [unique_id "175005347049.210812"] [ref "o0,4v4,4"]
+
+---cqS9zAPC---I--
+
+---cqS9zAPC---J--
+
+---cqS9zAPC---Z--
+
+---1nR7DrxW---A--
+[16/Jun/2025:05:57:50 +0000] 175005347052.600884 103.250.147.78 60543 172.19.0.2 443
+---1nR7DrxW---B--
+GET /favicon.ico HTTP/1.1
+Host: 13.234.29.148:8443
+Sec-Fetch-Dest: image
+Sec-Fetch-Mode: no-cors
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:139.0) Gecko/20100101 Firefox/139.0
+Priority: u=6
+Accept: image/avif,image/webp,image/png,image/svg+xml,image/*;q=0.8,*/*;q=0.5
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate, br, zstd
+Connection: keep-alive
+Referer: https://13.234.29.148:8443/api
+Sec-Fetch-Site: same-origin
+
+---1nR7DrxW---D--
+
+---1nR7DrxW---F--
+HTTP/1.1 403
+
+---1nR7DrxW---H--
+ModSecurity: Access denied with code 403 (phase 1). Matched "Operator `Rx' with parameter `^/(?!healthz|api/).*' against variable `REQUEST_URI' (Value: `/favicon.ico' ) [file "/usr/local/nginx/conf/modsec/custom-rules.conf"] [line "9"] [id "900003"] [rev ""] [msg "Restricted access to non-API route"] [data ""] [severity "0"] [ver ""] [maturity "0"] [accuracy "0"] [hostname "172.19.0.2"] [uri "/favicon.ico"] [unique_id "175005347052.600884"] [ref "o0,12v4,12"]
+
+---1nR7DrxW---I--
+
+---1nR7DrxW---J--
+
+---1nR7DrxW---Z--
+
+---LDYUnbRg---A--
+[16/Jun/2025:05:58:34 +0000] 175005351476.885429 103.250.147.78 60544 172.19.0.2 443
+---LDYUnbRg---B--
+GET /api HTTP/1.1
+Sec-Fetch-User: ?1
+Sec-Fetch-Site: none
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:139.0) Gecko/20100101 Firefox/139.0
+Upgrade-Insecure-Requests: 1
+Connection: keep-alive
+Sec-Fetch-Mode: navigate
+Accept-Encoding: gzip, deflate, br, zstd
+Accept-Language: en-US,en;q=0.5
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+Sec-Fetch-Dest: document
+Host: 13.234.29.148:8443
+Priority: u=0, i
+
+---LDYUnbRg---D--
+
+---LDYUnbRg---F--
+HTTP/1.1 403
+
+---LDYUnbRg---H--
+ModSecurity: Access denied with code 403 (phase 1). Matched "Operator `Rx' with parameter `^/(?!healthz|api/).*' against variable `REQUEST_URI' (Value: `/api' ) [file "/usr/local/nginx/conf/modsec/custom-rules.conf"] [line "9"] [id "900003"] [rev ""] [msg "Restricted access to non-API route"] [data ""] [severity "0"] [ver ""] [maturity "0"] [accuracy "0"] [hostname "172.19.0.2"] [uri "/api"] [unique_id "175005351476.885429"] [ref "o0,4v4,4"]
+
+---LDYUnbRg---I--
+
+---LDYUnbRg---J--
+
+---LDYUnbRg---Z--
+
+---mYsIFw3m---A--
+[16/Jun/2025:05:58:34 +0000] 175005351417.182151 103.250.147.78 60544 172.19.0.2 443
+---mYsIFw3m---B--
+GET /favicon.ico HTTP/1.1
+Host: 13.234.29.148:8443
+Sec-Fetch-Dest: image
+Sec-Fetch-Mode: no-cors
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:139.0) Gecko/20100101 Firefox/139.0
+Priority: u=6
+Accept: image/avif,image/webp,image/png,image/svg+xml,image/*;q=0.8,*/*;q=0.5
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate, br, zstd
+Connection: keep-alive
+Referer: https://13.234.29.148:8443/api
+Sec-Fetch-Site: same-origin
+
+---mYsIFw3m---D--
+
+---mYsIFw3m---F--
+HTTP/1.1 403
+
+---mYsIFw3m---H--
+ModSecurity: Access denied with code 403 (phase 1). Matched "Operator `Rx' with parameter `^/(?!healthz|api/).*' against variable `REQUEST_URI' (Value: `/favicon.ico' ) [file "/usr/local/nginx/conf/modsec/custom-rules.conf"] [line "9"] [id "900003"] [rev ""] [msg "Restricted access to non-API route"] [data ""] [severity "0"] [ver ""] [maturity "0"] [accuracy "0"] [hostname "172.19.0.2"] [uri "/favicon.ico"] [unique_id "175005351417.182151"] [ref "o0,12v4,12"]
+
+---mYsIFw3m---I--
+
+---mYsIFw3m---J--
+
+---mYsIFw3m---Z--
+
+---tGQHhJXh---A--
+[16/Jun/2025:06:02:33 +0000] 175005375350.206712 103.250.147.78 60559 172.19.0.2 443
+---tGQHhJXh---B--
+GET /api HTTP/1.1
+Sec-Fetch-User: ?1
+Sec-Fetch-Site: none
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:139.0) Gecko/20100101 Firefox/139.0
+Upgrade-Insecure-Requests: 1
+Connection: keep-alive
+Sec-Fetch-Mode: navigate
+Accept-Encoding: gzip, deflate, br, zstd
+Accept-Language: en-US,en;q=0.5
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+Sec-Fetch-Dest: document
+Host: 13.234.29.148:8443
+Priority: u=0, i
+
+---tGQHhJXh---D--
+
+---tGQHhJXh---F--
+HTTP/1.1 403
+
+---tGQHhJXh---H--
+ModSecurity: Access denied with code 403 (phase 1). Matched "Operator `Rx' with parameter `^/(?!healthz|api/).*' against variable `REQUEST_URI' (Value: `/api' ) [file "/usr/local/nginx/conf/modsec/custom-rules.conf"] [line "9"] [id "900003"] [rev ""] [msg "Restricted access to non-API route"] [data ""] [severity "0"] [ver ""] [maturity "0"] [accuracy "0"] [hostname "172.19.0.2"] [uri "/api"] [unique_id "175005375350.206712"] [ref "o0,4v4,4"]
+
+---tGQHhJXh---I--
+
+---tGQHhJXh---J--
+
+---tGQHhJXh---Z--
+
+---mQwOS2x7---A--
+[16/Jun/2025:06:02:33 +0000] 175005375393.658231 103.250.147.78 60559 172.19.0.2 443
+---mQwOS2x7---B--
+GET /favicon.ico HTTP/1.1
+Host: 13.234.29.148:8443
+Sec-Fetch-Dest: image
+Sec-Fetch-Mode: no-cors
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:139.0) Gecko/20100101 Firefox/139.0
+Priority: u=6
+Accept: image/avif,image/webp,image/png,image/svg+xml,image/*;q=0.8,*/*;q=0.5
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate, br, zstd
+Connection: keep-alive
+Referer: https://13.234.29.148:8443/api
+Sec-Fetch-Site: same-origin
+
+---mQwOS2x7---D--
+
+---mQwOS2x7---F--
+HTTP/1.1 403
+
+---mQwOS2x7---H--
+ModSecurity: Access denied with code 403 (phase 1). Matched "Operator `Rx' with parameter `^/(?!healthz|api/).*' against variable `REQUEST_URI' (Value: `/favicon.ico' ) [file "/usr/local/nginx/conf/modsec/custom-rules.conf"] [line "9"] [id "900003"] [rev ""] [msg "Restricted access to non-API route"] [data ""] [severity "0"] [ver ""] [maturity "0"] [accuracy "0"] [hostname "172.19.0.2"] [uri "/favicon.ico"] [unique_id "175005375393.658231"] [ref "o0,12v4,12"]
+
+---mQwOS2x7---I--
+
+---mQwOS2x7---J--
+
+---mQwOS2x7---Z--
+
+---UKxiGDuu---A--
+[16/Jun/2025:06:02:36 +0000] 175005375672.427890 103.250.147.78 60560 172.19.0.2 443
+---UKxiGDuu---B--
+GET /api HTTP/1.1
+Sec-Fetch-User: ?1
+Sec-Fetch-Site: none
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:139.0) Gecko/20100101 Firefox/139.0
+Upgrade-Insecure-Requests: 1
+Connection: keep-alive
+Sec-Fetch-Mode: navigate
+Accept-Encoding: gzip, deflate, br, zstd
+Accept-Language: en-US,en;q=0.5
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+Sec-Fetch-Dest: document
+Host: 13.234.29.148:8443
+Priority: u=0, i
+
+---UKxiGDuu---D--
+
+---UKxiGDuu---F--
+HTTP/1.1 403
+
+---UKxiGDuu---H--
+ModSecurity: Access denied with code 403 (phase 1). Matched "Operator `Rx' with parameter `^/(?!healthz|api/).*' against variable `REQUEST_URI' (Value: `/api' ) [file "/usr/local/nginx/conf/modsec/custom-rules.conf"] [line "9"] [id "900003"] [rev ""] [msg "Restricted access to non-API route"] [data ""] [severity "0"] [ver ""] [maturity "0"] [accuracy "0"] [hostname "172.19.0.2"] [uri "/api"] [unique_id "175005375672.427890"] [ref "o0,4v4,4"]
+
+---UKxiGDuu---I--
+
+---UKxiGDuu---J--
+
+---UKxiGDuu---Z--
+
+---rI1260HD---A--
+[16/Jun/2025:06:02:36 +0000] 175005375680.813462 103.250.147.78 60560 172.19.0.2 443
+---rI1260HD---B--
+GET /favicon.ico HTTP/1.1
+Host: 13.234.29.148:8443
+Sec-Fetch-Dest: image
+Sec-Fetch-Mode: no-cors
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:139.0) Gecko/20100101 Firefox/139.0
+Priority: u=6
+Accept: image/avif,image/webp,image/png,image/svg+xml,image/*;q=0.8,*/*;q=0.5
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate, br, zstd
+Connection: keep-alive
+Referer: https://13.234.29.148:8443/api
+Sec-Fetch-Site: same-origin
+
+---rI1260HD---D--
+
+---rI1260HD---F--
+HTTP/1.1 403
+
+---rI1260HD---H--
+ModSecurity: Access denied with code 403 (phase 1). Matched "Operator `Rx' with parameter `^/(?!healthz|api/).*' against variable `REQUEST_URI' (Value: `/favicon.ico' ) [file "/usr/local/nginx/conf/modsec/custom-rules.conf"] [line "9"] [id "900003"] [rev ""] [msg "Restricted access to non-API route"] [data ""] [severity "0"] [ver ""] [maturity "0"] [accuracy "0"] [hostname "172.19.0.2"] [uri "/favicon.ico"] [unique_id "175005375680.813462"] [ref "o0,12v4,12"]
+
+---rI1260HD---I--
+
+---rI1260HD---J--
+
+---rI1260HD---Z--
+
+---vs2KCaUG---A--
+[16/Jun/2025:06:02:37 +0000] 175005375729.579352 103.250.147.78 60561 172.19.0.2 443
+---vs2KCaUG---B--
+GET /api HTTP/1.1
+Sec-Fetch-User: ?1
+Sec-Fetch-Site: none
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:139.0) Gecko/20100101 Firefox/139.0
+Upgrade-Insecure-Requests: 1
+Connection: keep-alive
+Sec-Fetch-Mode: navigate
+Accept-Encoding: gzip, deflate, br, zstd
+Accept-Language: en-US,en;q=0.5
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+Sec-Fetch-Dest: document
+Host: 13.234.29.148:8443
+Priority: u=0, i
+
+---vs2KCaUG---D--
+
+---vs2KCaUG---F--
+HTTP/1.1 403
+
+---vs2KCaUG---H--
+ModSecurity: Access denied with code 403 (phase 1). Matched "Operator `Rx' with parameter `^/(?!healthz|api/).*' against variable `REQUEST_URI' (Value: `/api' ) [file "/usr/local/nginx/conf/modsec/custom-rules.conf"] [line "9"] [id "900003"] [rev ""] [msg "Restricted access to non-API route"] [data ""] [severity "0"] [ver ""] [maturity "0"] [accuracy "0"] [hostname "172.19.0.2"] [uri "/api"] [unique_id "175005375729.579352"] [ref "o0,4v4,4"]
+
+---vs2KCaUG---I--
+
+---vs2KCaUG---J--
+
+---vs2KCaUG---Z--
+
+---EOB3zrfP---A--
+[16/Jun/2025:06:03:03 +0000] 175005378386.469966 103.250.147.78 60561 172.19.0.2 443
+---EOB3zrfP---B--
+GET /api HTTP/1.1
+Sec-Fetch-User: ?1
+Sec-Fetch-Site: none
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:139.0) Gecko/20100101 Firefox/139.0
+Upgrade-Insecure-Requests: 1
+Connection: keep-alive
+Sec-Fetch-Mode: navigate
+Accept-Encoding: gzip, deflate, br, zstd
+Accept-Language: en-US,en;q=0.5
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+Sec-Fetch-Dest: document
+Host: 13.234.29.148:8443
+Priority: u=0, i
+
+---EOB3zrfP---D--
+
+---EOB3zrfP---F--
+HTTP/1.1 403
+
+---EOB3zrfP---H--
+ModSecurity: Access denied with code 403 (phase 1). Matched "Operator `Rx' with parameter `^/(?!healthz|api/).*' against variable `REQUEST_URI' (Value: `/api' ) [file "/usr/local/nginx/conf/modsec/custom-rules.conf"] [line "9"] [id "900003"] [rev ""] [msg "Restricted access to non-API route"] [data ""] [severity "0"] [ver ""] [maturity "0"] [accuracy "0"] [hostname "172.19.0.2"] [uri "/api"] [unique_id "175005378386.469966"] [ref "o0,4v4,4"]
+
+---EOB3zrfP---I--
+
+---EOB3zrfP---J--
+
+---EOB3zrfP---Z--
+
+---GXyRP1Ka---A--
+[16/Jun/2025:06:03:04 +0000] 17500537844.310570 103.250.147.78 60561 172.19.0.2 443
+---GXyRP1Ka---B--
+GET /favicon.ico HTTP/1.1
+Host: 13.234.29.148:8443
+Sec-Fetch-Dest: image
+Sec-Fetch-Mode: no-cors
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:139.0) Gecko/20100101 Firefox/139.0
+Priority: u=6
+Accept: image/avif,image/webp,image/png,image/svg+xml,image/*;q=0.8,*/*;q=0.5
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate, br, zstd
+Connection: keep-alive
+Referer: https://13.234.29.148:8443/api
+Sec-Fetch-Site: same-origin
+
+---GXyRP1Ka---D--
+
+---GXyRP1Ka---F--
+HTTP/1.1 403
+
+---GXyRP1Ka---H--
+ModSecurity: Access denied with code 403 (phase 1). Matched "Operator `Rx' with parameter `^/(?!healthz|api/).*' against variable `REQUEST_URI' (Value: `/favicon.ico' ) [file "/usr/local/nginx/conf/modsec/custom-rules.conf"] [line "9"] [id "900003"] [rev ""] [msg "Restricted access to non-API route"] [data ""] [severity "0"] [ver ""] [maturity "0"] [accuracy "0"] [hostname "172.19.0.2"] [uri "/favicon.ico"] [unique_id "17500537844.310570"] [ref "o0,12v4,12"]
+
+---GXyRP1Ka---I--
+
+---GXyRP1Ka---J--
+
+---GXyRP1Ka---Z--
+
+---XVwNpWtx---A--
+[16/Jun/2025:06:03:07 +0000] 175005378756.114459 103.250.147.78 60564 172.19.0.2 443
+---XVwNpWtx---B--
+GET / HTTP/1.1
+Sec-Fetch-User: ?1
+Sec-Fetch-Site: none
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:139.0) Gecko/20100101 Firefox/139.0
+Upgrade-Insecure-Requests: 1
+Connection: keep-alive
+Sec-Fetch-Mode: navigate
+Accept-Encoding: gzip, deflate, br, zstd
+Accept-Language: en-US,en;q=0.5
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+Sec-Fetch-Dest: document
+Host: 13.234.29.148:8443
+Priority: u=0, i
+
+---XVwNpWtx---D--
+
+---XVwNpWtx---F--
+HTTP/1.1 403
+
+---XVwNpWtx---H--
+ModSecurity: Access denied with code 403 (phase 1). Matched "Operator `Rx' with parameter `^/(?!healthz|api/).*' against variable `REQUEST_URI' (Value: `/' ) [file "/usr/local/nginx/conf/modsec/custom-rules.conf"] [line "9"] [id "900003"] [rev ""] [msg "Restricted access to non-API route"] [data ""] [severity "0"] [ver ""] [maturity "0"] [accuracy "0"] [hostname "172.19.0.2"] [uri "/"] [unique_id "175005378756.114459"] [ref "o0,1v4,1"]
+
+---XVwNpWtx---I--
+
+---XVwNpWtx---J--
+
+---XVwNpWtx---Z--
+
+---upsrDxyp---A--
+[16/Jun/2025:06:03:15 +0000] 175005379574.344754 103.250.147.78 60564 172.19.0.2 443
+---upsrDxyp---B--
+GET / HTTP/1.1
+Sec-Fetch-User: ?1
+Sec-Fetch-Site: none
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:139.0) Gecko/20100101 Firefox/139.0
+Upgrade-Insecure-Requests: 1
+Connection: keep-alive
+Sec-Fetch-Mode: navigate
+Accept-Encoding: gzip, deflate, br, zstd
+Accept-Language: en-US,en;q=0.5
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+Sec-Fetch-Dest: document
+Host: 13.234.29.148:8443
+Priority: u=0, i
+
+---upsrDxyp---D--
+
+---upsrDxyp---F--
+HTTP/1.1 403
+
+---upsrDxyp---H--
+ModSecurity: Access denied with code 403 (phase 1). Matched "Operator `Rx' with parameter `^/(?!healthz|api/).*' against variable `REQUEST_URI' (Value: `/' ) [file "/usr/local/nginx/conf/modsec/custom-rules.conf"] [line "9"] [id "900003"] [rev ""] [msg "Restricted access to non-API route"] [data ""] [severity "0"] [ver ""] [maturity "0"] [accuracy "0"] [hostname "172.19.0.2"] [uri "/"] [unique_id "175005379574.344754"] [ref "o0,1v4,1"]
+
+---upsrDxyp---I--
+
+---upsrDxyp---J--
+
+---upsrDxyp---Z--
+
+---EReEFZl8---A--
+[16/Jun/2025:06:03:15 +0000] 175005379590.829467 103.250.147.78 60564 172.19.0.2 443
+---EReEFZl8---B--
+GET /favicon.ico HTTP/1.1
+Host: 13.234.29.148:8443
+Sec-Fetch-Dest: image
+Sec-Fetch-Mode: no-cors
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:139.0) Gecko/20100101 Firefox/139.0
+Priority: u=6
+Accept: image/avif,image/webp,image/png,image/svg+xml,image/*;q=0.8,*/*;q=0.5
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate, br, zstd
+Connection: keep-alive
+Referer: https://13.234.29.148:8443/
+Sec-Fetch-Site: same-origin
+
+---EReEFZl8---D--
+
+---EReEFZl8---F--
+HTTP/1.1 403
+
+---EReEFZl8---H--
+ModSecurity: Access denied with code 403 (phase 1). Matched "Operator `Rx' with parameter `^/(?!healthz|api/).*' against variable `REQUEST_URI' (Value: `/favicon.ico' ) [file "/usr/local/nginx/conf/modsec/custom-rules.conf"] [line "9"] [id "900003"] [rev ""] [msg "Restricted access to non-API route"] [data ""] [severity "0"] [ver ""] [maturity "0"] [accuracy "0"] [hostname "172.19.0.2"] [uri "/favicon.ico"] [unique_id "175005379590.829467"] [ref "o0,12v4,12"]
+
+---EReEFZl8---I--
+
+---EReEFZl8---J--
+
+---EReEFZl8---Z--
+
+---QniNy1Bm---A--
+[16/Jun/2025:06:03:52 +0000] 175005383255.337068 103.250.147.78 60567 172.19.0.2 443
+---QniNy1Bm---B--
+GET / HTTP/1.1
+Sec-Fetch-User: ?1
+Sec-Fetch-Site: none
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:139.0) Gecko/20100101 Firefox/139.0
+Upgrade-Insecure-Requests: 1
+Connection: keep-alive
+Sec-Fetch-Mode: navigate
+Accept-Encoding: gzip, deflate, br, zstd
+Accept-Language: en-US,en;q=0.5
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+Sec-Fetch-Dest: document
+Host: 13.234.29.148:8443
+Priority: u=0, i
+
+---QniNy1Bm---D--
+
+---QniNy1Bm---F--
+HTTP/1.1 403
+
+---QniNy1Bm---H--
+ModSecurity: Access denied with code 403 (phase 1). Matched "Operator `Rx' with parameter `^/(?!healthz|api/).*' against variable `REQUEST_URI' (Value: `/' ) [file "/usr/local/nginx/conf/modsec/custom-rules.conf"] [line "9"] [id "900003"] [rev ""] [msg "Restricted access to non-API route"] [data ""] [severity "0"] [ver ""] [maturity "0"] [accuracy "0"] [hostname "172.19.0.2"] [uri "/"] [unique_id "175005383255.337068"] [ref "o0,1v4,1"]
+
+---QniNy1Bm---I--
+
+---QniNy1Bm---J--
+
+---QniNy1Bm---Z--
+
+---IWiMqXPv---A--
+[16/Jun/2025:06:03:53 +0000] 175005383372.517662 103.250.147.78 60567 172.19.0.2 443
+---IWiMqXPv---B--
+GET /favicon.ico HTTP/1.1
+Host: 13.234.29.148:8443
+Sec-Fetch-Dest: image
+Sec-Fetch-Mode: no-cors
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:139.0) Gecko/20100101 Firefox/139.0
+Priority: u=6
+Accept: image/avif,image/webp,image/png,image/svg+xml,image/*;q=0.8,*/*;q=0.5
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate, br, zstd
+Connection: keep-alive
+Referer: https://13.234.29.148:8443/
+Sec-Fetch-Site: same-origin
+
+---IWiMqXPv---D--
+
+---IWiMqXPv---F--
+HTTP/1.1 403
+
+---IWiMqXPv---H--
+ModSecurity: Access denied with code 403 (phase 1). Matched "Operator `Rx' with parameter `^/(?!healthz|api/).*' against variable `REQUEST_URI' (Value: `/favicon.ico' ) [file "/usr/local/nginx/conf/modsec/custom-rules.conf"] [line "9"] [id "900003"] [rev ""] [msg "Restricted access to non-API route"] [data ""] [severity "0"] [ver ""] [maturity "0"] [accuracy "0"] [hostname "172.19.0.2"] [uri "/favicon.ico"] [unique_id "175005383372.517662"] [ref "o0,12v4,12"]
+
+---IWiMqXPv---I--
+
+---IWiMqXPv---J--
+
+---IWiMqXPv---Z--
+
+---WbBdunxr---A--
+[16/Jun/2025:06:03:54 +0000] 175005383457.283759 103.250.147.78 60568 172.19.0.2 443
+---WbBdunxr---B--
+GET / HTTP/1.1
+Sec-Fetch-User: ?1
+Sec-Fetch-Site: none
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:139.0) Gecko/20100101 Firefox/139.0
+Upgrade-Insecure-Requests: 1
+Connection: keep-alive
+Sec-Fetch-Mode: navigate
+Accept-Encoding: gzip, deflate, br, zstd
+Accept-Language: en-US,en;q=0.5
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+Sec-Fetch-Dest: document
+Host: 13.234.29.148:8443
+Priority: u=0, i
+
+---WbBdunxr---D--
+
+---WbBdunxr---F--
+HTTP/1.1 403
+
+---WbBdunxr---H--
+ModSecurity: Access denied with code 403 (phase 1). Matched "Operator `Rx' with parameter `^/(?!healthz|api/).*' against variable `REQUEST_URI' (Value: `/' ) [file "/usr/local/nginx/conf/modsec/custom-rules.conf"] [line "9"] [id "900003"] [rev ""] [msg "Restricted access to non-API route"] [data ""] [severity "0"] [ver ""] [maturity "0"] [accuracy "0"] [hostname "172.19.0.2"] [uri "/"] [unique_id "175005383457.283759"] [ref "o0,1v4,1"]
+
+---WbBdunxr---I--
+
+---WbBdunxr---J--
+
+---WbBdunxr---Z--
+
+---3AugNZM5---A--
+[16/Jun/2025:06:03:54 +0000] 175005383429.928904 103.250.147.78 60568 172.19.0.2 443
+---3AugNZM5---B--
+GET /favicon.ico HTTP/1.1
+Host: 13.234.29.148:8443
+Sec-Fetch-Dest: image
+Sec-Fetch-Mode: no-cors
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:139.0) Gecko/20100101 Firefox/139.0
+Priority: u=6
+Accept: image/avif,image/webp,image/png,image/svg+xml,image/*;q=0.8,*/*;q=0.5
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate, br, zstd
+Connection: keep-alive
+Referer: https://13.234.29.148:8443/
+Sec-Fetch-Site: same-origin
+
+---3AugNZM5---D--
+
+---3AugNZM5---F--
+HTTP/1.1 403
+
+---3AugNZM5---H--
+ModSecurity: Access denied with code 403 (phase 1). Matched "Operator `Rx' with parameter `^/(?!healthz|api/).*' against variable `REQUEST_URI' (Value: `/favicon.ico' ) [file "/usr/local/nginx/conf/modsec/custom-rules.conf"] [line "9"] [id "900003"] [rev ""] [msg "Restricted access to non-API route"] [data ""] [severity "0"] [ver ""] [maturity "0"] [accuracy "0"] [hostname "172.19.0.2"] [uri "/favicon.ico"] [unique_id "175005383429.928904"] [ref "o0,12v4,12"]
+
+---3AugNZM5---I--
+
+---3AugNZM5---J--
+
+---3AugNZM5---Z--
+
+---VCDFO8WC---A--
+[16/Jun/2025:06:04:23 +0000] 175005386322.040565 103.250.147.78 60569 172.19.0.2 443
+---VCDFO8WC---B--
+GET / HTTP/1.1
+Sec-Fetch-User: ?1
+Sec-Fetch-Site: none
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:139.0) Gecko/20100101 Firefox/139.0
+Upgrade-Insecure-Requests: 1
+Connection: keep-alive
+Sec-Fetch-Mode: navigate
+Accept-Encoding: gzip, deflate, br, zstd
+Accept-Language: en-US,en;q=0.5
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+Sec-Fetch-Dest: document
+Host: 13.234.29.148:8443
+Priority: u=0, i
+
+---VCDFO8WC---D--
+
+---VCDFO8WC---F--
+HTTP/1.1 403
+
+---VCDFO8WC---H--
+ModSecurity: Access denied with code 403 (phase 1). Matched "Operator `Rx' with parameter `^/(?!healthz|api/).*' against variable `REQUEST_URI' (Value: `/' ) [file "/usr/local/nginx/conf/modsec/custom-rules.conf"] [line "9"] [id "900003"] [rev ""] [msg "Restricted access to non-API route"] [data ""] [severity "0"] [ver ""] [maturity "0"] [accuracy "0"] [hostname "172.19.0.2"] [uri "/"] [unique_id "175005386322.040565"] [ref "o0,1v4,1"]
+
+---VCDFO8WC---I--
+
+---VCDFO8WC---J--
+
+---VCDFO8WC---Z--
+
+---Lncxbews---A--
+[16/Jun/2025:06:04:23 +0000] 175005386312.139663 103.250.147.78 60569 172.19.0.2 443
+---Lncxbews---B--
+GET /favicon.ico HTTP/1.1
+Host: 13.234.29.148:8443
+Sec-Fetch-Dest: image
+Sec-Fetch-Mode: no-cors
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:139.0) Gecko/20100101 Firefox/139.0
+Priority: u=6
+Accept: image/avif,image/webp,image/png,image/svg+xml,image/*;q=0.8,*/*;q=0.5
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate, br, zstd
+Connection: keep-alive
+Referer: https://13.234.29.148:8443/
+Sec-Fetch-Site: same-origin
+
+---Lncxbews---D--
+
+---Lncxbews---F--
+HTTP/1.1 403
+
+---Lncxbews---H--
+ModSecurity: Access denied with code 403 (phase 1). Matched "Operator `Rx' with parameter `^/(?!healthz|api/).*' against variable `REQUEST_URI' (Value: `/favicon.ico' ) [file "/usr/local/nginx/conf/modsec/custom-rules.conf"] [line "9"] [id "900003"] [rev ""] [msg "Restricted access to non-API route"] [data ""] [severity "0"] [ver ""] [maturity "0"] [accuracy "0"] [hostname "172.19.0.2"] [uri "/favicon.ico"] [unique_id "175005386312.139663"] [ref "o0,12v4,12"]
+
+---Lncxbews---I--
+
+---Lncxbews---J--
+
+---Lncxbews---Z--
+
+---037wAVWE---A--
+[16/Jun/2025:06:04:25 +0000] 175005386582.899222 103.250.147.78 60570 172.19.0.2 443
+---037wAVWE---B--
+GET / HTTP/1.1
+Sec-Fetch-User: ?1
+Sec-Fetch-Site: none
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:139.0) Gecko/20100101 Firefox/139.0
+Upgrade-Insecure-Requests: 1
+Connection: keep-alive
+Sec-Fetch-Mode: navigate
+Accept-Encoding: gzip, deflate, br, zstd
+Accept-Language: en-US,en;q=0.5
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+Sec-Fetch-Dest: document
+Host: 13.234.29.148:8443
+Priority: u=0, i
+
+---037wAVWE---D--
+
+---037wAVWE---F--
+HTTP/1.1 403
+
+---037wAVWE---H--
+ModSecurity: Access denied with code 403 (phase 1). Matched "Operator `Rx' with parameter `^/(?!healthz|api/).*' against variable `REQUEST_URI' (Value: `/' ) [file "/usr/local/nginx/conf/modsec/custom-rules.conf"] [line "9"] [id "900003"] [rev ""] [msg "Restricted access to non-API route"] [data ""] [severity "0"] [ver ""] [maturity "0"] [accuracy "0"] [hostname "172.19.0.2"] [uri "/"] [unique_id "175005386582.899222"] [ref "o0,1v4,1"]
+
+---037wAVWE---I--
+
+---037wAVWE---J--
+
+---037wAVWE---Z--
+
+---MD9qGsLZ---A--
+[16/Jun/2025:06:04:25 +0000] 175005386586.947902 103.250.147.78 60570 172.19.0.2 443
+---MD9qGsLZ---B--
+GET /favicon.ico HTTP/1.1
+Host: 13.234.29.148:8443
+Sec-Fetch-Dest: image
+Sec-Fetch-Mode: no-cors
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:139.0) Gecko/20100101 Firefox/139.0
+Priority: u=6
+Accept: image/avif,image/webp,image/png,image/svg+xml,image/*;q=0.8,*/*;q=0.5
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate, br, zstd
+Connection: keep-alive
+Referer: https://13.234.29.148:8443/
+Sec-Fetch-Site: same-origin
+
+---MD9qGsLZ---D--
+
+---MD9qGsLZ---F--
+HTTP/1.1 403
+
+---MD9qGsLZ---H--
+ModSecurity: Access denied with code 403 (phase 1). Matched "Operator `Rx' with parameter `^/(?!healthz|api/).*' against variable `REQUEST_URI' (Value: `/favicon.ico' ) [file "/usr/local/nginx/conf/modsec/custom-rules.conf"] [line "9"] [id "900003"] [rev ""] [msg "Restricted access to non-API route"] [data ""] [severity "0"] [ver ""] [maturity "0"] [accuracy "0"] [hostname "172.19.0.2"] [uri "/favicon.ico"] [unique_id "175005386586.947902"] [ref "o0,12v4,12"]
+
+---MD9qGsLZ---I--
+
+---MD9qGsLZ---J--
+
+---MD9qGsLZ---Z--
+
+---51n19TYZ---A--
+[16/Jun/2025:06:04:27 +0000] 175005386720.310769 103.250.147.78 60572 172.19.0.2 443
+---51n19TYZ---B--
+GET / HTTP/1.1
+Sec-Fetch-User: ?1
+Sec-Fetch-Site: none
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:139.0) Gecko/20100101 Firefox/139.0
+Upgrade-Insecure-Requests: 1
+Connection: keep-alive
+Sec-Fetch-Mode: navigate
+Accept-Encoding: gzip, deflate, br, zstd
+Accept-Language: en-US,en;q=0.5
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+Sec-Fetch-Dest: document
+Host: 13.234.29.148:8443
+Priority: u=0, i
+
+---51n19TYZ---D--
+
+---51n19TYZ---F--
+HTTP/1.1 403
+
+---51n19TYZ---H--
+ModSecurity: Access denied with code 403 (phase 1). Matched "Operator `Rx' with parameter `^/(?!healthz|api/).*' against variable `REQUEST_URI' (Value: `/' ) [file "/usr/local/nginx/conf/modsec/custom-rules.conf"] [line "9"] [id "900003"] [rev ""] [msg "Restricted access to non-API route"] [data ""] [severity "0"] [ver ""] [maturity "0"] [accuracy "0"] [hostname "172.19.0.2"] [uri "/"] [unique_id "175005386720.310769"] [ref "o0,1v4,1"]
+
+---51n19TYZ---I--
+
+---51n19TYZ---J--
+
+---51n19TYZ---Z--
+
+---kUB2Va0e---A--
+[16/Jun/2025:06:04:33 +0000] 175005387325.714459 103.250.147.78 60572 172.19.0.2 443
+---kUB2Va0e---B--
+GET / HTTP/1.1
+Sec-Fetch-User: ?1
+Sec-Fetch-Site: none
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:139.0) Gecko/20100101 Firefox/139.0
+Upgrade-Insecure-Requests: 1
+Connection: keep-alive
+Sec-Fetch-Mode: navigate
+Accept-Encoding: gzip, deflate, br, zstd
+Accept-Language: en-US,en;q=0.5
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+Sec-Fetch-Dest: document
+Host: 13.234.29.148:8443
+Priority: u=0, i
+
+---kUB2Va0e---D--
+
+---kUB2Va0e---F--
+HTTP/1.1 403
+
+---kUB2Va0e---H--
+ModSecurity: Access denied with code 403 (phase 1). Matched "Operator `Rx' with parameter `^/(?!healthz|api/).*' against variable `REQUEST_URI' (Value: `/' ) [file "/usr/local/nginx/conf/modsec/custom-rules.conf"] [line "9"] [id "900003"] [rev ""] [msg "Restricted access to non-API route"] [data ""] [severity "0"] [ver ""] [maturity "0"] [accuracy "0"] [hostname "172.19.0.2"] [uri "/"] [unique_id "175005387325.714459"] [ref "o0,1v4,1"]
+
+---kUB2Va0e---I--
+
+---kUB2Va0e---J--
+
+---kUB2Va0e---Z--
+
+---RJlm0Mpg---A--
+[16/Jun/2025:06:08:22 +0000] 175005410282.280721 103.250.147.78 60588 172.19.0.2 443
+---RJlm0Mpg---B--
+GET / HTTP/1.1
+Sec-Fetch-User: ?1
+Sec-Fetch-Site: none
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:139.0) Gecko/20100101 Firefox/139.0
+Upgrade-Insecure-Requests: 1
+Connection: keep-alive
+Sec-Fetch-Mode: navigate
+Accept-Encoding: gzip, deflate, br, zstd
+Accept-Language: en-US,en;q=0.5
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+Sec-Fetch-Dest: document
+Host: 13.234.29.148:8443
+Priority: u=0, i
+
+---RJlm0Mpg---D--
+
+---RJlm0Mpg---F--
+HTTP/1.1 403
+
+---RJlm0Mpg---H--
+ModSecurity: Access denied with code 403 (phase 1). Matched "Operator `Rx' with parameter `^/(?!healthz|api/).*' against variable `REQUEST_URI' (Value: `/' ) [file "/usr/local/nginx/conf/modsec/custom-rules.conf"] [line "9"] [id "900003"] [rev ""] [msg "Restricted access to non-API route"] [data ""] [severity "0"] [ver ""] [maturity "0"] [accuracy "0"] [hostname "172.19.0.2"] [uri "/"] [unique_id "175005410282.280721"] [ref "o0,1v4,1"]
+
+---RJlm0Mpg---I--
+
+---RJlm0Mpg---J--
+
+---RJlm0Mpg---Z--
+
+---TVntCo6j---A--
+[16/Jun/2025:06:08:22 +0000] 175005410253.580301 103.250.147.78 60588 172.19.0.2 443
+---TVntCo6j---B--
+GET /favicon.ico HTTP/1.1
+Host: 13.234.29.148:8443
+Sec-Fetch-Dest: image
+Sec-Fetch-Mode: no-cors
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:139.0) Gecko/20100101 Firefox/139.0
+Priority: u=6
+Accept: image/avif,image/webp,image/png,image/svg+xml,image/*;q=0.8,*/*;q=0.5
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate, br, zstd
+Connection: keep-alive
+Referer: https://13.234.29.148:8443/
+Sec-Fetch-Site: same-origin
+
+---TVntCo6j---D--
+
+---TVntCo6j---F--
+HTTP/1.1 403
+
+---TVntCo6j---H--
+ModSecurity: Access denied with code 403 (phase 1). Matched "Operator `Rx' with parameter `^/(?!healthz|api/).*' against variable `REQUEST_URI' (Value: `/favicon.ico' ) [file "/usr/local/nginx/conf/modsec/custom-rules.conf"] [line "9"] [id "900003"] [rev ""] [msg "Restricted access to non-API route"] [data ""] [severity "0"] [ver ""] [maturity "0"] [accuracy "0"] [hostname "172.19.0.2"] [uri "/favicon.ico"] [unique_id "175005410253.580301"] [ref "o0,12v4,12"]
+
+---TVntCo6j---I--
+
+---TVntCo6j---J--
+
+---TVntCo6j---Z--
+
+---1zQAjgA3---A--
+[16/Jun/2025:06:08:23 +0000] 175005410341.332747 103.250.147.78 60589 172.19.0.2 443
+---1zQAjgA3---B--
+GET / HTTP/1.1
+Sec-Fetch-User: ?1
+Sec-Fetch-Site: none
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:139.0) Gecko/20100101 Firefox/139.0
+Upgrade-Insecure-Requests: 1
+Connection: keep-alive
+Sec-Fetch-Mode: navigate
+Accept-Encoding: gzip, deflate, br, zstd
+Accept-Language: en-US,en;q=0.5
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+Cache-Control: no-cache
+Sec-Fetch-Dest: document
+Host: 13.234.29.148:8443
+Priority: u=0, i
+Pragma: no-cache
+
+---1zQAjgA3---D--
+
+---1zQAjgA3---F--
+HTTP/1.1 403
+
+---1zQAjgA3---H--
+ModSecurity: Access denied with code 403 (phase 1). Matched "Operator `Rx' with parameter `^/(?!healthz|api/).*' against variable `REQUEST_URI' (Value: `/' ) [file "/usr/local/nginx/conf/modsec/custom-rules.conf"] [line "9"] [id "900003"] [rev ""] [msg "Restricted access to non-API route"] [data ""] [severity "0"] [ver ""] [maturity "0"] [accuracy "0"] [hostname "172.19.0.2"] [uri "/"] [unique_id "175005410341.332747"] [ref "o0,1v4,1"]
+
+---1zQAjgA3---I--
+
+---1zQAjgA3---J--
+
+---1zQAjgA3---Z--
+
+---zaDxDoTJ---A--
+[16/Jun/2025:06:08:23 +0000] 175005410375.277233 103.250.147.78 60589 172.19.0.2 443
+---zaDxDoTJ---B--
+GET /favicon.ico HTTP/1.1
+Sec-Fetch-Site: same-origin
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:139.0) Gecko/20100101 Firefox/139.0
+Referer: https://13.234.29.148:8443/
+Pragma: no-cache
+Connection: keep-alive
+Sec-Fetch-Mode: no-cors
+Accept-Encoding: gzip, deflate, br, zstd
+Accept-Language: en-US,en;q=0.5
+Accept: image/avif,image/webp,image/png,image/svg+xml,image/*;q=0.8,*/*;q=0.5
+Cache-Control: no-cache
+Priority: u=6
+Sec-Fetch-Dest: image
+Host: 13.234.29.148:8443
+
+---zaDxDoTJ---D--
+
+---zaDxDoTJ---F--
+HTTP/1.1 403
+
+---zaDxDoTJ---H--
+ModSecurity: Access denied with code 403 (phase 1). Matched "Operator `Rx' with parameter `^/(?!healthz|api/).*' against variable `REQUEST_URI' (Value: `/favicon.ico' ) [file "/usr/local/nginx/conf/modsec/custom-rules.conf"] [line "9"] [id "900003"] [rev ""] [msg "Restricted access to non-API route"] [data ""] [severity "0"] [ver ""] [maturity "0"] [accuracy "0"] [hostname "172.19.0.2"] [uri "/favicon.ico"] [unique_id "175005410375.277233"] [ref "o0,12v4,12"]
+
+---zaDxDoTJ---I--
+
+---zaDxDoTJ---J--
+
+---zaDxDoTJ---Z--
+
+---XwAgOsFJ---A--
+[16/Jun/2025:06:08:37 +0000] 175005411768.545581 103.250.147.78 60589 172.19.0.2 443
+---XwAgOsFJ---B--
+GET / HTTP/1.1
+Sec-Fetch-User: ?1
+Sec-Fetch-Site: none
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:139.0) Gecko/20100101 Firefox/139.0
+Upgrade-Insecure-Requests: 1
+Connection: keep-alive
+Sec-Fetch-Mode: navigate
+Accept-Encoding: gzip, deflate, br, zstd
+Accept-Language: en-US,en;q=0.5
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+Sec-Fetch-Dest: document
+Host: 13.234.29.148:8443
+Priority: u=0, i
+
+---XwAgOsFJ---D--
+
+---XwAgOsFJ---F--
+HTTP/1.1 403
+
+---XwAgOsFJ---H--
+ModSecurity: Access denied with code 403 (phase 1). Matched "Operator `Rx' with parameter `^/(?!healthz|api/).*' against variable `REQUEST_URI' (Value: `/' ) [file "/usr/local/nginx/conf/modsec/custom-rules.conf"] [line "9"] [id "900003"] [rev ""] [msg "Restricted access to non-API route"] [data ""] [severity "0"] [ver ""] [maturity "0"] [accuracy "0"] [hostname "172.19.0.2"] [uri "/"] [unique_id "175005411768.545581"] [ref "o0,1v4,1"]
+
+---XwAgOsFJ---I--
+
+---XwAgOsFJ---J--
+
+---XwAgOsFJ---Z--
+
+---LidL9aTf---A--
+[16/Jun/2025:06:13:04 +0000] 175005438418.830628 103.250.147.78 60613 172.19.0.2 443
+---LidL9aTf---B--
+GET / HTTP/1.1
+Sec-Fetch-User: ?1
+Sec-Fetch-Site: none
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:139.0) Gecko/20100101 Firefox/139.0
+Upgrade-Insecure-Requests: 1
+Connection: keep-alive
+Sec-Fetch-Mode: navigate
+Accept-Encoding: gzip, deflate, br, zstd
+Accept-Language: en-US,en;q=0.5
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+Sec-Fetch-Dest: document
+Host: 13.234.29.148:8443
+Priority: u=0, i
+
+---LidL9aTf---D--
+
+---LidL9aTf---E--
+<!DOCTYPE html>\x0a<html>\x0a<head>\x0a<title>Welcome to nginx!</title>\x0a<style>\x0ahtml { color-scheme: light dark; }\x0abody { width: 35em; margin: 0 auto;\x0afont-family: Tahoma, Verdana, Arial, sans-serif; }\x0a</style>\x0a</head>\x0a<body>\x0a<h1>Welcome to nginx!</h1>\x0a<p>If you see this page, the nginx web server is successfully installed and\x0aworking. Further configuration is required.</p>\x0a\x0a<p>For online documentation and support please refer to\x0a<a href="http://nginx.org/">nginx.org</a>.<br/>\x0aCommercial support is available at\x0a<a href="http://nginx.com/">nginx.com</a>.</p>\x0a\x0a<p><em>Thank you for using nginx.</em></p>\x0a</body>\x0a</html>\x0a
+
+---LidL9aTf---F--
+HTTP/1.1 200
+Server: nginx/1.24.0
+Date: Mon, 16 Jun 2025 06:13:04 GMT
+Content-Length: 615
+Content-Type: text/html
+Last-Modified: Mon, 16 Jun 2025 05:57:07 GMT
+Connection: keep-alive
+ETag: "684fb233-267"
+
+---LidL9aTf---H--
+ModSecurity: Warning. Matched "Operator `Rx' with parameter `(?:^([\d.]+|\[[\da-f:]+\]|[\da-f:]+)(:[\d]+)?$)' against variable `REQUEST_HEADERS:Host' (Value: `13.234.29.148:8443' ) [file "/usr/local/nginx/conf/modsec/crs/rules/REQUEST-920-PROTOCOL-ENFORCEMENT.conf"] [line "712"] [id "920350"] [rev ""] [msg "Host header is a numeric IP address"] [data "13.234.29.148:8443"] [severity "4"] [ver "OWASP_CRS/4.16.0-dev"] [maturity "0"] [accuracy "0"] [tag "application-multi"] [tag "language-multi"] [tag "platform-multi"] [tag "attack-protocol"] [tag "paranoia-level/1"] [tag "OWASP_CRS"] [tag "OWASP_CRS/PROTOCOL-ENFORCEMENT"] [tag "capec/1000/210/272"] [tag "PCI/6.5.10"] [hostname "172.19.0.2"] [uri "/"] [unique_id "175005438418.830628"] [ref "o0,18o0,13o13,5v21,18"]
+
+---LidL9aTf---I--
+
+---LidL9aTf---J--
+
+---LidL9aTf---Z--
+
+---pXmAhebe---A--
+[16/Jun/2025:06:13:04 +0000] 175005438453.245246 103.250.147.78 60613 172.19.0.2 443
+---pXmAhebe---B--
+GET /favicon.ico HTTP/1.1
+Host: 13.234.29.148:8443
+Sec-Fetch-Dest: image
+Sec-Fetch-Mode: no-cors
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:139.0) Gecko/20100101 Firefox/139.0
+Priority: u=6
+Accept: image/avif,image/webp,image/png,image/svg+xml,image/*;q=0.8,*/*;q=0.5
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate, br, zstd
+Connection: keep-alive
+Referer: https://13.234.29.148:8443/
+Sec-Fetch-Site: same-origin
+
+---pXmAhebe---D--
+
+---pXmAhebe---E--
+<html>\x0d\x0a<head><title>404 Not Found</title></head>\x0d\x0a<body>\x0d\x0a<center><h1>404 Not Found</h1></center>\x0d\x0a<hr><center>nginx/1.24.0</center>\x0d\x0a</body>\x0d\x0a</html>\x0d\x0a
+
+---pXmAhebe---F--
+HTTP/1.1 404
+Server: nginx/1.24.0
+Date: Mon, 16 Jun 2025 06:13:04 GMT
+Content-Length: 153
+Content-Type: text/html
+Connection: keep-alive
+
+---pXmAhebe---H--
+ModSecurity: Warning. Matched "Operator `Rx' with parameter `(?:^([\d.]+|\[[\da-f:]+\]|[\da-f:]+)(:[\d]+)?$)' against variable `REQUEST_HEADERS:Host' (Value: `13.234.29.148:8443' ) [file "/usr/local/nginx/conf/modsec/crs/rules/REQUEST-920-PROTOCOL-ENFORCEMENT.conf"] [line "712"] [id "920350"] [rev ""] [msg "Host header is a numeric IP address"] [data "13.234.29.148:8443"] [severity "4"] [ver "OWASP_CRS/4.16.0-dev"] [maturity "0"] [accuracy "0"] [tag "application-multi"] [tag "language-multi"] [tag "platform-multi"] [tag "attack-protocol"] [tag "paranoia-level/1"] [tag "OWASP_CRS"] [tag "OWASP_CRS/PROTOCOL-ENFORCEMENT"] [tag "capec/1000/210/272"] [tag "PCI/6.5.10"] [hostname "172.19.0.2"] [uri "/favicon.ico"] [unique_id "175005438453.245246"] [ref "o0,18o0,13o13,5v32,18"]
+
+---pXmAhebe---I--
+
+---pXmAhebe---J--
+
+---pXmAhebe---Z--
+
+---WmxhDwPg---A--
+[16/Jun/2025:06:14:42 +0000] 175005448270.247321 103.250.147.78 60616 172.19.0.2 443
+---WmxhDwPg---B--
+GET //?q=select+*+from+users HTTP/1.1
+Sec-Fetch-User: ?1
+Sec-Fetch-Site: none
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:139.0) Gecko/20100101 Firefox/139.0
+Upgrade-Insecure-Requests: 1
+Connection: keep-alive
+Sec-Fetch-Mode: navigate
+Accept-Encoding: gzip, deflate, br, zstd
+Accept-Language: en-US,en;q=0.5
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+Sec-Fetch-Dest: document
+Host: 13.234.29.148:8443
+Priority: u=0, i
+
+---WmxhDwPg---D--
+
+---WmxhDwPg---E--
+<html>\x0d\x0a<head><title>403 Forbidden</title></head>\x0d\x0a<body>\x0d\x0a<center><h1>403 Forbidden</h1></center>\x0d\x0a<hr><center>nginx/1.24.0</center>\x0d\x0a</body>\x0d\x0a</html>\x0d\x0a
+
+---WmxhDwPg---F--
+HTTP/1.1 403
+Server: nginx/1.24.0
+Date: Mon, 16 Jun 2025 06:14:42 GMT
+Content-Length: 153
+Content-Type: text/html
+Connection: keep-alive
+
+---WmxhDwPg---H--
+ModSecurity: Warning. Matched "Operator `Rx' with parameter `(?:^([\d.]+|\[[\da-f:]+\]|[\da-f:]+)(:[\d]+)?$)' against variable `REQUEST_HEADERS:Host' (Value: `13.234.29.148:8443' ) [file "/usr/local/nginx/conf/modsec/crs/rules/REQUEST-920-PROTOCOL-ENFORCEMENT.conf"] [line "712"] [id "920350"] [rev ""] [msg "Host header is a numeric IP address"] [data "13.234.29.148:8443"] [severity "4"] [ver "OWASP_CRS/4.16.0-dev"] [maturity "0"] [accuracy "0"] [tag "application-multi"] [tag "language-multi"] [tag "platform-multi"] [tag "attack-protocol"] [tag "paranoia-level/1"] [tag "OWASP_CRS"] [tag "OWASP_CRS/PROTOCOL-ENFORCEMENT"] [tag "capec/1000/210/272"] [tag "PCI/6.5.10"] [hostname "172.19.0.2"] [uri "//"] [unique_id "175005448270.247321"] [ref "o0,18o0,13o13,5v44,18"]
+ModSecurity: Access denied with code 403 (phase 2). Matched "Operator `Rx' with parameter `(?i)(union(.*?)select|select.+from)' against variable `ARGS:q' (Value: `select * from users' ) [file "/usr/local/nginx/conf/modsec/custom-rules.conf"] [line "10"] [id "10003"] [rev ""] [msg "SQLi pattern blocked"] [data ""] [severity "0"] [ver ""] [maturity "0"] [accuracy "0"] [hostname "172.19.0.2"] [uri "//"] [unique_id "175005448270.247321"] [ref "o0,13o0,13v9,19"]
+
+---WmxhDwPg---I--
+
+---WmxhDwPg---J--
+
+---WmxhDwPg---Z--
+
+---7ILerWwr---A--
+[16/Jun/2025:06:55:19 +0000] 175005691988.041943 103.250.147.78 60856 172.19.0.2 443
+---7ILerWwr---B--
+GET //?q=select+*+from+users HTTP/1.1
+Sec-Fetch-User: ?1
+Sec-Fetch-Site: none
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:139.0) Gecko/20100101 Firefox/139.0
+Upgrade-Insecure-Requests: 1
+Connection: keep-alive
+Sec-Fetch-Mode: navigate
+Accept-Encoding: gzip, deflate, br, zstd
+Accept-Language: en-US,en;q=0.5
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+Sec-Fetch-Dest: document
+Host: 13.234.29.148:8443
+Priority: u=0, i
+
+---7ILerWwr---D--
+
+---7ILerWwr---E--
+<html>\x0d\x0a<head><title>403 Forbidden</title></head>\x0d\x0a<body>\x0d\x0a<center><h1>403 Forbidden</h1></center>\x0d\x0a<hr><center>nginx</center>\x0d\x0a</body>\x0d\x0a</html>\x0d\x0a
+
+---7ILerWwr---F--
+HTTP/1.1 403
+Server: nginx
+Date: Mon, 16 Jun 2025 06:55:19 GMT
+Content-Length: 146
+Content-Type: text/html
+X-Content-Type-Options: nosniff
+Connection: keep-alive
+X-XSS-Protection: 1; mode=block
+X-Frame-Options: SAMEORIGIN
+Referrer-Policy: strict-origin-when-cross-origin
+Permissions-Policy: geolocation=(), microphone=()
+
+---7ILerWwr---H--
+ModSecurity: Warning. Matched "Operator `Rx' with parameter `(?:^([\d.]+|\[[\da-f:]+\]|[\da-f:]+)(:[\d]+)?$)' against variable `REQUEST_HEADERS:Host' (Value: `13.234.29.148:8443' ) [file "/usr/local/nginx/conf/modsec/crs/rules/REQUEST-920-PROTOCOL-ENFORCEMENT.conf"] [line "712"] [id "920350"] [rev ""] [msg "Host header is a numeric IP address"] [data "13.234.29.148:8443"] [severity "4"] [ver "OWASP_CRS/4.16.0-dev"] [maturity "0"] [accuracy "0"] [tag "application-multi"] [tag "language-multi"] [tag "platform-multi"] [tag "attack-protocol"] [tag "paranoia-level/1"] [tag "OWASP_CRS"] [tag "OWASP_CRS/PROTOCOL-ENFORCEMENT"] [tag "capec/1000/210/272"] [tag "PCI/6.5.10"] [hostname "172.19.0.2"] [uri "//"] [unique_id "175005691988.041943"] [ref "o0,18o0,13o13,5v44,18"]
+ModSecurity: Access denied with code 403 (phase 2). Matched "Operator `Rx' with parameter `(?i)(union(.*?)select|select.+from)' against variable `ARGS:q' (Value: `select * from users' ) [file "/usr/local/nginx/conf/modsec/custom-rules.conf"] [line "10"] [id "10003"] [rev ""] [msg "SQLi pattern blocked"] [data ""] [severity "0"] [ver ""] [maturity "0"] [accuracy "0"] [hostname "172.19.0.2"] [uri "//"] [unique_id "175005691988.041943"] [ref "o0,13o0,13v9,19"]
+
+---7ILerWwr---I--
+
+---7ILerWwr---J--
+
+---7ILerWwr---Z--
+
+---NbD6c6Q6---A--
+[16/Jun/2025:06:55:19 +0000] 175005691960.866057 103.250.147.78 60856 172.19.0.2 443
+---NbD6c6Q6---B--
+GET /favicon.ico HTTP/1.1
+Host: 13.234.29.148:8443
+Sec-Fetch-Dest: image
+Sec-Fetch-Mode: no-cors
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:139.0) Gecko/20100101 Firefox/139.0
+Priority: u=6
+Accept: image/avif,image/webp,image/png,image/svg+xml,image/*;q=0.8,*/*;q=0.5
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate, br, zstd
+Referer: https://13.234.29.148:8443//?q=select+*+from+users
+Connection: keep-alive
+Sec-Fetch-Site: same-origin
+
+---NbD6c6Q6---D--
+
+---NbD6c6Q6---E--
+<html>\x0d\x0a<head><title>404 Not Found</title></head>\x0d\x0a<body>\x0d\x0a<center><h1>404 Not Found</h1></center>\x0d\x0a<hr><center>nginx</center>\x0d\x0a</body>\x0d\x0a</html>\x0d\x0a
+
+---NbD6c6Q6---F--
+HTTP/1.1 404
+Server: nginx
+Date: Mon, 16 Jun 2025 06:55:19 GMT
+Content-Length: 146
+Content-Type: text/html
+X-Content-Type-Options: nosniff
+Connection: keep-alive
+X-XSS-Protection: 1; mode=block
+X-Frame-Options: SAMEORIGIN
+Referrer-Policy: strict-origin-when-cross-origin
+Permissions-Policy: geolocation=(), microphone=()
+
+---NbD6c6Q6---H--
+ModSecurity: Warning. Matched "Operator `Rx' with parameter `(?:^([\d.]+|\[[\da-f:]+\]|[\da-f:]+)(:[\d]+)?$)' against variable `REQUEST_HEADERS:Host' (Value: `13.234.29.148:8443' ) [file "/usr/local/nginx/conf/modsec/crs/rules/REQUEST-920-PROTOCOL-ENFORCEMENT.conf"] [line "712"] [id "920350"] [rev ""] [msg "Host header is a numeric IP address"] [data "13.234.29.148:8443"] [severity "4"] [ver "OWASP_CRS/4.16.0-dev"] [maturity "0"] [accuracy "0"] [tag "application-multi"] [tag "language-multi"] [tag "platform-multi"] [tag "attack-protocol"] [tag "paranoia-level/1"] [tag "OWASP_CRS"] [tag "OWASP_CRS/PROTOCOL-ENFORCEMENT"] [tag "capec/1000/210/272"] [tag "PCI/6.5.10"] [hostname "172.19.0.2"] [uri "/favicon.ico"] [unique_id "175005691960.866057"] [ref "o0,18o0,13o13,5v32,18"]
+
+---NbD6c6Q6---I--
+
+---NbD6c6Q6---J--
+
+---NbD6c6Q6---Z--
+
+---7ILerWwr---A--
+[16/Jun/2025:06:55:23 +0000] 175005692350.965818 103.250.147.78 60857 172.19.0.2 443
+---7ILerWwr---B--
+GET / HTTP/1.1
+Sec-Fetch-User: ?1
+Sec-Fetch-Site: none
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:139.0) Gecko/20100101 Firefox/139.0
+Upgrade-Insecure-Requests: 1
+Connection: keep-alive
+Sec-Fetch-Mode: navigate
+Accept-Encoding: gzip, deflate, br, zstd
+Accept-Language: en-US,en;q=0.5
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+Sec-Fetch-Dest: document
+Host: 13.234.29.148:8443
+Priority: u=0, i
+
+---7ILerWwr---D--
+
+---7ILerWwr---E--
+<!DOCTYPE html>\x0a<html>\x0a<head>\x0a<title>Welcome to nginx!</title>\x0a<style>\x0ahtml { color-scheme: light dark; }\x0abody { width: 35em; margin: 0 auto;\x0afont-family: Tahoma, Verdana, Arial, sans-serif; }\x0a</style>\x0a</head>\x0a<body>\x0a<h1>Welcome to nginx!</h1>\x0a<p>If you see this page, the nginx web server is successfully installed and\x0aworking. Further configuration is required.</p>\x0a\x0a<p>For online documentation and support please refer to\x0a<a href="http://nginx.org/">nginx.org</a>.<br/>\x0aCommercial support is available at\x0a<a href="http://nginx.com/">nginx.com</a>.</p>\x0a\x0a<p><em>Thank you for using nginx.</em></p>\x0a</body>\x0a</html>\x0a
+
+---7ILerWwr---F--
+HTTP/1.1 200
+Referrer-Policy: strict-origin-when-cross-origin
+X-Frame-Options: SAMEORIGIN
+ETag: "684fb233-267"
+Last-Modified: Mon, 16 Jun 2025 05:57:07 GMT
+X-XSS-Protection: 1; mode=block
+Connection: keep-alive
+X-Content-Type-Options: nosniff
+Content-Type: text/html
+Content-Length: 615
+Date: Mon, 16 Jun 2025 06:55:23 GMT
+Server: nginx
+Permissions-Policy: geolocation=(), microphone=()
+
+---7ILerWwr---H--
+ModSecurity: Warning. Matched "Operator `Rx' with parameter `(?:^([\d.]+|\[[\da-f:]+\]|[\da-f:]+)(:[\d]+)?$)' against variable `REQUEST_HEADERS:Host' (Value: `13.234.29.148:8443' ) [file "/usr/local/nginx/conf/modsec/crs/rules/REQUEST-920-PROTOCOL-ENFORCEMENT.conf"] [line "712"] [id "920350"] [rev ""] [msg "Host header is a numeric IP address"] [data "13.234.29.148:8443"] [severity "4"] [ver "OWASP_CRS/4.16.0-dev"] [maturity "0"] [accuracy "0"] [tag "application-multi"] [tag "language-multi"] [tag "platform-multi"] [tag "attack-protocol"] [tag "paranoia-level/1"] [tag "OWASP_CRS"] [tag "OWASP_CRS/PROTOCOL-ENFORCEMENT"] [tag "capec/1000/210/272"] [tag "PCI/6.5.10"] [hostname "172.19.0.2"] [uri "/"] [unique_id "175005692350.965818"] [ref "o0,18o0,13o13,5v21,18"]
+
+---7ILerWwr---I--
+
+---7ILerWwr---J--
+
+---7ILerWwr---Z--
+
+---NbD6c6Q6---A--
+[16/Jun/2025:06:55:23 +0000] 17500569233.611857 103.250.147.78 60857 172.19.0.2 443
+---NbD6c6Q6---B--
+GET /favicon.ico HTTP/1.1
+Host: 13.234.29.148:8443
+Sec-Fetch-Dest: image
+Sec-Fetch-Mode: no-cors
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:139.0) Gecko/20100101 Firefox/139.0
+Priority: u=6
+Accept: image/avif,image/webp,image/png,image/svg+xml,image/*;q=0.8,*/*;q=0.5
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate, br, zstd
+Referer: https://13.234.29.148:8443/
+Connection: keep-alive
+Sec-Fetch-Site: same-origin
+
+---NbD6c6Q6---D--
+
+---NbD6c6Q6---E--
+<html>\x0d\x0a<head><title>404 Not Found</title></head>\x0d\x0a<body>\x0d\x0a<center><h1>404 Not Found</h1></center>\x0d\x0a<hr><center>nginx</center>\x0d\x0a</body>\x0d\x0a</html>\x0d\x0a
+
+---NbD6c6Q6---F--
+HTTP/1.1 404
+Server: nginx
+Date: Mon, 16 Jun 2025 06:55:23 GMT
+Content-Length: 146
+Content-Type: text/html
+X-Content-Type-Options: nosniff
+Connection: keep-alive
+X-XSS-Protection: 1; mode=block
+X-Frame-Options: SAMEORIGIN
+Referrer-Policy: strict-origin-when-cross-origin
+Permissions-Policy: geolocation=(), microphone=()
+
+---NbD6c6Q6---H--
+ModSecurity: Warning. Matched "Operator `Rx' with parameter `(?:^([\d.]+|\[[\da-f:]+\]|[\da-f:]+)(:[\d]+)?$)' against variable `REQUEST_HEADERS:Host' (Value: `13.234.29.148:8443' ) [file "/usr/local/nginx/conf/modsec/crs/rules/REQUEST-920-PROTOCOL-ENFORCEMENT.conf"] [line "712"] [id "920350"] [rev ""] [msg "Host header is a numeric IP address"] [data "13.234.29.148:8443"] [severity "4"] [ver "OWASP_CRS/4.16.0-dev"] [maturity "0"] [accuracy "0"] [tag "application-multi"] [tag "language-multi"] [tag "platform-multi"] [tag "attack-protocol"] [tag "paranoia-level/1"] [tag "OWASP_CRS"] [tag "OWASP_CRS/PROTOCOL-ENFORCEMENT"] [tag "capec/1000/210/272"] [tag "PCI/6.5.10"] [hostname "172.19.0.2"] [uri "/favicon.ico"] [unique_id "17500569233.611857"] [ref "o0,18o0,13o13,5v32,18"]
+
+---NbD6c6Q6---I--
+
+---NbD6c6Q6---J--
+
+---NbD6c6Q6---Z--
+
+---7ILerWwr---A--
+[16/Jun/2025:07:05:30 +0000] 175005753018.981812 195.184.76.235 53569 172.19.0.2 443
+---7ILerWwr---B--
+GET / HTTP/1.1
+Host: 13.234.29.148:8443
+Connection: close
+User-Agent: Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:134.0) Gecko/20100101 Firefox/134.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+Accept-Language: en-US,en;q=0.5
+
+---7ILerWwr---D--
+
+---7ILerWwr---E--
+<!DOCTYPE html>\x0a<html>\x0a<head>\x0a<title>Welcome to nginx!</title>\x0a<style>\x0ahtml { color-scheme: light dark; }\x0abody { width: 35em; margin: 0 auto;\x0afont-family: Tahoma, Verdana, Arial, sans-serif; }\x0a</style>\x0a</head>\x0a<body>\x0a<h1>Welcome to nginx!</h1>\x0a<p>If you see this page, the nginx web server is successfully installed and\x0aworking. Further configuration is required.</p>\x0a\x0a<p>For online documentation and support please refer to\x0a<a href="http://nginx.org/">nginx.org</a>.<br/>\x0aCommercial support is available at\x0a<a href="http://nginx.com/">nginx.com</a>.</p>\x0a\x0a<p><em>Thank you for using nginx.</em></p>\x0a</body>\x0a</html>\x0a
+
+---7ILerWwr---F--
+HTTP/1.1 200
+Referrer-Policy: strict-origin-when-cross-origin
+X-Frame-Options: SAMEORIGIN
+ETag: "684fb233-267"
+Last-Modified: Mon, 16 Jun 2025 05:57:07 GMT
+X-XSS-Protection: 1; mode=block
+Connection: close
+X-Content-Type-Options: nosniff
+Content-Type: text/html
+Content-Length: 615
+Date: Mon, 16 Jun 2025 07:05:30 GMT
+Server: nginx
+Permissions-Policy: geolocation=(), microphone=()
+
+---7ILerWwr---H--
+ModSecurity: Warning. Matched "Operator `Rx' with parameter `(?:^([\d.]+|\[[\da-f:]+\]|[\da-f:]+)(:[\d]+)?$)' against variable `REQUEST_HEADERS:Host' (Value: `13.234.29.148:8443' ) [file "/usr/local/nginx/conf/modsec/crs/rules/REQUEST-920-PROTOCOL-ENFORCEMENT.conf"] [line "712"] [id "920350"] [rev ""] [msg "Host header is a numeric IP address"] [data "13.234.29.148:8443"] [severity "4"] [ver "OWASP_CRS/4.16.0-dev"] [maturity "0"] [accuracy "0"] [tag "application-multi"] [tag "language-multi"] [tag "platform-multi"] [tag "attack-protocol"] [tag "paranoia-level/1"] [tag "OWASP_CRS"] [tag "OWASP_CRS/PROTOCOL-ENFORCEMENT"] [tag "capec/1000/210/272"] [tag "PCI/6.5.10"] [hostname "172.19.0.2"] [uri "/"] [unique_id "175005753018.981812"] [ref "o0,18o0,13o13,5v21,18"]
+
+---7ILerWwr---I--
+
+---7ILerWwr---J--
+
+---7ILerWwr---Z--
+
+---NbD6c6Q6---A--
+[16/Jun/2025:07:05:32 +0000] 175005753282.159031 54.242.155.61 13138 172.19.0.2 443
+---NbD6c6Q6---B--
+GET / HTTP/1.1
+Host: 13.234.29.148:8443
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Safari/537.36
+Accept: */*
+Accept-Encoding: gzip
+
+---NbD6c6Q6---D--
+
+---NbD6c6Q6---E--
+<!DOCTYPE html>\x0a<html>\x0a<head>\x0a<title>Welcome to nginx!</title>\x0a<style>\x0ahtml { color-scheme: light dark; }\x0abody { width: 35em; margin: 0 auto;\x0afont-family: Tahoma, Verdana, Arial, sans-serif; }\x0a</style>\x0a</head>\x0a<body>\x0a<h1>Welcome to nginx!</h1>\x0a<p>If you see this page, the nginx web server is successfully installed and\x0aworking. Further configuration is required.</p>\x0a\x0a<p>For online documentation and support please refer to\x0a<a href="http://nginx.org/">nginx.org</a>.<br/>\x0aCommercial support is available at\x0a<a href="http://nginx.com/">nginx.com</a>.</p>\x0a\x0a<p><em>Thank you for using nginx.</em></p>\x0a</body>\x0a</html>\x0a
+
+---NbD6c6Q6---F--
+HTTP/1.1 200
+Referrer-Policy: strict-origin-when-cross-origin
+X-Frame-Options: SAMEORIGIN
+ETag: "684fb233-267"
+Last-Modified: Mon, 16 Jun 2025 05:57:07 GMT
+X-XSS-Protection: 1; mode=block
+Connection: keep-alive
+X-Content-Type-Options: nosniff
+Content-Type: text/html
+Content-Length: 615
+Date: Mon, 16 Jun 2025 07:05:32 GMT
+Server: nginx
+Permissions-Policy: geolocation=(), microphone=()
+
+---NbD6c6Q6---H--
+ModSecurity: Warning. Matched "Operator `Rx' with parameter `(?:^([\d.]+|\[[\da-f:]+\]|[\da-f:]+)(:[\d]+)?$)' against variable `REQUEST_HEADERS:Host' (Value: `13.234.29.148:8443' ) [file "/usr/local/nginx/conf/modsec/crs/rules/REQUEST-920-PROTOCOL-ENFORCEMENT.conf"] [line "712"] [id "920350"] [rev ""] [msg "Host header is a numeric IP address"] [data "13.234.29.148:8443"] [severity "4"] [ver "OWASP_CRS/4.16.0-dev"] [maturity "0"] [accuracy "0"] [tag "application-multi"] [tag "language-multi"] [tag "platform-multi"] [tag "attack-protocol"] [tag "paranoia-level/1"] [tag "OWASP_CRS"] [tag "OWASP_CRS/PROTOCOL-ENFORCEMENT"] [tag "capec/1000/210/272"] [tag "PCI/6.5.10"] [hostname "172.19.0.2"] [uri "/"] [unique_id "175005753282.159031"] [ref "o0,18o0,13o13,5v21,18"]
+
+---NbD6c6Q6---I--
+
+---NbD6c6Q6---J--
+
+---NbD6c6Q6---Z--
+
+---mVTXJ4su---A--
+[16/Jun/2025:07:06:27 +0000] 175005758725.484606 103.250.147.78 60897 172.19.0.2 443
+---mVTXJ4su---B--
+GET / HTTP/1.1
+Sec-Fetch-User: ?1
+Sec-Fetch-Site: none
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:139.0) Gecko/20100101 Firefox/139.0
+Upgrade-Insecure-Requests: 1
+If-None-Match: "684fb233-267"
+Connection: keep-alive
+Sec-Fetch-Mode: navigate
+Accept-Encoding: gzip, deflate, br, zstd
+Accept-Language: en-US,en;q=0.5
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+Sec-Fetch-Dest: document
+Host: 13.234.29.148:8443
+If-Modified-Since: Mon, 16 Jun 2025 05:57:07 GMT
+Priority: u=0, i
+
+---mVTXJ4su---D--
+
+---mVTXJ4su---F--
+HTTP/1.1 304
+Server: nginx
+Date: Mon, 16 Jun 2025 07:06:27 GMT
+Last-Modified: Mon, 16 Jun 2025 05:57:07 GMT
+Connection: keep-alive
+X-XSS-Protection: 1; mode=block
+ETag: "684fb233-267"
+Permissions-Policy: geolocation=(), microphone=()
+X-Content-Type-Options: nosniff
+X-Frame-Options: SAMEORIGIN
+Referrer-Policy: strict-origin-when-cross-origin
+
+---mVTXJ4su---H--
+ModSecurity: Warning. Matched "Operator `Rx' with parameter `(?:^([\d.]+|\[[\da-f:]+\]|[\da-f:]+)(:[\d]+)?$)' against variable `REQUEST_HEADERS:Host' (Value: `13.234.29.148:8443' ) [file "/usr/local/nginx/conf/modsec/crs/rules/REQUEST-920-PROTOCOL-ENFORCEMENT.conf"] [line "712"] [id "920350"] [rev ""] [msg "Host header is a numeric IP address"] [data "13.234.29.148:8443"] [severity "4"] [ver "OWASP_CRS/4.16.0-dev"] [maturity "0"] [accuracy "0"] [tag "application-multi"] [tag "language-multi"] [tag "platform-multi"] [tag "attack-protocol"] [tag "paranoia-level/1"] [tag "OWASP_CRS"] [tag "OWASP_CRS/PROTOCOL-ENFORCEMENT"] [tag "capec/1000/210/272"] [tag "PCI/6.5.10"] [hostname "172.19.0.2"] [uri "/"] [unique_id "175005758725.484606"] [ref "o0,18o0,13o13,5v21,18"]
+
+---mVTXJ4su---I--
+
+---mVTXJ4su---J--
+
+---mVTXJ4su---Z--
+
+---mVTXJ4su---A--
+[16/Jun/2025:07:08:00 +0000] 175005768064.581437 103.250.147.78 60905 172.19.0.2 443
+---mVTXJ4su---B--
+GET /? HTTP/1.1
+Sec-Fetch-User: ?1
+Sec-Fetch-Site: none
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:139.0) Gecko/20100101 Firefox/139.0
+Upgrade-Insecure-Requests: 1
+Connection: keep-alive
+Sec-Fetch-Mode: navigate
+Accept-Encoding: gzip, deflate, br, zstd
+Accept-Language: en-US,en;q=0.5
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+Sec-Fetch-Dest: document
+Host: 13.234.29.148:8443
+Priority: u=0, i
+
+---mVTXJ4su---D--
+
+---mVTXJ4su---E--
+<!DOCTYPE html>\x0a<html>\x0a<head>\x0a<title>Welcome to nginx!</title>\x0a<style>\x0ahtml { color-scheme: light dark; }\x0abody { width: 35em; margin: 0 auto;\x0afont-family: Tahoma, Verdana, Arial, sans-serif; }\x0a</style>\x0a</head>\x0a<body>\x0a<h1>Welcome to nginx!</h1>\x0a<p>If you see this page, the nginx web server is successfully installed and\x0aworking. Further configuration is required.</p>\x0a\x0a<p>For online documentation and support please refer to\x0a<a href="http://nginx.org/">nginx.org</a>.<br/>\x0aCommercial support is available at\x0a<a href="http://nginx.com/">nginx.com</a>.</p>\x0a\x0a<p><em>Thank you for using nginx.</em></p>\x0a</body>\x0a</html>\x0a
+
+---mVTXJ4su---F--
+HTTP/1.1 200
+Referrer-Policy: strict-origin-when-cross-origin
+X-Frame-Options: SAMEORIGIN
+ETag: "684fb233-267"
+Last-Modified: Mon, 16 Jun 2025 05:57:07 GMT
+X-XSS-Protection: 1; mode=block
+Connection: keep-alive
+X-Content-Type-Options: nosniff
+Content-Type: text/html
+Content-Length: 615
+Date: Mon, 16 Jun 2025 07:08:00 GMT
+Server: nginx
+Permissions-Policy: geolocation=(), microphone=()
+
+---mVTXJ4su---H--
+ModSecurity: Warning. Matched "Operator `Rx' with parameter `(?:^([\d.]+|\[[\da-f:]+\]|[\da-f:]+)(:[\d]+)?$)' against variable `REQUEST_HEADERS:Host' (Value: `13.234.29.148:8443' ) [file "/usr/local/nginx/conf/modsec/crs/rules/REQUEST-920-PROTOCOL-ENFORCEMENT.conf"] [line "712"] [id "920350"] [rev ""] [msg "Host header is a numeric IP address"] [data "13.234.29.148:8443"] [severity "4"] [ver "OWASP_CRS/4.16.0-dev"] [maturity "0"] [accuracy "0"] [tag "application-multi"] [tag "language-multi"] [tag "platform-multi"] [tag "attack-protocol"] [tag "paranoia-level/1"] [tag "OWASP_CRS"] [tag "OWASP_CRS/PROTOCOL-ENFORCEMENT"] [tag "capec/1000/210/272"] [tag "PCI/6.5.10"] [hostname "172.19.0.2"] [uri "/"] [unique_id "175005768064.581437"] [ref "o0,18o0,13o13,5v22,18"]
+
+---mVTXJ4su---I--
+
+---mVTXJ4su---J--
+
+---mVTXJ4su---Z--
+
+---oLSvWVQJ---A--
+[16/Jun/2025:07:08:36 +0000] 175005771696.400463 103.250.147.78 60905 172.19.0.2 443
+---oLSvWVQJ---B--
+GET /?q=select+*+from+users HTTP/1.1
+Sec-Fetch-User: ?1
+Sec-Fetch-Site: none
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:139.0) Gecko/20100101 Firefox/139.0
+Upgrade-Insecure-Requests: 1
+Connection: keep-alive
+Sec-Fetch-Mode: navigate
+Accept-Encoding: gzip, deflate, br, zstd
+Accept-Language: en-US,en;q=0.5
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+Sec-Fetch-Dest: document
+Host: 13.234.29.148:8443
+Priority: u=0, i
+
+---oLSvWVQJ---D--
+
+---oLSvWVQJ---E--
+<html>\x0d\x0a<head><title>403 Forbidden</title></head>\x0d\x0a<body>\x0d\x0a<center><h1>403 Forbidden</h1></center>\x0d\x0a<hr><center>nginx</center>\x0d\x0a</body>\x0d\x0a</html>\x0d\x0a
+
+---oLSvWVQJ---F--
+HTTP/1.1 403
+Server: nginx
+Date: Mon, 16 Jun 2025 07:08:36 GMT
+Content-Length: 146
+Content-Type: text/html
+X-Content-Type-Options: nosniff
+Connection: keep-alive
+X-XSS-Protection: 1; mode=block
+X-Frame-Options: SAMEORIGIN
+Referrer-Policy: strict-origin-when-cross-origin
+Permissions-Policy: geolocation=(), microphone=()
+
+---oLSvWVQJ---H--
+ModSecurity: Warning. Matched "Operator `Rx' with parameter `(?:^([\d.]+|\[[\da-f:]+\]|[\da-f:]+)(:[\d]+)?$)' against variable `REQUEST_HEADERS:Host' (Value: `13.234.29.148:8443' ) [file "/usr/local/nginx/conf/modsec/crs/rules/REQUEST-920-PROTOCOL-ENFORCEMENT.conf"] [line "712"] [id "920350"] [rev ""] [msg "Host header is a numeric IP address"] [data "13.234.29.148:8443"] [severity "4"] [ver "OWASP_CRS/4.16.0-dev"] [maturity "0"] [accuracy "0"] [tag "application-multi"] [tag "language-multi"] [tag "platform-multi"] [tag "attack-protocol"] [tag "paranoia-level/1"] [tag "OWASP_CRS"] [tag "OWASP_CRS/PROTOCOL-ENFORCEMENT"] [tag "capec/1000/210/272"] [tag "PCI/6.5.10"] [hostname "172.19.0.2"] [uri "/"] [unique_id "175005771696.400463"] [ref "o0,18o0,13o13,5v43,18"]
+ModSecurity: Access denied with code 403 (phase 2). Matched "Operator `Rx' with parameter `(?i)(union(.*?)select|select.+from)' against variable `ARGS:q' (Value: `select * from users' ) [file "/usr/local/nginx/conf/modsec/custom-rules.conf"] [line "10"] [id "10003"] [rev ""] [msg "SQLi pattern blocked"] [data ""] [severity "0"] [ver ""] [maturity "0"] [accuracy "0"] [hostname "172.19.0.2"] [uri "/"] [unique_id "175005771696.400463"] [ref "o0,13o0,13v8,19"]
+
+---oLSvWVQJ---I--
+
+---oLSvWVQJ---J--
+
+---oLSvWVQJ---Z--
+
+---mVTXJ4su---A--
+[16/Jun/2025:07:19:16 +0000] 175005835698.734447 195.184.76.110 50065 172.19.0.2 443
+---mVTXJ4su---B--
+GET /favicon.ico HTTP/1.1
+Host: 13.234.29.148:8443
+Connection: close
+User-Agent: Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:134.0) Gecko/20100101 Firefox/134.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+Accept-Language: en-US,en;q=0.5
+
+---mVTXJ4su---D--
+
+---mVTXJ4su---E--
+<html>\x0d\x0a<head><title>404 Not Found</title></head>\x0d\x0a<body>\x0d\x0a<center><h1>404 Not Found</h1></center>\x0d\x0a<hr><center>nginx</center>\x0d\x0a</body>\x0d\x0a</html>\x0d\x0a
+
+---mVTXJ4su---F--
+HTTP/1.1 404
+Server: nginx
+Date: Mon, 16 Jun 2025 07:19:16 GMT
+Content-Length: 146
+Content-Type: text/html
+X-Content-Type-Options: nosniff
+Connection: close
+X-XSS-Protection: 1; mode=block
+X-Frame-Options: SAMEORIGIN
+Referrer-Policy: strict-origin-when-cross-origin
+Permissions-Policy: geolocation=(), microphone=()
+
+---mVTXJ4su---H--
+ModSecurity: Warning. Matched "Operator `Rx' with parameter `(?:^([\d.]+|\[[\da-f:]+\]|[\da-f:]+)(:[\d]+)?$)' against variable `REQUEST_HEADERS:Host' (Value: `13.234.29.148:8443' ) [file "/usr/local/nginx/conf/modsec/crs/rules/REQUEST-920-PROTOCOL-ENFORCEMENT.conf"] [line "712"] [id "920350"] [rev ""] [msg "Host header is a numeric IP address"] [data "13.234.29.148:8443"] [severity "4"] [ver "OWASP_CRS/4.16.0-dev"] [maturity "0"] [accuracy "0"] [tag "application-multi"] [tag "language-multi"] [tag "platform-multi"] [tag "attack-protocol"] [tag "paranoia-level/1"] [tag "OWASP_CRS"] [tag "OWASP_CRS/PROTOCOL-ENFORCEMENT"] [tag "capec/1000/210/272"] [tag "PCI/6.5.10"] [hostname "172.19.0.2"] [uri "/favicon.ico"] [unique_id "175005835698.734447"] [ref "o0,18o0,13o13,5v32,18"]
+
+---mVTXJ4su---I--
+
+---mVTXJ4su---J--
+
+---mVTXJ4su---Z--
+
+---mVTXJ4su---A--
+[16/Jun/2025:07:38:23 +0000] 175005950363.966255 103.250.147.78 61052 172.19.0.2 443
+---mVTXJ4su---B--
+GET /?q=select+*+from+users HTTP/1.1
+Sec-Fetch-User: ?1
+Sec-Fetch-Site: none
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:139.0) Gecko/20100101 Firefox/139.0
+Upgrade-Insecure-Requests: 1
+Connection: keep-alive
+Sec-Fetch-Mode: navigate
+Accept-Encoding: gzip, deflate, br, zstd
+Accept-Language: en-US,en;q=0.5
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+Sec-Fetch-Dest: document
+Host: 13.234.29.148:8443
+Priority: u=0, i
+
+---mVTXJ4su---D--
+
+---mVTXJ4su---E--
+<html>\x0d\x0a<head><title>403 Forbidden</title></head>\x0d\x0a<body>\x0d\x0a<center><h1>403 Forbidden</h1></center>\x0d\x0a<hr><center>nginx</center>\x0d\x0a</body>\x0d\x0a</html>\x0d\x0a
+
+---mVTXJ4su---F--
+HTTP/1.1 403
+Server: nginx
+Date: Mon, 16 Jun 2025 07:38:23 GMT
+Content-Length: 146
+Content-Type: text/html
+X-Content-Type-Options: nosniff
+Connection: keep-alive
+X-XSS-Protection: 1; mode=block
+X-Frame-Options: SAMEORIGIN
+Referrer-Policy: strict-origin-when-cross-origin
+Permissions-Policy: geolocation=(), microphone=()
+
+---mVTXJ4su---H--
+ModSecurity: Warning. Matched "Operator `Rx' with parameter `(?:^([\d.]+|\[[\da-f:]+\]|[\da-f:]+)(:[\d]+)?$)' against variable `REQUEST_HEADERS:Host' (Value: `13.234.29.148:8443' ) [file "/usr/local/nginx/conf/modsec/crs/rules/REQUEST-920-PROTOCOL-ENFORCEMENT.conf"] [line "712"] [id "920350"] [rev ""] [msg "Host header is a numeric IP address"] [data "13.234.29.148:8443"] [severity "4"] [ver "OWASP_CRS/4.16.0-dev"] [maturity "0"] [accuracy "0"] [tag "application-multi"] [tag "language-multi"] [tag "platform-multi"] [tag "attack-protocol"] [tag "paranoia-level/1"] [tag "OWASP_CRS"] [tag "OWASP_CRS/PROTOCOL-ENFORCEMENT"] [tag "capec/1000/210/272"] [tag "PCI/6.5.10"] [hostname "172.19.0.2"] [uri "/"] [unique_id "175005950363.966255"] [ref "o0,18o0,13o13,5v43,18"]
+ModSecurity: Access denied with code 403 (phase 2). Matched "Operator `Rx' with parameter `(?i)(union(.*?)select|select.+from)' against variable `ARGS:q' (Value: `select * from users' ) [file "/usr/local/nginx/conf/modsec/custom-rules.conf"] [line "10"] [id "10003"] [rev ""] [msg "SQLi pattern blocked"] [data ""] [severity "0"] [ver ""] [maturity "0"] [accuracy "0"] [hostname "172.19.0.2"] [uri "/"] [unique_id "175005950363.966255"] [ref "o0,13o0,13v8,19"]
+
+---mVTXJ4su---I--
+
+---mVTXJ4su---J--
+
+---mVTXJ4su---Z--
+
+---oLSvWVQJ---A--
+[16/Jun/2025:07:38:23 +0000] 175005950336.171960 103.250.147.78 61052 172.19.0.2 443
+---oLSvWVQJ---B--
+GET /favicon.ico HTTP/1.1
+Host: 13.234.29.148:8443
+Sec-Fetch-Dest: image
+Sec-Fetch-Mode: no-cors
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:139.0) Gecko/20100101 Firefox/139.0
+Priority: u=6
+Accept: image/avif,image/webp,image/png,image/svg+xml,image/*;q=0.8,*/*;q=0.5
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate, br, zstd
+Referer: https://13.234.29.148:8443/?q=select+*+from+users
+Connection: keep-alive
+Sec-Fetch-Site: same-origin
+
+---oLSvWVQJ---D--
+
+---oLSvWVQJ---E--
+<html>\x0d\x0a<head><title>404 Not Found</title></head>\x0d\x0a<body>\x0d\x0a<center><h1>404 Not Found</h1></center>\x0d\x0a<hr><center>nginx</center>\x0d\x0a</body>\x0d\x0a</html>\x0d\x0a
+
+---oLSvWVQJ---F--
+HTTP/1.1 404
+Server: nginx
+Date: Mon, 16 Jun 2025 07:38:23 GMT
+Content-Length: 146
+Content-Type: text/html
+X-Content-Type-Options: nosniff
+Connection: keep-alive
+X-XSS-Protection: 1; mode=block
+X-Frame-Options: SAMEORIGIN
+Referrer-Policy: strict-origin-when-cross-origin
+Permissions-Policy: geolocation=(), microphone=()
+
+---oLSvWVQJ---H--
+ModSecurity: Warning. Matched "Operator `Rx' with parameter `(?:^([\d.]+|\[[\da-f:]+\]|[\da-f:]+)(:[\d]+)?$)' against variable `REQUEST_HEADERS:Host' (Value: `13.234.29.148:8443' ) [file "/usr/local/nginx/conf/modsec/crs/rules/REQUEST-920-PROTOCOL-ENFORCEMENT.conf"] [line "712"] [id "920350"] [rev ""] [msg "Host header is a numeric IP address"] [data "13.234.29.148:8443"] [severity "4"] [ver "OWASP_CRS/4.16.0-dev"] [maturity "0"] [accuracy "0"] [tag "application-multi"] [tag "language-multi"] [tag "platform-multi"] [tag "attack-protocol"] [tag "paranoia-level/1"] [tag "OWASP_CRS"] [tag "OWASP_CRS/PROTOCOL-ENFORCEMENT"] [tag "capec/1000/210/272"] [tag "PCI/6.5.10"] [hostname "172.19.0.2"] [uri "/favicon.ico"] [unique_id "175005950336.171960"] [ref "o0,18o0,13o13,5v32,18"]
+
+---oLSvWVQJ---I--
+
+---oLSvWVQJ---J--
+
+---oLSvWVQJ---Z--
+
+---k66rYemC---A--
+[16/Jun/2025:08:13:30 +0000] 175006161076.395399 103.250.147.78 61243 172.19.0.3 443
+---k66rYemC---B--
+GET / HTTP/1.1
+Sec-Fetch-User: ?1
+Sec-Fetch-Site: none
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:139.0) Gecko/20100101 Firefox/139.0
+Upgrade-Insecure-Requests: 1
+If-None-Match: "684fb233-267"
+Connection: keep-alive
+Sec-Fetch-Mode: navigate
+Accept-Encoding: gzip, deflate, br, zstd
+Accept-Language: en-US,en;q=0.5
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+Sec-Fetch-Dest: document
+Host: 13.234.29.148:8443
+If-Modified-Since: Mon, 16 Jun 2025 05:57:07 GMT
+Priority: u=0, i
+
+---k66rYemC---D--
+
+---k66rYemC---F--
+HTTP/1.1 304
+Server: nginx
+Date: Mon, 16 Jun 2025 08:13:30 GMT
+Last-Modified: Mon, 16 Jun 2025 05:57:07 GMT
+Connection: keep-alive
+X-XSS-Protection: 1; mode=block
+ETag: "684fb233-267"
+Permissions-Policy: geolocation=(), microphone=()
+X-Content-Type-Options: nosniff
+X-Frame-Options: SAMEORIGIN
+Referrer-Policy: strict-origin-when-cross-origin
+
+---k66rYemC---H--
+ModSecurity: Warning. Matched "Operator `Rx' with parameter `(?:^([\d.]+|\[[\da-f:]+\]|[\da-f:]+)(:[\d]+)?$)' against variable `REQUEST_HEADERS:Host' (Value: `13.234.29.148:8443' ) [file "/usr/local/nginx/conf/modsec/crs/rules/REQUEST-920-PROTOCOL-ENFORCEMENT.conf"] [line "712"] [id "920350"] [rev ""] [msg "Host header is a numeric IP address"] [data "13.234.29.148:8443"] [severity "4"] [ver "OWASP_CRS/4.16.0-dev"] [maturity "0"] [accuracy "0"] [tag "application-multi"] [tag "language-multi"] [tag "platform-multi"] [tag "attack-protocol"] [tag "paranoia-level/1"] [tag "OWASP_CRS"] [tag "OWASP_CRS/PROTOCOL-ENFORCEMENT"] [tag "capec/1000/210/272"] [tag "PCI/6.5.10"] [hostname "172.19.0.3"] [uri "/"] [unique_id "175006161076.395399"] [ref "o0,18o0,13o13,5v21,18"]
+
+---k66rYemC---I--
+
+---k66rYemC---J--
+
+---k66rYemC---Z--
+
+---QXk20x69---A--
+[16/Jun/2025:08:16:31 +0000] 17500617910.704362 103.250.147.78 61255 172.19.0.3 443
+---QXk20x69---B--
+GET / HTTP/1.1
+Sec-Fetch-User: ?1
+Sec-Fetch-Site: none
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:139.0) Gecko/20100101 Firefox/139.0
+Upgrade-Insecure-Requests: 1
+Connection: keep-alive
+Sec-Fetch-Mode: navigate
+Accept-Encoding: gzip, deflate, br, zstd
+Accept-Language: en-US,en;q=0.5
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+Sec-Fetch-Dest: document
+Host: 13.234.29.148:8443
+Priority: u=0, i
+
+---QXk20x69---D--
+
+---QXk20x69---E--
+Hello from Node app!
+
+---QXk20x69---F--
+HTTP/1.1 200
+Referrer-Policy: strict-origin-when-cross-origin
+X-Frame-Options: SAMEORIGIN
+ETag: W/"14-xrFyu1/zI7D6Ig0zrxUGsRvZ+Ng"
+X-Powered-By: Express
+Connection: keep-alive
+X-XSS-Protection: 1; mode=block
+X-Content-Type-Options: nosniff
+Content-Type: text/html; charset=utf-8
+Content-Length: 20
+Date: Mon, 16 Jun 2025 08:16:31 GMT
+Server: nginx
+Permissions-Policy: geolocation=(), microphone=()
+
+---QXk20x69---H--
+ModSecurity: Warning. Matched "Operator `Rx' with parameter `(?:^([\d.]+|\[[\da-f:]+\]|[\da-f:]+)(:[\d]+)?$)' against variable `REQUEST_HEADERS:Host' (Value: `13.234.29.148:8443' ) [file "/usr/local/nginx/conf/modsec/crs/rules/REQUEST-920-PROTOCOL-ENFORCEMENT.conf"] [line "712"] [id "920350"] [rev ""] [msg "Host header is a numeric IP address"] [data "13.234.29.148:8443"] [severity "4"] [ver "OWASP_CRS/4.16.0-dev"] [maturity "0"] [accuracy "0"] [tag "application-multi"] [tag "language-multi"] [tag "platform-multi"] [tag "attack-protocol"] [tag "paranoia-level/1"] [tag "OWASP_CRS"] [tag "OWASP_CRS/PROTOCOL-ENFORCEMENT"] [tag "capec/1000/210/272"] [tag "PCI/6.5.10"] [hostname "172.19.0.3"] [uri "/"] [unique_id "17500617910.704362"] [ref "o0,18o0,13o13,5v21,18"]
+
+---QXk20x69---I--
+
+---QXk20x69---J--
+
+---QXk20x69---Z--
+
+---fUYsnVzE---A--
+[16/Jun/2025:08:16:31 +0000] 175006179119.060509 103.250.147.78 61255 172.19.0.3 443
+---fUYsnVzE---B--
+GET /favicon.ico HTTP/1.1
+Host: 13.234.29.148:8443
+Sec-Fetch-Dest: image
+Sec-Fetch-Mode: no-cors
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:139.0) Gecko/20100101 Firefox/139.0
+Priority: u=6
+Accept: image/avif,image/webp,image/png,image/svg+xml,image/*;q=0.8,*/*;q=0.5
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate, br, zstd
+Referer: https://13.234.29.148:8443/
+Connection: keep-alive
+Sec-Fetch-Site: same-origin
+
+---fUYsnVzE---D--
+
+---fUYsnVzE---F--
+HTTP/1.1 200
+
+---fUYsnVzE---H--
+ModSecurity: Warning. Matched "Operator `Rx' with parameter `(?:^([\d.]+|\[[\da-f:]+\]|[\da-f:]+)(:[\d]+)?$)' against variable `REQUEST_HEADERS:Host' (Value: `13.234.29.148:8443' ) [file "/usr/local/nginx/conf/modsec/crs/rules/REQUEST-920-PROTOCOL-ENFORCEMENT.conf"] [line "712"] [id "920350"] [rev ""] [msg "Host header is a numeric IP address"] [data "13.234.29.148:8443"] [severity "4"] [ver "OWASP_CRS/4.16.0-dev"] [maturity "0"] [accuracy "0"] [tag "application-multi"] [tag "language-multi"] [tag "platform-multi"] [tag "attack-protocol"] [tag "paranoia-level/1"] [tag "OWASP_CRS"] [tag "OWASP_CRS/PROTOCOL-ENFORCEMENT"] [tag "capec/1000/210/272"] [tag "PCI/6.5.10"] [hostname "172.19.0.3"] [uri "/favicon.ico"] [unique_id "175006179119.060509"] [ref "o0,18o0,13o13,5v32,18"]
+
+---fUYsnVzE---I--
+
+---fUYsnVzE---J--
+
+---fUYsnVzE---Z--
+
+---QXk20x69---A--
+[16/Jun/2025:08:16:33 +0000] 175006179335.751150 103.250.147.78 61256 172.19.0.3 443
+---QXk20x69---B--
+GET / HTTP/1.1
+Sec-Fetch-User: ?1
+Sec-Fetch-Site: none
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:139.0) Gecko/20100101 Firefox/139.0
+Upgrade-Insecure-Requests: 1
+If-None-Match: W/"14-xrFyu1/zI7D6Ig0zrxUGsRvZ+Ng"
+Connection: keep-alive
+Sec-Fetch-Mode: navigate
+Accept-Encoding: gzip, deflate, br, zstd
+Accept-Language: en-US,en;q=0.5
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+Sec-Fetch-Dest: document
+Host: 13.234.29.148:8443
+Priority: u=0, i
+
+---QXk20x69---D--
+
+---QXk20x69---F--
+HTTP/1.1 304
+Server: nginx
+Date: Mon, 16 Jun 2025 08:16:33 GMT
+Connection: keep-alive
+X-XSS-Protection: 1; mode=block
+X-Powered-By: Express
+ETag: W/"14-xrFyu1/zI7D6Ig0zrxUGsRvZ+Ng"
+Permissions-Policy: geolocation=(), microphone=()
+X-Content-Type-Options: nosniff
+X-Frame-Options: SAMEORIGIN
+Referrer-Policy: strict-origin-when-cross-origin
+
+---QXk20x69---H--
+ModSecurity: Warning. Matched "Operator `Rx' with parameter `(?:^([\d.]+|\[[\da-f:]+\]|[\da-f:]+)(:[\d]+)?$)' against variable `REQUEST_HEADERS:Host' (Value: `13.234.29.148:8443' ) [file "/usr/local/nginx/conf/modsec/crs/rules/REQUEST-920-PROTOCOL-ENFORCEMENT.conf"] [line "712"] [id "920350"] [rev ""] [msg "Host header is a numeric IP address"] [data "13.234.29.148:8443"] [severity "4"] [ver "OWASP_CRS/4.16.0-dev"] [maturity "0"] [accuracy "0"] [tag "application-multi"] [tag "language-multi"] [tag "platform-multi"] [tag "attack-protocol"] [tag "paranoia-level/1"] [tag "OWASP_CRS"] [tag "OWASP_CRS/PROTOCOL-ENFORCEMENT"] [tag "capec/1000/210/272"] [tag "PCI/6.5.10"] [hostname "172.19.0.3"] [uri "/"] [unique_id "175006179335.751150"] [ref "o0,18o0,13o13,5v21,18"]
+
+---QXk20x69---I--
+
+---QXk20x69---J--
+
+---QXk20x69---Z--
+
+---fUYsnVzE---A--
+[16/Jun/2025:08:16:46 +0000] 175006180685.730669 103.250.147.78 61256 172.19.0.3 443
+---fUYsnVzE---B--
+GET /?testparam=test HTTP/1.1
+Sec-Fetch-User: ?1
+Sec-Fetch-Site: none
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:139.0) Gecko/20100101 Firefox/139.0
+Upgrade-Insecure-Requests: 1
+Connection: keep-alive
+Sec-Fetch-Mode: navigate
+Accept-Encoding: gzip, deflate, br, zstd
+Accept-Language: en-US,en;q=0.5
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+Sec-Fetch-Dest: document
+Host: 13.234.29.148:8443
+Priority: u=0, i
+
+---fUYsnVzE---D--
+
+---fUYsnVzE---E--
+<html>\x0d\x0a<head><title>403 Forbidden</title></head>\x0d\x0a<body>\x0d\x0a<center><h1>403 Forbidden</h1></center>\x0d\x0a<hr><center>nginx</center>\x0d\x0a</body>\x0d\x0a</html>\x0d\x0a
+
+---fUYsnVzE---F--
+HTTP/1.1 403
+Server: nginx
+Date: Mon, 16 Jun 2025 08:16:46 GMT
+Content-Length: 146
+Content-Type: text/html
+X-Content-Type-Options: nosniff
+Connection: keep-alive
+X-XSS-Protection: 1; mode=block
+X-Frame-Options: SAMEORIGIN
+Referrer-Policy: strict-origin-when-cross-origin
+Permissions-Policy: geolocation=(), microphone=()
+
+---fUYsnVzE---H--
+ModSecurity: Warning. Matched "Operator `Rx' with parameter `(?:^([\d.]+|\[[\da-f:]+\]|[\da-f:]+)(:[\d]+)?$)' against variable `REQUEST_HEADERS:Host' (Value: `13.234.29.148:8443' ) [file "/usr/local/nginx/conf/modsec/crs/rules/REQUEST-920-PROTOCOL-ENFORCEMENT.conf"] [line "712"] [id "920350"] [rev ""] [msg "Host header is a numeric IP address"] [data "13.234.29.148:8443"] [severity "4"] [ver "OWASP_CRS/4.16.0-dev"] [maturity "0"] [accuracy "0"] [tag "application-multi"] [tag "language-multi"] [tag "platform-multi"] [tag "attack-protocol"] [tag "paranoia-level/1"] [tag "OWASP_CRS"] [tag "OWASP_CRS/PROTOCOL-ENFORCEMENT"] [tag "capec/1000/210/272"] [tag "PCI/6.5.10"] [hostname "172.19.0.3"] [uri "/"] [unique_id "175006180685.730669"] [ref "o0,18o0,13o13,5v36,18"]
+ModSecurity: Access denied with code 403 (phase 2). Matched "Operator `Contains' with parameter `test' against variable `ARGS:testparam' (Value: `test' ) [file "/usr/local/nginx/conf/modsec/modsecurity.conf"] [line "9"] [id "12345"] [rev ""] [msg "Test param blocked"] [data ""] [severity "0"] [ver ""] [maturity "0"] [accuracy "0"] [hostname "172.19.0.3"] [uri "/"] [unique_id "175006180685.730669"] [ref "o0,4v16,4"]
+
+---fUYsnVzE---I--
+
+---fUYsnVzE---J--
+
+---fUYsnVzE---Z--
+
+---XF97TaRT---A--
+[16/Jun/2025:08:16:48 +0000] 175006180836.554790 103.250.147.78 61256 172.19.0.3 443
+---XF97TaRT---B--
+GET /?testparam=test HTTP/1.1
+Sec-Fetch-User: ?1
+Sec-Fetch-Site: none
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:139.0) Gecko/20100101 Firefox/139.0
+Upgrade-Insecure-Requests: 1
+Connection: keep-alive
+Sec-Fetch-Mode: navigate
+Accept-Encoding: gzip, deflate, br, zstd
+Accept-Language: en-US,en;q=0.5
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+Sec-Fetch-Dest: document
+Host: 13.234.29.148:8443
+Priority: u=0, i
+
+---XF97TaRT---D--
+
+---XF97TaRT---E--
+<html>\x0d\x0a<head><title>403 Forbidden</title></head>\x0d\x0a<body>\x0d\x0a<center><h1>403 Forbidden</h1></center>\x0d\x0a<hr><center>nginx</center>\x0d\x0a</body>\x0d\x0a</html>\x0d\x0a
+
+---XF97TaRT---F--
+HTTP/1.1 403
+Server: nginx
+Date: Mon, 16 Jun 2025 08:16:48 GMT
+Content-Length: 146
+Content-Type: text/html
+X-Content-Type-Options: nosniff
+Connection: keep-alive
+X-XSS-Protection: 1; mode=block
+X-Frame-Options: SAMEORIGIN
+Referrer-Policy: strict-origin-when-cross-origin
+Permissions-Policy: geolocation=(), microphone=()
+
+---XF97TaRT---H--
+ModSecurity: Warning. Matched "Operator `Rx' with parameter `(?:^([\d.]+|\[[\da-f:]+\]|[\da-f:]+)(:[\d]+)?$)' against variable `REQUEST_HEADERS:Host' (Value: `13.234.29.148:8443' ) [file "/usr/local/nginx/conf/modsec/crs/rules/REQUEST-920-PROTOCOL-ENFORCEMENT.conf"] [line "712"] [id "920350"] [rev ""] [msg "Host header is a numeric IP address"] [data "13.234.29.148:8443"] [severity "4"] [ver "OWASP_CRS/4.16.0-dev"] [maturity "0"] [accuracy "0"] [tag "application-multi"] [tag "language-multi"] [tag "platform-multi"] [tag "attack-protocol"] [tag "paranoia-level/1"] [tag "OWASP_CRS"] [tag "OWASP_CRS/PROTOCOL-ENFORCEMENT"] [tag "capec/1000/210/272"] [tag "PCI/6.5.10"] [hostname "172.19.0.3"] [uri "/"] [unique_id "175006180836.554790"] [ref "o0,18o0,13o13,5v36,18"]
+ModSecurity: Access denied with code 403 (phase 2). Matched "Operator `Contains' with parameter `test' against variable `ARGS:testparam' (Value: `test' ) [file "/usr/local/nginx/conf/modsec/modsecurity.conf"] [line "9"] [id "12345"] [rev ""] [msg "Test param blocked"] [data ""] [severity "0"] [ver ""] [maturity "0"] [accuracy "0"] [hostname "172.19.0.3"] [uri "/"] [unique_id "175006180836.554790"] [ref "o0,4v16,4"]
+
+---XF97TaRT---I--
+
+---XF97TaRT---J--
+
+---XF97TaRT---Z--
+
+---jPAO39jZ---A--
+[16/Jun/2025:08:16:48 +0000] 175006180832.792278 103.250.147.78 61256 172.19.0.3 443
+---jPAO39jZ---B--
+GET /favicon.ico HTTP/1.1
+Host: 13.234.29.148:8443
+Sec-Fetch-Dest: image
+Sec-Fetch-Mode: no-cors
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:139.0) Gecko/20100101 Firefox/139.0
+Priority: u=6
+Accept: image/avif,image/webp,image/png,image/svg+xml,image/*;q=0.8,*/*;q=0.5
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate, br, zstd
+Referer: https://13.234.29.148:8443/?testparam=test
+Connection: keep-alive
+Sec-Fetch-Site: same-origin
+
+---jPAO39jZ---D--
+
+---jPAO39jZ---F--
+HTTP/1.1 200
+
+---jPAO39jZ---H--
+ModSecurity: Warning. Matched "Operator `Rx' with parameter `(?:^([\d.]+|\[[\da-f:]+\]|[\da-f:]+)(:[\d]+)?$)' against variable `REQUEST_HEADERS:Host' (Value: `13.234.29.148:8443' ) [file "/usr/local/nginx/conf/modsec/crs/rules/REQUEST-920-PROTOCOL-ENFORCEMENT.conf"] [line "712"] [id "920350"] [rev ""] [msg "Host header is a numeric IP address"] [data "13.234.29.148:8443"] [severity "4"] [ver "OWASP_CRS/4.16.0-dev"] [maturity "0"] [accuracy "0"] [tag "application-multi"] [tag "language-multi"] [tag "platform-multi"] [tag "attack-protocol"] [tag "paranoia-level/1"] [tag "OWASP_CRS"] [tag "OWASP_CRS/PROTOCOL-ENFORCEMENT"] [tag "capec/1000/210/272"] [tag "PCI/6.5.10"] [hostname "172.19.0.3"] [uri "/favicon.ico"] [unique_id "175006180832.792278"] [ref "o0,18o0,13o13,5v32,18"]
+
+---jPAO39jZ---I--
+
+---jPAO39jZ---J--
+
+---jPAO39jZ---Z--
+
+---QXk20x69---A--
+[16/Jun/2025:08:18:24 +0000] 17500619045.336015 103.250.147.78 61263 172.19.0.3 443
+---QXk20x69---B--
+GET / HTTP/1.1
+Sec-Fetch-User: ?1
+Sec-Fetch-Site: none
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:139.0) Gecko/20100101 Firefox/139.0
+Upgrade-Insecure-Requests: 1
+If-None-Match: W/"14-xrFyu1/zI7D6Ig0zrxUGsRvZ+Ng"
+Connection: keep-alive
+Sec-Fetch-Mode: navigate
+Accept-Encoding: gzip, deflate, br, zstd
+Accept-Language: en-US,en;q=0.5
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+Sec-Fetch-Dest: document
+Host: 13.234.29.148:8443
+Priority: u=0, i
+
+---QXk20x69---D--
+
+---QXk20x69---F--
+HTTP/1.1 304
+Server: nginx
+Date: Mon, 16 Jun 2025 08:18:24 GMT
+Connection: keep-alive
+X-XSS-Protection: 1; mode=block
+X-Powered-By: Express
+ETag: W/"14-xrFyu1/zI7D6Ig0zrxUGsRvZ+Ng"
+Permissions-Policy: geolocation=(), microphone=()
+X-Content-Type-Options: nosniff
+X-Frame-Options: SAMEORIGIN
+Referrer-Policy: strict-origin-when-cross-origin
+
+---QXk20x69---H--
+ModSecurity: Warning. Matched "Operator `Rx' with parameter `(?:^([\d.]+|\[[\da-f:]+\]|[\da-f:]+)(:[\d]+)?$)' against variable `REQUEST_HEADERS:Host' (Value: `13.234.29.148:8443' ) [file "/usr/local/nginx/conf/modsec/crs/rules/REQUEST-920-PROTOCOL-ENFORCEMENT.conf"] [line "712"] [id "920350"] [rev ""] [msg "Host header is a numeric IP address"] [data "13.234.29.148:8443"] [severity "4"] [ver "OWASP_CRS/4.16.0-dev"] [maturity "0"] [accuracy "0"] [tag "application-multi"] [tag "language-multi"] [tag "platform-multi"] [tag "attack-protocol"] [tag "paranoia-level/1"] [tag "OWASP_CRS"] [tag "OWASP_CRS/PROTOCOL-ENFORCEMENT"] [tag "capec/1000/210/272"] [tag "PCI/6.5.10"] [hostname "172.19.0.3"] [uri "/"] [unique_id "17500619045.336015"] [ref "o0,18o0,13o13,5v21,18"]
+
+---QXk20x69---I--
+
+---QXk20x69---J--
+
+---QXk20x69---Z--
+
+---fUYsnVzE---A--
+[16/Jun/2025:08:18:54 +0000] 175006193482.248188 103.250.147.78 61263 172.19.0.3 443
+---fUYsnVzE---B--
+GET /?testparam=test HTTP/1.1
+Sec-Fetch-User: ?1
+Sec-Fetch-Site: none
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:139.0) Gecko/20100101 Firefox/139.0
+Upgrade-Insecure-Requests: 1
+Connection: keep-alive
+Sec-Fetch-Mode: navigate
+Accept-Encoding: gzip, deflate, br, zstd
+Accept-Language: en-US,en;q=0.5
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+Sec-Fetch-Dest: document
+Host: 13.234.29.148:8443
+Priority: u=0, i
+
+---fUYsnVzE---D--
+
+---fUYsnVzE---E--
+<html>\x0d\x0a<head><title>403 Forbidden</title></head>\x0d\x0a<body>\x0d\x0a<center><h1>403 Forbidden</h1></center>\x0d\x0a<hr><center>nginx</center>\x0d\x0a</body>\x0d\x0a</html>\x0d\x0a
+
+---fUYsnVzE---F--
+HTTP/1.1 403
+Server: nginx
+Date: Mon, 16 Jun 2025 08:18:54 GMT
+Content-Length: 146
+Content-Type: text/html
+X-Content-Type-Options: nosniff
+Connection: keep-alive
+X-XSS-Protection: 1; mode=block
+X-Frame-Options: SAMEORIGIN
+Referrer-Policy: strict-origin-when-cross-origin
+Permissions-Policy: geolocation=(), microphone=()
+
+---fUYsnVzE---H--
+ModSecurity: Warning. Matched "Operator `Rx' with parameter `(?:^([\d.]+|\[[\da-f:]+\]|[\da-f:]+)(:[\d]+)?$)' against variable `REQUEST_HEADERS:Host' (Value: `13.234.29.148:8443' ) [file "/usr/local/nginx/conf/modsec/crs/rules/REQUEST-920-PROTOCOL-ENFORCEMENT.conf"] [line "712"] [id "920350"] [rev ""] [msg "Host header is a numeric IP address"] [data "13.234.29.148:8443"] [severity "4"] [ver "OWASP_CRS/4.16.0-dev"] [maturity "0"] [accuracy "0"] [tag "application-multi"] [tag "language-multi"] [tag "platform-multi"] [tag "attack-protocol"] [tag "paranoia-level/1"] [tag "OWASP_CRS"] [tag "OWASP_CRS/PROTOCOL-ENFORCEMENT"] [tag "capec/1000/210/272"] [tag "PCI/6.5.10"] [hostname "172.19.0.3"] [uri "/"] [unique_id "175006193482.248188"] [ref "o0,18o0,13o13,5v36,18"]
+ModSecurity: Access denied with code 403 (phase 2). Matched "Operator `Contains' with parameter `test' against variable `ARGS:testparam' (Value: `test' ) [file "/usr/local/nginx/conf/modsec/modsecurity.conf"] [line "9"] [id "12345"] [rev ""] [msg "Test param blocked"] [data ""] [severity "0"] [ver ""] [maturity "0"] [accuracy "0"] [hostname "172.19.0.3"] [uri "/"] [unique_id "175006193482.248188"] [ref "o0,4v16,4"]
+
+---fUYsnVzE---I--
+
+---fUYsnVzE---J--
+
+---fUYsnVzE---Z--
+
+---AKjDQbPC---A--
+[16/Jun/2025:09:20:40 +0000] 175006564052.605740 103.250.147.78 61563 172.18.0.3 443
+---AKjDQbPC---B--
+GET /?testparam=test HTTP/1.1
+Sec-Fetch-User: ?1
+Sec-Fetch-Site: none
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:139.0) Gecko/20100101 Firefox/139.0
+Upgrade-Insecure-Requests: 1
+Connection: keep-alive
+Sec-Fetch-Mode: navigate
+Accept-Encoding: gzip, deflate, br, zstd
+Accept-Language: en-US,en;q=0.5
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+Sec-Fetch-Dest: document
+Host: 13.234.29.148:8443
+Priority: u=0, i
+
+---AKjDQbPC---D--
+
+---AKjDQbPC---E--
+<html>\x0d\x0a<head><title>403 Forbidden</title></head>\x0d\x0a<body>\x0d\x0a<center><h1>403 Forbidden</h1></center>\x0d\x0a<hr><center>nginx</center>\x0d\x0a</body>\x0d\x0a</html>\x0d\x0a
+
+---AKjDQbPC---F--
+HTTP/1.1 403
+Server: nginx
+Date: Mon, 16 Jun 2025 09:20:40 GMT
+Content-Length: 146
+Content-Type: text/html
+X-Content-Type-Options: nosniff
+Connection: keep-alive
+X-XSS-Protection: 1; mode=block
+X-Frame-Options: SAMEORIGIN
+Referrer-Policy: strict-origin-when-cross-origin
+Permissions-Policy: geolocation=(), microphone=()
+
+---AKjDQbPC---H--
+ModSecurity: Warning. Matched "Operator `Rx' with parameter `(?:^([\d.]+|\[[\da-f:]+\]|[\da-f:]+)(:[\d]+)?$)' against variable `REQUEST_HEADERS:Host' (Value: `13.234.29.148:8443' ) [file "/usr/local/nginx/conf/modsec/crs/rules/REQUEST-920-PROTOCOL-ENFORCEMENT.conf"] [line "712"] [id "920350"] [rev ""] [msg "Host header is a numeric IP address"] [data "13.234.29.148:8443"] [severity "4"] [ver "OWASP_CRS/4.16.0-dev"] [maturity "0"] [accuracy "0"] [tag "application-multi"] [tag "language-multi"] [tag "platform-multi"] [tag "attack-protocol"] [tag "paranoia-level/1"] [tag "OWASP_CRS"] [tag "OWASP_CRS/PROTOCOL-ENFORCEMENT"] [tag "capec/1000/210/272"] [tag "PCI/6.5.10"] [hostname "172.18.0.3"] [uri "/"] [unique_id "175006564052.605740"] [ref "o0,18o0,13o13,5v36,18"]
+ModSecurity: Access denied with code 403 (phase 2). Matched "Operator `Contains' with parameter `test' against variable `ARGS:testparam' (Value: `test' ) [file "/usr/local/nginx/conf/modsec/modsecurity.conf"] [line "9"] [id "12345"] [rev ""] [msg "Test param blocked"] [data ""] [severity "0"] [ver ""] [maturity "0"] [accuracy "0"] [hostname "172.18.0.3"] [uri "/"] [unique_id "175006564052.605740"] [ref "o0,4v16,4"]
+
+---AKjDQbPC---I--
+
+---AKjDQbPC---J--
+
+---AKjDQbPC---Z--
+
+---RXCEiyo6---A--
+[16/Jun/2025:09:20:40 +0000] 175006564032.405538 103.250.147.78 61563 172.18.0.3 443
+---RXCEiyo6---B--
+GET /favicon.ico HTTP/1.1
+Host: 13.234.29.148:8443
+Sec-Fetch-Dest: image
+Sec-Fetch-Mode: no-cors
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:139.0) Gecko/20100101 Firefox/139.0
+Priority: u=6
+Accept: image/avif,image/webp,image/png,image/svg+xml,image/*;q=0.8,*/*;q=0.5
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate, br, zstd
+Referer: https://13.234.29.148:8443/?testparam=test
+Connection: keep-alive
+Sec-Fetch-Site: same-origin
+
+---RXCEiyo6---D--
+
+---RXCEiyo6---E--
+<html>\x0d\x0a<head><title>404 Not Found</title></head>\x0d\x0a<body>\x0d\x0a<center><h1>404 Not Found</h1></center>\x0d\x0a<hr><center>nginx</center>\x0d\x0a</body>\x0d\x0a</html>\x0d\x0a
+
+---RXCEiyo6---F--
+HTTP/1.1 404
+Server: nginx
+Date: Mon, 16 Jun 2025 09:20:40 GMT
+Content-Length: 146
+Content-Type: text/html
+X-Content-Type-Options: nosniff
+Connection: keep-alive
+X-XSS-Protection: 1; mode=block
+X-Frame-Options: SAMEORIGIN
+Referrer-Policy: strict-origin-when-cross-origin
+Permissions-Policy: geolocation=(), microphone=()
+
+---RXCEiyo6---H--
+ModSecurity: Warning. Matched "Operator `Rx' with parameter `(?:^([\d.]+|\[[\da-f:]+\]|[\da-f:]+)(:[\d]+)?$)' against variable `REQUEST_HEADERS:Host' (Value: `13.234.29.148:8443' ) [file "/usr/local/nginx/conf/modsec/crs/rules/REQUEST-920-PROTOCOL-ENFORCEMENT.conf"] [line "712"] [id "920350"] [rev ""] [msg "Host header is a numeric IP address"] [data "13.234.29.148:8443"] [severity "4"] [ver "OWASP_CRS/4.16.0-dev"] [maturity "0"] [accuracy "0"] [tag "application-multi"] [tag "language-multi"] [tag "platform-multi"] [tag "attack-protocol"] [tag "paranoia-level/1"] [tag "OWASP_CRS"] [tag "OWASP_CRS/PROTOCOL-ENFORCEMENT"] [tag "capec/1000/210/272"] [tag "PCI/6.5.10"] [hostname "172.18.0.3"] [uri "/favicon.ico"] [unique_id "175006564032.405538"] [ref "o0,18o0,13o13,5v32,18"]
+
+---RXCEiyo6---I--
+
+---RXCEiyo6---J--
+
+---RXCEiyo6---Z--
+
+---AKjDQbPC---A--
+[16/Jun/2025:09:20:43 +0000] 175006564373.676724 103.250.147.78 61564 172.18.0.3 443
+---AKjDQbPC---B--
+GET / HTTP/1.1
+Sec-Fetch-User: ?1
+Sec-Fetch-Site: none
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:139.0) Gecko/20100101 Firefox/139.0
+Upgrade-Insecure-Requests: 1
+Connection: keep-alive
+Sec-Fetch-Mode: navigate
+Accept-Encoding: gzip, deflate, br, zstd
+Accept-Language: en-US,en;q=0.5
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+Sec-Fetch-Dest: document
+Host: 13.234.29.148:8443
+Priority: u=0, i
+
+---AKjDQbPC---D--
+
+---AKjDQbPC---E--
+<!DOCTYPE html>\x0a<html>\x0a<head>\x0a<title>Welcome to nginx!</title>\x0a<style>\x0ahtml { color-scheme: light dark; }\x0abody { width: 35em; margin: 0 auto;\x0afont-family: Tahoma, Verdana, Arial, sans-serif; }\x0a</style>\x0a</head>\x0a<body>\x0a<h1>Welcome to nginx!</h1>\x0a<p>If you see this page, the nginx web server is successfully installed and\x0aworking. Further configuration is required.</p>\x0a\x0a<p>For online documentation and support please refer to\x0a<a href="http://nginx.org/">nginx.org</a>.<br/>\x0aCommercial support is available at\x0a<a href="http://nginx.com/">nginx.com</a>.</p>\x0a\x0a<p><em>Thank you for using nginx.</em></p>\x0a</body>\x0a</html>\x0a
+
+---AKjDQbPC---F--
+HTTP/1.1 200
+Referrer-Policy: strict-origin-when-cross-origin
+X-Frame-Options: SAMEORIGIN
+ETag: "684fe187-267"
+Last-Modified: Mon, 16 Jun 2025 09:19:03 GMT
+X-XSS-Protection: 1; mode=block
+Connection: keep-alive
+X-Content-Type-Options: nosniff
+Content-Type: text/html
+Content-Length: 615
+Date: Mon, 16 Jun 2025 09:20:43 GMT
+Server: nginx
+Permissions-Policy: geolocation=(), microphone=()
+
+---AKjDQbPC---H--
+ModSecurity: Warning. Matched "Operator `Rx' with parameter `(?:^([\d.]+|\[[\da-f:]+\]|[\da-f:]+)(:[\d]+)?$)' against variable `REQUEST_HEADERS:Host' (Value: `13.234.29.148:8443' ) [file "/usr/local/nginx/conf/modsec/crs/rules/REQUEST-920-PROTOCOL-ENFORCEMENT.conf"] [line "712"] [id "920350"] [rev ""] [msg "Host header is a numeric IP address"] [data "13.234.29.148:8443"] [severity "4"] [ver "OWASP_CRS/4.16.0-dev"] [maturity "0"] [accuracy "0"] [tag "application-multi"] [tag "language-multi"] [tag "platform-multi"] [tag "attack-protocol"] [tag "paranoia-level/1"] [tag "OWASP_CRS"] [tag "OWASP_CRS/PROTOCOL-ENFORCEMENT"] [tag "capec/1000/210/272"] [tag "PCI/6.5.10"] [hostname "172.18.0.3"] [uri "/"] [unique_id "175006564373.676724"] [ref "o0,18o0,13o13,5v21,18"]
+
+---AKjDQbPC---I--
+
+---AKjDQbPC---J--
+
+---AKjDQbPC---Z--
+
+---5x2Yyt1q---A--
+[16/Jun/2025:09:32:05 +0000] 175006632526.029717 103.250.147.78 61607 172.18.0.2 443
+---5x2Yyt1q---B--
+GET / HTTP/1.1
+Sec-Fetch-User: ?1
+Sec-Fetch-Site: none
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:139.0) Gecko/20100101 Firefox/139.0
+Upgrade-Insecure-Requests: 1
+If-None-Match: "684fe187-267"
+Connection: keep-alive
+Sec-Fetch-Mode: navigate
+Accept-Encoding: gzip, deflate, br, zstd
+Accept-Language: en-US,en;q=0.5
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+Sec-Fetch-Dest: document
+Host: 13.234.29.148:8443
+If-Modified-Since: Mon, 16 Jun 2025 09:19:03 GMT
+Priority: u=0, i
+
+---5x2Yyt1q---D--
+
+---5x2Yyt1q---E--
+<!DOCTYPE html>\x0a<html>\x0a<head>\x0a<title>Welcome to nginx!</title>\x0a<style>\x0ahtml { color-scheme: light dark; }\x0abody { width: 35em; margin: 0 auto;\x0afont-family: Tahoma, Verdana, Arial, sans-serif; }\x0a</style>\x0a</head>\x0a<body>\x0a<h1>Welcome to nginx!</h1>\x0a<p>If you see this page, the nginx web server is successfully installed and\x0aworking. Further configuration is required.</p>\x0a\x0a<p>For online documentation and support please refer to\x0a<a href="http://nginx.org/">nginx.org</a>.<br/>\x0aCommercial support is available at\x0a<a href="http://nginx.com/">nginx.com</a>.</p>\x0a\x0a<p><em>Thank you for using nginx.</em></p>\x0a</body>\x0a</html>\x0a
+
+---5x2Yyt1q---F--
+HTTP/1.1 200
+Referrer-Policy: strict-origin-when-cross-origin
+X-Frame-Options: SAMEORIGIN
+ETag: "684fe47f-267"
+Last-Modified: Mon, 16 Jun 2025 09:31:43 GMT
+X-XSS-Protection: 1; mode=block
+Connection: keep-alive
+X-Content-Type-Options: nosniff
+Content-Type: text/html
+Content-Length: 615
+Date: Mon, 16 Jun 2025 09:32:05 GMT
+Server: nginx
+Permissions-Policy: geolocation=(), microphone=()
+
+---5x2Yyt1q---H--
+ModSecurity: Warning. Matched "Operator `Rx' with parameter `(?:^([\d.]+|\[[\da-f:]+\]|[\da-f:]+)(:[\d]+)?$)' against variable `REQUEST_HEADERS:Host' (Value: `13.234.29.148:8443' ) [file "/usr/local/nginx/conf/modsec/crs/rules/REQUEST-920-PROTOCOL-ENFORCEMENT.conf"] [line "712"] [id "920350"] [rev ""] [msg "Host header is a numeric IP address"] [data "13.234.29.148:8443"] [severity "4"] [ver "OWASP_CRS/4.16.0-dev"] [maturity "0"] [accuracy "0"] [tag "application-multi"] [tag "language-multi"] [tag "platform-multi"] [tag "attack-protocol"] [tag "paranoia-level/1"] [tag "OWASP_CRS"] [tag "OWASP_CRS/PROTOCOL-ENFORCEMENT"] [tag "capec/1000/210/272"] [tag "PCI/6.5.10"] [hostname "172.18.0.2"] [uri "/"] [unique_id "175006632526.029717"] [ref "o0,18o0,13o13,5v21,18"]
+
+---5x2Yyt1q---I--
+
+---5x2Yyt1q---J--
+
+---5x2Yyt1q---Z--
+
+---V05faCtQ---A--
+[16/Jun/2025:09:32:18 +0000] 175006633890.249503 103.250.147.78 61607 172.18.0.2 443
+---V05faCtQ---B--
+GET /?testpatame=ueu HTTP/1.1
+Sec-Fetch-User: ?1
+Sec-Fetch-Site: none
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:139.0) Gecko/20100101 Firefox/139.0
+Upgrade-Insecure-Requests: 1
+Connection: keep-alive
+Sec-Fetch-Mode: navigate
+Accept-Encoding: gzip, deflate, br, zstd
+Accept-Language: en-US,en;q=0.5
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+Sec-Fetch-Dest: document
+Host: 13.234.29.148:8443
+Priority: u=0, i
+
+---V05faCtQ---D--
+
+---V05faCtQ---E--
+<!DOCTYPE html>\x0a<html>\x0a<head>\x0a<title>Welcome to nginx!</title>\x0a<style>\x0ahtml { color-scheme: light dark; }\x0abody { width: 35em; margin: 0 auto;\x0afont-family: Tahoma, Verdana, Arial, sans-serif; }\x0a</style>\x0a</head>\x0a<body>\x0a<h1>Welcome to nginx!</h1>\x0a<p>If you see this page, the nginx web server is successfully installed and\x0aworking. Further configuration is required.</p>\x0a\x0a<p>For online documentation and support please refer to\x0a<a href="http://nginx.org/">nginx.org</a>.<br/>\x0aCommercial support is available at\x0a<a href="http://nginx.com/">nginx.com</a>.</p>\x0a\x0a<p><em>Thank you for using nginx.</em></p>\x0a</body>\x0a</html>\x0a
+
+---V05faCtQ---F--
+HTTP/1.1 200
+Referrer-Policy: strict-origin-when-cross-origin
+X-Frame-Options: SAMEORIGIN
+ETag: "684fe47f-267"
+Last-Modified: Mon, 16 Jun 2025 09:31:43 GMT
+X-XSS-Protection: 1; mode=block
+Connection: keep-alive
+X-Content-Type-Options: nosniff
+Content-Type: text/html
+Content-Length: 615
+Date: Mon, 16 Jun 2025 09:32:18 GMT
+Server: nginx
+Permissions-Policy: geolocation=(), microphone=()
+
+---V05faCtQ---H--
+ModSecurity: Warning. Matched "Operator `Rx' with parameter `(?:^([\d.]+|\[[\da-f:]+\]|[\da-f:]+)(:[\d]+)?$)' against variable `REQUEST_HEADERS:Host' (Value: `13.234.29.148:8443' ) [file "/usr/local/nginx/conf/modsec/crs/rules/REQUEST-920-PROTOCOL-ENFORCEMENT.conf"] [line "712"] [id "920350"] [rev ""] [msg "Host header is a numeric IP address"] [data "13.234.29.148:8443"] [severity "4"] [ver "OWASP_CRS/4.16.0-dev"] [maturity "0"] [accuracy "0"] [tag "application-multi"] [tag "language-multi"] [tag "platform-multi"] [tag "attack-protocol"] [tag "paranoia-level/1"] [tag "OWASP_CRS"] [tag "OWASP_CRS/PROTOCOL-ENFORCEMENT"] [tag "capec/1000/210/272"] [tag "PCI/6.5.10"] [hostname "172.18.0.2"] [uri "/"] [unique_id "175006633890.249503"] [ref "o0,18o0,13o13,5v36,18"]
+
+---V05faCtQ---I--
+
+---V05faCtQ---J--
+
+---V05faCtQ---Z--
+
+---934L8GZM---A--
+[16/Jun/2025:09:32:22 +0000] 175006634238.801111 103.250.147.78 61607 172.18.0.2 443
+---934L8GZM---B--
+GET /?testpatame=ueu HTTP/1.1
+Sec-Fetch-User: ?1
+Sec-Fetch-Site: none
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:139.0) Gecko/20100101 Firefox/139.0
+Upgrade-Insecure-Requests: 1
+If-None-Match: "684fe47f-267"
+Connection: keep-alive
+Sec-Fetch-Mode: navigate
+Accept-Encoding: gzip, deflate, br, zstd
+Accept-Language: en-US,en;q=0.5
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+Sec-Fetch-Dest: document
+Host: 13.234.29.148:8443
+If-Modified-Since: Mon, 16 Jun 2025 09:31:43 GMT
+Priority: u=0, i
+
+---934L8GZM---D--
+
+---934L8GZM---F--
+HTTP/1.1 304
+Server: nginx
+Date: Mon, 16 Jun 2025 09:32:22 GMT
+Last-Modified: Mon, 16 Jun 2025 09:31:43 GMT
+Connection: keep-alive
+X-XSS-Protection: 1; mode=block
+ETag: "684fe47f-267"
+Permissions-Policy: geolocation=(), microphone=()
+X-Content-Type-Options: nosniff
+X-Frame-Options: SAMEORIGIN
+Referrer-Policy: strict-origin-when-cross-origin
+
+---934L8GZM---H--
+ModSecurity: Warning. Matched "Operator `Rx' with parameter `(?:^([\d.]+|\[[\da-f:]+\]|[\da-f:]+)(:[\d]+)?$)' against variable `REQUEST_HEADERS:Host' (Value: `13.234.29.148:8443' ) [file "/usr/local/nginx/conf/modsec/crs/rules/REQUEST-920-PROTOCOL-ENFORCEMENT.conf"] [line "712"] [id "920350"] [rev ""] [msg "Host header is a numeric IP address"] [data "13.234.29.148:8443"] [severity "4"] [ver "OWASP_CRS/4.16.0-dev"] [maturity "0"] [accuracy "0"] [tag "application-multi"] [tag "language-multi"] [tag "platform-multi"] [tag "attack-protocol"] [tag "paranoia-level/1"] [tag "OWASP_CRS"] [tag "OWASP_CRS/PROTOCOL-ENFORCEMENT"] [tag "capec/1000/210/272"] [tag "PCI/6.5.10"] [hostname "172.18.0.2"] [uri "/"] [unique_id "175006634238.801111"] [ref "o0,18o0,13o13,5v36,18"]
+
+---934L8GZM---I--
+
+---934L8GZM---J--
+
+---934L8GZM---Z--
+
+---5x2Yyt1q---A--
+[16/Jun/2025:09:33:45 +0000] 175006642599.080701 103.250.147.78 61614 172.18.0.2 443
+---5x2Yyt1q---B--
+GET /?testparam=test HTTP/1.1
+Sec-Fetch-User: ?1
+Sec-Fetch-Site: none
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:139.0) Gecko/20100101 Firefox/139.0
+Upgrade-Insecure-Requests: 1
+Connection: keep-alive
+Sec-Fetch-Mode: navigate
+Accept-Encoding: gzip, deflate, br, zstd
+Accept-Language: en-US,en;q=0.5
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+Sec-Fetch-Dest: document
+Host: 13.234.29.148:8443
+Priority: u=0, i
+
+---5x2Yyt1q---D--
+
+---5x2Yyt1q---E--
+<html>\x0d\x0a<head><title>403 Forbidden</title></head>\x0d\x0a<body>\x0d\x0a<center><h1>403 Forbidden</h1></center>\x0d\x0a<hr><center>nginx</center>\x0d\x0a</body>\x0d\x0a</html>\x0d\x0a
+
+---5x2Yyt1q---F--
+HTTP/1.1 403
+Server: nginx
+Date: Mon, 16 Jun 2025 09:33:45 GMT
+Content-Length: 146
+Content-Type: text/html
+X-Content-Type-Options: nosniff
+Connection: keep-alive
+X-XSS-Protection: 1; mode=block
+X-Frame-Options: SAMEORIGIN
+Referrer-Policy: strict-origin-when-cross-origin
+Permissions-Policy: geolocation=(), microphone=()
+
+---5x2Yyt1q---H--
+ModSecurity: Warning. Matched "Operator `Rx' with parameter `(?:^([\d.]+|\[[\da-f:]+\]|[\da-f:]+)(:[\d]+)?$)' against variable `REQUEST_HEADERS:Host' (Value: `13.234.29.148:8443' ) [file "/usr/local/nginx/conf/modsec/crs/rules/REQUEST-920-PROTOCOL-ENFORCEMENT.conf"] [line "712"] [id "920350"] [rev ""] [msg "Host header is a numeric IP address"] [data "13.234.29.148:8443"] [severity "4"] [ver "OWASP_CRS/4.16.0-dev"] [maturity "0"] [accuracy "0"] [tag "application-multi"] [tag "language-multi"] [tag "platform-multi"] [tag "attack-protocol"] [tag "paranoia-level/1"] [tag "OWASP_CRS"] [tag "OWASP_CRS/PROTOCOL-ENFORCEMENT"] [tag "capec/1000/210/272"] [tag "PCI/6.5.10"] [hostname "172.18.0.2"] [uri "/"] [unique_id "175006642599.080701"] [ref "o0,18o0,13o13,5v36,18"]
+ModSecurity: Access denied with code 403 (phase 2). Matched "Operator `Contains' with parameter `test' against variable `ARGS:testparam' (Value: `test' ) [file "/usr/local/nginx/conf/modsec/modsecurity.conf"] [line "9"] [id "12345"] [rev ""] [msg "Test param blocked"] [data ""] [severity "0"] [ver ""] [maturity "0"] [accuracy "0"] [hostname "172.18.0.2"] [uri "/"] [unique_id "175006642599.080701"] [ref "o0,4v16,4"]
+
+---5x2Yyt1q---I--
+
+---5x2Yyt1q---J--
+
+---5x2Yyt1q---Z--
+
+---V05faCtQ---A--
+[16/Jun/2025:09:33:45 +0000] 175006642562.751932 103.250.147.78 61614 172.18.0.2 443
+---V05faCtQ---B--
+GET /favicon.ico HTTP/1.1
+Host: 13.234.29.148:8443
+Sec-Fetch-Dest: image
+Sec-Fetch-Mode: no-cors
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:139.0) Gecko/20100101 Firefox/139.0
+Priority: u=6
+Accept: image/avif,image/webp,image/png,image/svg+xml,image/*;q=0.8,*/*;q=0.5
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate, br, zstd
+Referer: https://13.234.29.148:8443/?testparam=test
+Connection: keep-alive
+Sec-Fetch-Site: same-origin
+
+---V05faCtQ---D--
+
+---V05faCtQ---E--
+<html>\x0d\x0a<head><title>404 Not Found</title></head>\x0d\x0a<body>\x0d\x0a<center><h1>404 Not Found</h1></center>\x0d\x0a<hr><center>nginx</center>\x0d\x0a</body>\x0d\x0a</html>\x0d\x0a
+
+---V05faCtQ---F--
+HTTP/1.1 404
+Server: nginx
+Date: Mon, 16 Jun 2025 09:33:45 GMT
+Content-Length: 146
+Content-Type: text/html
+X-Content-Type-Options: nosniff
+Connection: keep-alive
+X-XSS-Protection: 1; mode=block
+X-Frame-Options: SAMEORIGIN
+Referrer-Policy: strict-origin-when-cross-origin
+Permissions-Policy: geolocation=(), microphone=()
+
+---V05faCtQ---H--
+ModSecurity: Warning. Matched "Operator `Rx' with parameter `(?:^([\d.]+|\[[\da-f:]+\]|[\da-f:]+)(:[\d]+)?$)' against variable `REQUEST_HEADERS:Host' (Value: `13.234.29.148:8443' ) [file "/usr/local/nginx/conf/modsec/crs/rules/REQUEST-920-PROTOCOL-ENFORCEMENT.conf"] [line "712"] [id "920350"] [rev ""] [msg "Host header is a numeric IP address"] [data "13.234.29.148:8443"] [severity "4"] [ver "OWASP_CRS/4.16.0-dev"] [maturity "0"] [accuracy "0"] [tag "application-multi"] [tag "language-multi"] [tag "platform-multi"] [tag "attack-protocol"] [tag "paranoia-level/1"] [tag "OWASP_CRS"] [tag "OWASP_CRS/PROTOCOL-ENFORCEMENT"] [tag "capec/1000/210/272"] [tag "PCI/6.5.10"] [hostname "172.18.0.2"] [uri "/favicon.ico"] [unique_id "175006642562.751932"] [ref "o0,18o0,13o13,5v32,18"]
+
+---V05faCtQ---I--
+
+---V05faCtQ---J--
+
+---V05faCtQ---Z--
+
+---5x2Yyt1q---A--
+[16/Jun/2025:09:33:46 +0000] 175006642621.993886 103.250.147.78 61615 172.18.0.2 443
+---5x2Yyt1q---B--
+GET /?testparam=test HTTP/1.1
+Sec-Fetch-User: ?1
+Sec-Fetch-Site: none
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:139.0) Gecko/20100101 Firefox/139.0
+Upgrade-Insecure-Requests: 1
+Connection: keep-alive
+Sec-Fetch-Mode: navigate
+Accept-Encoding: gzip, deflate, br, zstd
+Accept-Language: en-US,en;q=0.5
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+Sec-Fetch-Dest: document
+Host: 13.234.29.148:8443
+Priority: u=0, i
+
+---5x2Yyt1q---D--
+
+---5x2Yyt1q---E--
+<html>\x0d\x0a<head><title>403 Forbidden</title></head>\x0d\x0a<body>\x0d\x0a<center><h1>403 Forbidden</h1></center>\x0d\x0a<hr><center>nginx</center>\x0d\x0a</body>\x0d\x0a</html>\x0d\x0a
+
+---5x2Yyt1q---F--
+HTTP/1.1 403
+Server: nginx
+Date: Mon, 16 Jun 2025 09:33:46 GMT
+Content-Length: 146
+Content-Type: text/html
+X-Content-Type-Options: nosniff
+Connection: keep-alive
+X-XSS-Protection: 1; mode=block
+X-Frame-Options: SAMEORIGIN
+Referrer-Policy: strict-origin-when-cross-origin
+Permissions-Policy: geolocation=(), microphone=()
+
+---5x2Yyt1q---H--
+ModSecurity: Warning. Matched "Operator `Rx' with parameter `(?:^([\d.]+|\[[\da-f:]+\]|[\da-f:]+)(:[\d]+)?$)' against variable `REQUEST_HEADERS:Host' (Value: `13.234.29.148:8443' ) [file "/usr/local/nginx/conf/modsec/crs/rules/REQUEST-920-PROTOCOL-ENFORCEMENT.conf"] [line "712"] [id "920350"] [rev ""] [msg "Host header is a numeric IP address"] [data "13.234.29.148:8443"] [severity "4"] [ver "OWASP_CRS/4.16.0-dev"] [maturity "0"] [accuracy "0"] [tag "application-multi"] [tag "language-multi"] [tag "platform-multi"] [tag "attack-protocol"] [tag "paranoia-level/1"] [tag "OWASP_CRS"] [tag "OWASP_CRS/PROTOCOL-ENFORCEMENT"] [tag "capec/1000/210/272"] [tag "PCI/6.5.10"] [hostname "172.18.0.2"] [uri "/"] [unique_id "175006642621.993886"] [ref "o0,18o0,13o13,5v36,18"]
+ModSecurity: Access denied with code 403 (phase 2). Matched "Operator `Contains' with parameter `test' against variable `ARGS:testparam' (Value: `test' ) [file "/usr/local/nginx/conf/modsec/modsecurity.conf"] [line "9"] [id "12345"] [rev ""] [msg "Test param blocked"] [data ""] [severity "0"] [ver ""] [maturity "0"] [accuracy "0"] [hostname "172.18.0.2"] [uri "/"] [unique_id "175006642621.993886"] [ref "o0,4v16,4"]
+
+---5x2Yyt1q---I--
+
+---5x2Yyt1q---J--
+
+---5x2Yyt1q---Z--
+
+---bLbQ0wQW---A--
+[16/Jun/2025:10:01:24 +0000] 175006808472.334869 103.250.147.78 61803 172.18.0.2 443
+---bLbQ0wQW---B--
+GET /?testparam=test HTTP/1.1
+Sec-Fetch-User: ?1
+Sec-Fetch-Site: none
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:139.0) Gecko/20100101 Firefox/139.0
+Upgrade-Insecure-Requests: 1
+Connection: keep-alive
+Sec-Fetch-Mode: navigate
+Accept-Encoding: gzip, deflate, br, zstd
+Accept-Language: en-US,en;q=0.5
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+Sec-Fetch-Dest: document
+Host: 13.234.29.148:8443
+Priority: u=0, i
+
+---bLbQ0wQW---D--
+
+---bLbQ0wQW---E--
+<html>\x0d\x0a<head><title>403 Forbidden</title></head>\x0d\x0a<body>\x0d\x0a<center><h1>403 Forbidden</h1></center>\x0d\x0a<hr><center>nginx</center>\x0d\x0a</body>\x0d\x0a</html>\x0d\x0a
+
+---bLbQ0wQW---F--
+HTTP/1.1 403
+Server: nginx
+Date: Mon, 16 Jun 2025 10:01:24 GMT
+Content-Length: 146
+Content-Type: text/html
+X-Content-Type-Options: nosniff
+Connection: keep-alive
+X-XSS-Protection: 1; mode=block
+X-Frame-Options: SAMEORIGIN
+Referrer-Policy: strict-origin-when-cross-origin
+Permissions-Policy: geolocation=(), microphone=()
+
+---bLbQ0wQW---H--
+ModSecurity: Warning. Matched "Operator `Rx' with parameter `(?:^([\d.]+|\[[\da-f:]+\]|[\da-f:]+)(:[\d]+)?$)' against variable `REQUEST_HEADERS:Host' (Value: `13.234.29.148:8443' ) [file "/usr/local/nginx/conf/modsec/crs/rules/REQUEST-920-PROTOCOL-ENFORCEMENT.conf"] [line "712"] [id "920350"] [rev ""] [msg "Host header is a numeric IP address"] [data "13.234.29.148:8443"] [severity "4"] [ver "OWASP_CRS/4.16.0-dev"] [maturity "0"] [accuracy "0"] [tag "application-multi"] [tag "language-multi"] [tag "platform-multi"] [tag "attack-protocol"] [tag "paranoia-level/1"] [tag "OWASP_CRS"] [tag "OWASP_CRS/PROTOCOL-ENFORCEMENT"] [tag "capec/1000/210/272"] [tag "PCI/6.5.10"] [hostname "172.18.0.2"] [uri "/"] [unique_id "175006808472.334869"] [ref "o0,18o0,13o13,5v36,18"]
+ModSecurity: Access denied with code 403 (phase 2). Matched "Operator `Contains' with parameter `test' against variable `ARGS:testparam' (Value: `test' ) [file "/usr/local/nginx/conf/modsec/modsecurity.conf"] [line "9"] [id "12345"] [rev ""] [msg "Test param blocked"] [data ""] [severity "0"] [ver ""] [maturity "0"] [accuracy "0"] [hostname "172.18.0.2"] [uri "/"] [unique_id "175006808472.334869"] [ref "o0,4v16,4"]
+
+---bLbQ0wQW---I--
+
+---bLbQ0wQW---J--
+
+---bLbQ0wQW---Z--
+
+---XX1IPPwE---A--
+[16/Jun/2025:10:01:24 +0000] 17500680847.096073 103.250.147.78 61803 172.18.0.2 443
+---XX1IPPwE---B--
+GET /favicon.ico HTTP/1.1
+Host: 13.234.29.148:8443
+Sec-Fetch-Dest: image
+Sec-Fetch-Mode: no-cors
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:139.0) Gecko/20100101 Firefox/139.0
+Priority: u=6
+Accept: image/avif,image/webp,image/png,image/svg+xml,image/*;q=0.8,*/*;q=0.5
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate, br, zstd
+Referer: https://13.234.29.148:8443/?testparam=test
+Connection: keep-alive
+Sec-Fetch-Site: same-origin
+
+---XX1IPPwE---D--
+
+---XX1IPPwE---E--
+<html>\x0d\x0a<head><title>404 Not Found</title></head>\x0d\x0a<body>\x0d\x0a<center><h1>404 Not Found</h1></center>\x0d\x0a<hr><center>nginx</center>\x0d\x0a</body>\x0d\x0a</html>\x0d\x0a
+
+---XX1IPPwE---F--
+HTTP/1.1 404
+Server: nginx
+Date: Mon, 16 Jun 2025 10:01:24 GMT
+Content-Length: 146
+Content-Type: text/html
+X-Content-Type-Options: nosniff
+Connection: keep-alive
+X-XSS-Protection: 1; mode=block
+X-Frame-Options: SAMEORIGIN
+Referrer-Policy: strict-origin-when-cross-origin
+Permissions-Policy: geolocation=(), microphone=()
+
+---XX1IPPwE---H--
+ModSecurity: Warning. Matched "Operator `Rx' with parameter `(?:^([\d.]+|\[[\da-f:]+\]|[\da-f:]+)(:[\d]+)?$)' against variable `REQUEST_HEADERS:Host' (Value: `13.234.29.148:8443' ) [file "/usr/local/nginx/conf/modsec/crs/rules/REQUEST-920-PROTOCOL-ENFORCEMENT.conf"] [line "712"] [id "920350"] [rev ""] [msg "Host header is a numeric IP address"] [data "13.234.29.148:8443"] [severity "4"] [ver "OWASP_CRS/4.16.0-dev"] [maturity "0"] [accuracy "0"] [tag "application-multi"] [tag "language-multi"] [tag "platform-multi"] [tag "attack-protocol"] [tag "paranoia-level/1"] [tag "OWASP_CRS"] [tag "OWASP_CRS/PROTOCOL-ENFORCEMENT"] [tag "capec/1000/210/272"] [tag "PCI/6.5.10"] [hostname "172.18.0.2"] [uri "/favicon.ico"] [unique_id "17500680847.096073"] [ref "o0,18o0,13o13,5v32,18"]
+
+---XX1IPPwE---I--
+
+---XX1IPPwE---J--
+
+---XX1IPPwE---Z--
+
+---bLbQ0wQW---A--
+[16/Jun/2025:10:01:27 +0000] 175006808768.284849 103.250.147.78 61806 172.18.0.2 443
+---bLbQ0wQW---B--
+GET /?testparam=test HTTP/1.1
+Sec-Fetch-User: ?1
+Sec-Fetch-Site: none
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:139.0) Gecko/20100101 Firefox/139.0
+Upgrade-Insecure-Requests: 1
+Connection: keep-alive
+Sec-Fetch-Mode: navigate
+Accept-Encoding: gzip, deflate, br, zstd
+Accept-Language: en-US,en;q=0.5
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+Sec-Fetch-Dest: document
+Host: 13.234.29.148:8443
+Priority: u=0, i
+
+---bLbQ0wQW---D--
+
+---bLbQ0wQW---E--
+<html>\x0d\x0a<head><title>403 Forbidden</title></head>\x0d\x0a<body>\x0d\x0a<center><h1>403 Forbidden</h1></center>\x0d\x0a<hr><center>nginx</center>\x0d\x0a</body>\x0d\x0a</html>\x0d\x0a
+
+---bLbQ0wQW---F--
+HTTP/1.1 403
+Server: nginx
+Date: Mon, 16 Jun 2025 10:01:27 GMT
+Content-Length: 146
+Content-Type: text/html
+X-Content-Type-Options: nosniff
+Connection: keep-alive
+X-XSS-Protection: 1; mode=block
+X-Frame-Options: SAMEORIGIN
+Referrer-Policy: strict-origin-when-cross-origin
+Permissions-Policy: geolocation=(), microphone=()
+
+---bLbQ0wQW---H--
+ModSecurity: Warning. Matched "Operator `Rx' with parameter `(?:^([\d.]+|\[[\da-f:]+\]|[\da-f:]+)(:[\d]+)?$)' against variable `REQUEST_HEADERS:Host' (Value: `13.234.29.148:8443' ) [file "/usr/local/nginx/conf/modsec/crs/rules/REQUEST-920-PROTOCOL-ENFORCEMENT.conf"] [line "712"] [id "920350"] [rev ""] [msg "Host header is a numeric IP address"] [data "13.234.29.148:8443"] [severity "4"] [ver "OWASP_CRS/4.16.0-dev"] [maturity "0"] [accuracy "0"] [tag "application-multi"] [tag "language-multi"] [tag "platform-multi"] [tag "attack-protocol"] [tag "paranoia-level/1"] [tag "OWASP_CRS"] [tag "OWASP_CRS/PROTOCOL-ENFORCEMENT"] [tag "capec/1000/210/272"] [tag "PCI/6.5.10"] [hostname "172.18.0.2"] [uri "/"] [unique_id "175006808768.284849"] [ref "o0,18o0,13o13,5v36,18"]
+ModSecurity: Access denied with code 403 (phase 2). Matched "Operator `Contains' with parameter `test' against variable `ARGS:testparam' (Value: `test' ) [file "/usr/local/nginx/conf/modsec/modsecurity.conf"] [line "9"] [id "12345"] [rev ""] [msg "Test param blocked"] [data ""] [severity "0"] [ver ""] [maturity "0"] [accuracy "0"] [hostname "172.18.0.2"] [uri "/"] [unique_id "175006808768.284849"] [ref "o0,4v16,4"]
+
+---bLbQ0wQW---I--
+
+---bLbQ0wQW---J--
+
+---bLbQ0wQW---Z--
+
+---XX1IPPwE---A--
+[16/Jun/2025:10:01:29 +0000] 17500680892.173512 103.250.147.78 61806 172.18.0.2 443
+---XX1IPPwE---B--
+GET / HTTP/1.1
+Sec-Fetch-User: ?1
+Sec-Fetch-Site: none
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:139.0) Gecko/20100101 Firefox/139.0
+Upgrade-Insecure-Requests: 1
+If-None-Match: "684fe47f-267"
+Connection: keep-alive
+Sec-Fetch-Mode: navigate
+Accept-Encoding: gzip, deflate, br, zstd
+Accept-Language: en-US,en;q=0.5
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+Sec-Fetch-Dest: document
+Host: 13.234.29.148:8443
+If-Modified-Since: Mon, 16 Jun 2025 09:31:43 GMT
+Priority: u=0, i
+
+---XX1IPPwE---D--
+
+---XX1IPPwE---E--
+<!DOCTYPE html>\x0a<html>\x0a<head>\x0a<title>Welcome to nginx!</title>\x0a<style>\x0ahtml { color-scheme: light dark; }\x0abody { width: 35em; margin: 0 auto;\x0afont-family: Tahoma, Verdana, Arial, sans-serif; }\x0a</style>\x0a</head>\x0a<body>\x0a<h1>Welcome to nginx!</h1>\x0a<p>If you see this page, the nginx web server is successfully installed and\x0aworking. Further configuration is required.</p>\x0a\x0a<p>For online documentation and support please refer to\x0a<a href="http://nginx.org/">nginx.org</a>.<br/>\x0aCommercial support is available at\x0a<a href="http://nginx.com/">nginx.com</a>.</p>\x0a\x0a<p><em>Thank you for using nginx.</em></p>\x0a</body>\x0a</html>\x0a
+
+---XX1IPPwE---F--
+HTTP/1.1 200
+Referrer-Policy: strict-origin-when-cross-origin
+X-Frame-Options: SAMEORIGIN
+ETag: "684fe6fd-267"
+Last-Modified: Mon, 16 Jun 2025 09:42:21 GMT
+X-XSS-Protection: 1; mode=block
+Connection: keep-alive
+X-Content-Type-Options: nosniff
+Content-Type: text/html
+Content-Length: 615
+Date: Mon, 16 Jun 2025 10:01:29 GMT
+Server: nginx
+Permissions-Policy: geolocation=(), microphone=()
+
+---XX1IPPwE---H--
+ModSecurity: Warning. Matched "Operator `Rx' with parameter `(?:^([\d.]+|\[[\da-f:]+\]|[\da-f:]+)(:[\d]+)?$)' against variable `REQUEST_HEADERS:Host' (Value: `13.234.29.148:8443' ) [file "/usr/local/nginx/conf/modsec/crs/rules/REQUEST-920-PROTOCOL-ENFORCEMENT.conf"] [line "712"] [id "920350"] [rev ""] [msg "Host header is a numeric IP address"] [data "13.234.29.148:8443"] [severity "4"] [ver "OWASP_CRS/4.16.0-dev"] [maturity "0"] [accuracy "0"] [tag "application-multi"] [tag "language-multi"] [tag "platform-multi"] [tag "attack-protocol"] [tag "paranoia-level/1"] [tag "OWASP_CRS"] [tag "OWASP_CRS/PROTOCOL-ENFORCEMENT"] [tag "capec/1000/210/272"] [tag "PCI/6.5.10"] [hostname "172.18.0.2"] [uri "/"] [unique_id "17500680892.173512"] [ref "o0,18o0,13o13,5v21,18"]
+
+---XX1IPPwE---I--
+
+---XX1IPPwE---J--
+
+---XX1IPPwE---Z--
+
+---soPrO2hG---A--
+[16/Jun/2025:10:01:32 +0000] 175006809250.776575 103.250.147.78 61806 172.18.0.2 443
+---soPrO2hG---B--
+GET / HTTP/1.1
+Sec-Fetch-User: ?1
+Sec-Fetch-Site: none
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:139.0) Gecko/20100101 Firefox/139.0
+Upgrade-Insecure-Requests: 1
+If-None-Match: "684fe6fd-267"
+Connection: keep-alive
+Sec-Fetch-Mode: navigate
+Accept-Encoding: gzip, deflate, br, zstd
+Accept-Language: en-US,en;q=0.5
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+Sec-Fetch-Dest: document
+Host: 13.234.29.148:8443
+If-Modified-Since: Mon, 16 Jun 2025 09:42:21 GMT
+Priority: u=0, i
+
+---soPrO2hG---D--
+
+---soPrO2hG---F--
+HTTP/1.1 304
+Server: nginx
+Date: Mon, 16 Jun 2025 10:01:32 GMT
+Last-Modified: Mon, 16 Jun 2025 09:42:21 GMT
+Connection: keep-alive
+X-XSS-Protection: 1; mode=block
+ETag: "684fe6fd-267"
+Permissions-Policy: geolocation=(), microphone=()
+X-Content-Type-Options: nosniff
+X-Frame-Options: SAMEORIGIN
+Referrer-Policy: strict-origin-when-cross-origin
+
+---soPrO2hG---H--
+ModSecurity: Warning. Matched "Operator `Rx' with parameter `(?:^([\d.]+|\[[\da-f:]+\]|[\da-f:]+)(:[\d]+)?$)' against variable `REQUEST_HEADERS:Host' (Value: `13.234.29.148:8443' ) [file "/usr/local/nginx/conf/modsec/crs/rules/REQUEST-920-PROTOCOL-ENFORCEMENT.conf"] [line "712"] [id "920350"] [rev ""] [msg "Host header is a numeric IP address"] [data "13.234.29.148:8443"] [severity "4"] [ver "OWASP_CRS/4.16.0-dev"] [maturity "0"] [accuracy "0"] [tag "application-multi"] [tag "language-multi"] [tag "platform-multi"] [tag "attack-protocol"] [tag "paranoia-level/1"] [tag "OWASP_CRS"] [tag "OWASP_CRS/PROTOCOL-ENFORCEMENT"] [tag "capec/1000/210/272"] [tag "PCI/6.5.10"] [hostname "172.18.0.2"] [uri "/"] [unique_id "175006809250.776575"] [ref "o0,18o0,13o13,5v21,18"]
+
+---soPrO2hG---I--
+
+---soPrO2hG---J--
+
+---soPrO2hG---Z--
+
+---bLbQ0wQW---A--
+[16/Jun/2025:10:02:22 +0000] 175006814273.728575 64.62.197.76 19773 172.18.0.2 443
+---bLbQ0wQW---B--
+GET / HTTP/1.1
+Host: 13.234.29.148:8443
+User-Agent: Mozilla/5.0 (Windows NT 10.0; rv:109.0) Gecko/20100101 Firefox/115.0
+Accept: */*
+Accept-Encoding: gzip
+
+---bLbQ0wQW---D--
+
+---bLbQ0wQW---E--
+<!DOCTYPE html>\x0a<html>\x0a<head>\x0a<title>Welcome to nginx!</title>\x0a<style>\x0ahtml { color-scheme: light dark; }\x0abody { width: 35em; margin: 0 auto;\x0afont-family: Tahoma, Verdana, Arial, sans-serif; }\x0a</style>\x0a</head>\x0a<body>\x0a<h1>Welcome to nginx!</h1>\x0a<p>If you see this page, the nginx web server is successfully installed and\x0aworking. Further configuration is required.</p>\x0a\x0a<p>For online documentation and support please refer to\x0a<a href="http://nginx.org/">nginx.org</a>.<br/>\x0aCommercial support is available at\x0a<a href="http://nginx.com/">nginx.com</a>.</p>\x0a\x0a<p><em>Thank you for using nginx.</em></p>\x0a</body>\x0a</html>\x0a
+
+---bLbQ0wQW---F--
+HTTP/1.1 200
+Referrer-Policy: strict-origin-when-cross-origin
+X-Frame-Options: SAMEORIGIN
+ETag: "684fe6fd-267"
+Last-Modified: Mon, 16 Jun 2025 09:42:21 GMT
+X-XSS-Protection: 1; mode=block
+Connection: keep-alive
+X-Content-Type-Options: nosniff
+Content-Type: text/html
+Content-Length: 615
+Date: Mon, 16 Jun 2025 10:02:22 GMT
+Server: nginx
+Permissions-Policy: geolocation=(), microphone=()
+
+---bLbQ0wQW---H--
+ModSecurity: Warning. Matched "Operator `Rx' with parameter `(?:^([\d.]+|\[[\da-f:]+\]|[\da-f:]+)(:[\d]+)?$)' against variable `REQUEST_HEADERS:Host' (Value: `13.234.29.148:8443' ) [file "/usr/local/nginx/conf/modsec/crs/rules/REQUEST-920-PROTOCOL-ENFORCEMENT.conf"] [line "712"] [id "920350"] [rev ""] [msg "Host header is a numeric IP address"] [data "13.234.29.148:8443"] [severity "4"] [ver "OWASP_CRS/4.16.0-dev"] [maturity "0"] [accuracy "0"] [tag "application-multi"] [tag "language-multi"] [tag "platform-multi"] [tag "attack-protocol"] [tag "paranoia-level/1"] [tag "OWASP_CRS"] [tag "OWASP_CRS/PROTOCOL-ENFORCEMENT"] [tag "capec/1000/210/272"] [tag "PCI/6.5.10"] [hostname "172.18.0.2"] [uri "/"] [unique_id "175006814273.728575"] [ref "o0,18o0,13o13,5v21,18"]
+
+---bLbQ0wQW---I--
+
+---bLbQ0wQW---J--
+
+---bLbQ0wQW---Z--
+
+---eXpssPo1---A--
+[16/Jun/2025:10:03:34 +0000] 175006821419.624479 64.62.197.74 35427 172.18.0.3 443
+---eXpssPo1---B--
+GET /webui/ HTTP/1.1
+Host: 13.234.29.148:8443
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:123.0) Gecko/20100101 Firefox/123.0
+Accept: */*
+Accept-Encoding: gzip
+
+---eXpssPo1---D--
+
+---eXpssPo1---E--
+<!DOCTYPE html>\x0a<html lang="en">\x0a<head>\x0a<meta charset="utf-8">\x0a<title>Error</title>\x0a</head>\x0a<body>\x0a<pre>Cannot GET /webui/</pre>\x0a</body>\x0a</html>\x0a
+
+---eXpssPo1---F--
+HTTP/1.1 404
+X-Frame-Options: SAMEORIGIN
+Content-Security-Policy: default-src 'none'
+X-Powered-By: Express
+Connection: keep-alive
+X-XSS-Protection: 1; mode=block
+X-Content-Type-Options: nosniff
+X-Content-Type-Options: nosniff
+Content-Type: text/html; charset=utf-8
+Content-Length: 145
+Date: Mon, 16 Jun 2025 10:03:34 GMT
+Server: nginx
+Referrer-Policy: strict-origin-when-cross-origin
+Permissions-Policy: geolocation=(), microphone=()
+
+---eXpssPo1---H--
+ModSecurity: Warning. Matched "Operator `Rx' with parameter `(?:^([\d.]+|\[[\da-f:]+\]|[\da-f:]+)(:[\d]+)?$)' against variable `REQUEST_HEADERS:Host' (Value: `13.234.29.148:8443' ) [file "/usr/local/nginx/conf/modsec/crs/rules/REQUEST-920-PROTOCOL-ENFORCEMENT.conf"] [line "712"] [id "920350"] [rev ""] [msg "Host header is a numeric IP address"] [data "13.234.29.148:8443"] [severity "4"] [ver "OWASP_CRS/4.16.0-dev"] [maturity "0"] [accuracy "0"] [tag "application-multi"] [tag "language-multi"] [tag "platform-multi"] [tag "attack-protocol"] [tag "paranoia-level/1"] [tag "OWASP_CRS"] [tag "OWASP_CRS/PROTOCOL-ENFORCEMENT"] [tag "capec/1000/210/272"] [tag "PCI/6.5.10"] [hostname "172.18.0.3"] [uri "/webui/"] [unique_id "175006821419.624479"] [ref "o0,18o0,13o13,5v27,18"]
+
+---eXpssPo1---I--
+
+---eXpssPo1---J--
+
+---eXpssPo1---Z--
+
+---eXpssPo1---A--
+[16/Jun/2025:10:03:37 +0000] 17500682176.927329 103.250.147.78 61819 172.18.0.3 443
+---eXpssPo1---B--
+GET / HTTP/1.1
+Sec-Fetch-User: ?1
+Sec-Fetch-Site: none
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:139.0) Gecko/20100101 Firefox/139.0
+Upgrade-Insecure-Requests: 1
+If-None-Match: "684fe6fd-267"
+Connection: keep-alive
+Sec-Fetch-Mode: navigate
+Accept-Encoding: gzip, deflate, br, zstd
+Accept-Language: en-US,en;q=0.5
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+Sec-Fetch-Dest: document
+Host: 13.234.29.148:8443
+If-Modified-Since: Mon, 16 Jun 2025 09:42:21 GMT
+Priority: u=0, i
+
+---eXpssPo1---D--
+
+---eXpssPo1---E--
+Hello from Node app!
+
+---eXpssPo1---F--
+HTTP/1.1 200
+Referrer-Policy: strict-origin-when-cross-origin
+X-Frame-Options: SAMEORIGIN
+ETag: W/"14-xrFyu1/zI7D6Ig0zrxUGsRvZ+Ng"
+X-Powered-By: Express
+Connection: keep-alive
+X-XSS-Protection: 1; mode=block
+X-Content-Type-Options: nosniff
+Content-Type: text/html; charset=utf-8
+Content-Length: 20
+Date: Mon, 16 Jun 2025 10:03:37 GMT
+Server: nginx
+Permissions-Policy: geolocation=(), microphone=()
+
+---eXpssPo1---H--
+ModSecurity: Warning. Matched "Operator `Rx' with parameter `(?:^([\d.]+|\[[\da-f:]+\]|[\da-f:]+)(:[\d]+)?$)' against variable `REQUEST_HEADERS:Host' (Value: `13.234.29.148:8443' ) [file "/usr/local/nginx/conf/modsec/crs/rules/REQUEST-920-PROTOCOL-ENFORCEMENT.conf"] [line "712"] [id "920350"] [rev ""] [msg "Host header is a numeric IP address"] [data "13.234.29.148:8443"] [severity "4"] [ver "OWASP_CRS/4.16.0-dev"] [maturity "0"] [accuracy "0"] [tag "application-multi"] [tag "language-multi"] [tag "platform-multi"] [tag "attack-protocol"] [tag "paranoia-level/1"] [tag "OWASP_CRS"] [tag "OWASP_CRS/PROTOCOL-ENFORCEMENT"] [tag "capec/1000/210/272"] [tag "PCI/6.5.10"] [hostname "172.18.0.3"] [uri "/"] [unique_id "17500682176.927329"] [ref "o0,18o0,13o13,5v21,18"]
+
+---eXpssPo1---I--
+
+---eXpssPo1---J--
+
+---eXpssPo1---Z--
+
+---eXpssPo1---A--
+[16/Jun/2025:10:04:29 +0000] 175006826953.087700 64.62.197.74 11339 172.18.0.3 443
+---eXpssPo1---B--
+GET /favicon.ico HTTP/1.1
+Host: 13.234.29.148:8443
+User-Agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36
+Accept: */*
+Accept-Encoding: gzip
+
+---eXpssPo1---D--
+
+---eXpssPo1---E--
+<!DOCTYPE html>\x0a<html lang="en">\x0a<head>\x0a<meta charset="utf-8">\x0a<title>Error</title>\x0a</head>\x0a<body>\x0a<pre>Cannot GET /favicon.ico</pre>\x0a</body>\x0a</html>\x0a
+
+---eXpssPo1---F--
+HTTP/1.1 404
+X-Frame-Options: SAMEORIGIN
+Content-Security-Policy: default-src 'none'
+X-Powered-By: Express
+Connection: keep-alive
+X-XSS-Protection: 1; mode=block
+X-Content-Type-Options: nosniff
+X-Content-Type-Options: nosniff
+Content-Type: text/html; charset=utf-8
+Content-Length: 150
+Date: Mon, 16 Jun 2025 10:04:29 GMT
+Server: nginx
+Referrer-Policy: strict-origin-when-cross-origin
+Permissions-Policy: geolocation=(), microphone=()
+
+---eXpssPo1---H--
+ModSecurity: Warning. Matched "Operator `Rx' with parameter `(?:^([\d.]+|\[[\da-f:]+\]|[\da-f:]+)(:[\d]+)?$)' against variable `REQUEST_HEADERS:Host' (Value: `13.234.29.148:8443' ) [file "/usr/local/nginx/conf/modsec/crs/rules/REQUEST-920-PROTOCOL-ENFORCEMENT.conf"] [line "712"] [id "920350"] [rev ""] [msg "Host header is a numeric IP address"] [data "13.234.29.148:8443"] [severity "4"] [ver "OWASP_CRS/4.16.0-dev"] [maturity "0"] [accuracy "0"] [tag "application-multi"] [tag "language-multi"] [tag "platform-multi"] [tag "attack-protocol"] [tag "paranoia-level/1"] [tag "OWASP_CRS"] [tag "OWASP_CRS/PROTOCOL-ENFORCEMENT"] [tag "capec/1000/210/272"] [tag "PCI/6.5.10"] [hostname "172.18.0.3"] [uri "/favicon.ico"] [unique_id "175006826953.087700"] [ref "o0,18o0,13o13,5v32,18"]
+
+---eXpssPo1---I--
+
+---eXpssPo1---J--
+
+---eXpssPo1---Z--
+
+---eXpssPo1---A--
+[16/Jun/2025:10:04:57 +0000] 175006829763.378876 64.62.197.73 21975 172.18.0.3 443
+---eXpssPo1---B--
+GET / HTTP/1.1
+Host: 13.234.29.148:8443
+User-Agent: Mozilla/5.0 (Windows NT 10.0; rv:109.0) Gecko/20100101 Firefox/115.0
+Accept: */*
+Accept-Encoding: gzip
+
+---eXpssPo1---D--
+
+---eXpssPo1---E--
+Hello from Node app!
+
+---eXpssPo1---F--
+HTTP/1.1 200
+Referrer-Policy: strict-origin-when-cross-origin
+X-Frame-Options: SAMEORIGIN
+ETag: W/"14-xrFyu1/zI7D6Ig0zrxUGsRvZ+Ng"
+X-Powered-By: Express
+Connection: keep-alive
+X-XSS-Protection: 1; mode=block
+X-Content-Type-Options: nosniff
+Content-Type: text/html; charset=utf-8
+Content-Length: 20
+Date: Mon, 16 Jun 2025 10:04:57 GMT
+Server: nginx
+Permissions-Policy: geolocation=(), microphone=()
+
+---eXpssPo1---H--
+ModSecurity: Warning. Matched "Operator `Rx' with parameter `(?:^([\d.]+|\[[\da-f:]+\]|[\da-f:]+)(:[\d]+)?$)' against variable `REQUEST_HEADERS:Host' (Value: `13.234.29.148:8443' ) [file "/usr/local/nginx/conf/modsec/crs/rules/REQUEST-920-PROTOCOL-ENFORCEMENT.conf"] [line "712"] [id "920350"] [rev ""] [msg "Host header is a numeric IP address"] [data "13.234.29.148:8443"] [severity "4"] [ver "OWASP_CRS/4.16.0-dev"] [maturity "0"] [accuracy "0"] [tag "application-multi"] [tag "language-multi"] [tag "platform-multi"] [tag "attack-protocol"] [tag "paranoia-level/1"] [tag "OWASP_CRS"] [tag "OWASP_CRS/PROTOCOL-ENFORCEMENT"] [tag "capec/1000/210/272"] [tag "PCI/6.5.10"] [hostname "172.18.0.3"] [uri "/"] [unique_id "175006829763.378876"] [ref "o0,18o0,13o13,5v21,18"]
+
+---eXpssPo1---I--
+
+---eXpssPo1---J--
+
+---eXpssPo1---Z--
+
+---f3O8zEa9---A--
+[16/Jun/2025:10:23:51 +0000] 175006943161.070633 103.250.147.78 62084 172.18.0.2 443
+---f3O8zEa9---B--
+GET / HTTP/1.1
+Sec-Fetch-User: ?1
+Sec-Fetch-Site: none
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:139.0) Gecko/20100101 Firefox/139.0
+Upgrade-Insecure-Requests: 1
+If-None-Match: W/"14-xrFyu1/zI7D6Ig0zrxUGsRvZ+Ng"
+Connection: keep-alive
+Sec-Fetch-Mode: navigate
+Accept-Encoding: gzip, deflate, br, zstd
+Accept-Language: en-US,en;q=0.5
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+Sec-Fetch-Dest: document
+Host: 13.234.29.148:8443
+Priority: u=0, i
+
+---f3O8zEa9---D--
+
+---f3O8zEa9---E--
+<!DOCTYPE html>\x0a<html>\x0a<head>\x0a<title>Welcome to nginx!</title>\x0a<style>\x0ahtml { color-scheme: light dark; }\x0abody { width: 35em; margin: 0 auto;\x0afont-family: Tahoma, Verdana, Arial, sans-serif; }\x0a</style>\x0a</head>\x0a<body>\x0a<h1>Welcome to nginx!</h1>\x0a<p>If you see this page, the nginx web server is successfully installed and\x0aworking. Further configuration is required.</p>\x0a\x0a<p>For online documentation and support please refer to\x0a<a href="http://nginx.org/">nginx.org</a>.<br/>\x0aCommercial support is available at\x0a<a href="http://nginx.com/">nginx.com</a>.</p>\x0a\x0a<p><em>Thank you for using nginx.</em></p>\x0a</body>\x0a</html>\x0a
+
+---f3O8zEa9---F--
+HTTP/1.1 200
+Referrer-Policy: strict-origin-when-cross-origin
+X-Frame-Options: SAMEORIGIN
+ETag: "684fe6fd-267"
+Last-Modified: Mon, 16 Jun 2025 09:42:21 GMT
+X-XSS-Protection: 1; mode=block
+Connection: keep-alive
+X-Content-Type-Options: nosniff
+Content-Type: text/html
+Content-Length: 615
+Date: Mon, 16 Jun 2025 10:23:51 GMT
+Server: nginx
+Permissions-Policy: geolocation=(), microphone=()
+
+---f3O8zEa9---H--
+ModSecurity: Warning. Matched "Operator `Rx' with parameter `(?:^([\d.]+|\[[\da-f:]+\]|[\da-f:]+)(:[\d]+)?$)' against variable `REQUEST_HEADERS:Host' (Value: `13.234.29.148:8443' ) [file "/usr/local/nginx/conf/modsec/crs/rules/REQUEST-920-PROTOCOL-ENFORCEMENT.conf"] [line "712"] [id "920350"] [rev ""] [msg "Host header is a numeric IP address"] [data "13.234.29.148:8443"] [severity "4"] [ver "OWASP_CRS/4.16.0-dev"] [maturity "0"] [accuracy "0"] [tag "application-multi"] [tag "language-multi"] [tag "platform-multi"] [tag "attack-protocol"] [tag "paranoia-level/1"] [tag "OWASP_CRS"] [tag "OWASP_CRS/PROTOCOL-ENFORCEMENT"] [tag "capec/1000/210/272"] [tag "PCI/6.5.10"] [hostname "172.18.0.2"] [uri "/"] [unique_id "175006943161.070633"] [ref "o0,18o0,13o13,5v21,18"]
+
+---f3O8zEa9---I--
+
+---f3O8zEa9---J--
+
+---f3O8zEa9---Z--
+
+---HwK28RTt---A--
+[28/Nov/2025:04:26:24 +0000] 17643039841.733784 172.31.16.1 51918 172.18.0.3 443
+---HwK28RTt---B--
+GET / HTTP/1.1
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36 Edg/142.0.0.0
+Sec-Fetch-Site: none
+sec-ch-ua-platform: "Windows"
+Upgrade-Insecure-Requests: 1
+sec-ch-ua-mobile: ?0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
+Cache-Control: max-age=0
+sec-ch-ua: "Chromium";v="142", "Microsoft Edge";v="142", "Not_A Brand";v="99"
+Sec-Fetch-User: ?1
+Sec-Fetch-Mode: navigate
+Connection: keep-alive
+Host: 172.31.19.233:8443
+Sec-Fetch-Dest: document
+Accept-Encoding: gzip, deflate, br, zstd
+Cookie: _pk_id.1.414a=aa705b881cfb5776.1764298144.; portainer_api_key=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwidXNlcm5hbWUiOiJhZG1pbiIsInJvbGUiOjEsInNjb3BlIjoiZGVmYXVsdCIsImZvcmNlQ2hhbmdlUGFzc3dvcmQiOmZhbHNlLCJleHAiOjE3NjQzMjY5ODksImlhdCI6MTc2NDI5ODE4OSwianRpIjoiNzY0OWRmZTAtM2Q5MS00YTkxLTk5ZDItZDI3N2ZkZjAyZmMwIn0.Y5TRYX7p4J3yp8WHjzmWgZs1qiHOvLXh6EgVZdzmaYA; _gorilla_csrf=MTc2NDI5ODE4OXxJamg2U21ONWVIRm5SMnMzVUZKelRreHBRVTEyTkdjNFFqSktTR2hHV2l0cFNuSklWVEZ5TURsR2RFVTlJZ289fEfiie2HunncsmgFPS7NuRQbPt-WwDS50DSrI4r9rHMd; _pk_ses.1.414a=1
+Accept-Language: en-US,en;q=0.9
+
+---HwK28RTt---D--
+
+---HwK28RTt---E--
+Hello from Node app!
+
+---HwK28RTt---F--
+HTTP/1.1 200
+Referrer-Policy: strict-origin-when-cross-origin
+X-Frame-Options: SAMEORIGIN
+ETag: W/"14-xrFyu1/zI7D6Ig0zrxUGsRvZ+Ng"
+X-Powered-By: Express
+Connection: keep-alive
+X-XSS-Protection: 1; mode=block
+X-Content-Type-Options: nosniff
+Content-Type: text/html; charset=utf-8
+Content-Length: 20
+Date: Fri, 28 Nov 2025 04:26:24 GMT
+Server: nginx
+Permissions-Policy: geolocation=(), microphone=()
+
+---HwK28RTt---H--
+ModSecurity: Warning. Matched "Operator `Rx' with parameter `(?:^([\d.]+|\[[\da-f:]+\]|[\da-f:]+)(:[\d]+)?$)' against variable `REQUEST_HEADERS:Host' (Value: `172.31.19.233:8443' ) [file "/usr/local/nginx/conf/modsec/crs/rules/REQUEST-920-PROTOCOL-ENFORCEMENT.conf"] [line "712"] [id "920350"] [rev ""] [msg "Host header is a numeric IP address"] [data "172.31.19.233:8443"] [severity "4"] [ver "OWASP_CRS/4.16.0-dev"] [maturity "0"] [accuracy "0"] [tag "application-multi"] [tag "language-multi"] [tag "platform-multi"] [tag "attack-protocol"] [tag "paranoia-level/1"] [tag "OWASP_CRS"] [tag "OWASP_CRS/PROTOCOL-ENFORCEMENT"] [tag "capec/1000/210/272"] [tag "PCI/6.5.10"] [hostname "172.31.19.233"] [uri "/"] [unique_id "17643039841.733784"] [ref "o0,18o0,13o13,5v21,18"]
+
+---HwK28RTt---I--
+
+---HwK28RTt---J--
+
+---HwK28RTt---Z--
+
+---jnFT4ZaZ---A--
+[28/Nov/2025:04:26:24 +0000] 176430398456.696820 172.31.16.1 51918 172.18.0.3 443
+---jnFT4ZaZ---B--
+GET /favicon.ico HTTP/1.1
+Referer: https://172.31.19.233:8443/
+sec-ch-ua-platform: "Windows"
+Sec-Fetch-Site: same-origin
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36 Edg/142.0.0.0
+sec-ch-ua-mobile: ?0
+Accept: image/avif,image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8
+sec-ch-ua: "Chromium";v="142", "Microsoft Edge";v="142", "Not_A Brand";v="99"
+Connection: keep-alive
+Sec-Fetch-Mode: no-cors
+Sec-Fetch-Dest: image
+Host: 172.31.19.233:8443
+Accept-Encoding: gzip, deflate, br, zstd
+Cookie: _pk_id.1.414a=aa705b881cfb5776.1764298144.; portainer_api_key=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwidXNlcm5hbWUiOiJhZG1pbiIsInJvbGUiOjEsInNjb3BlIjoiZGVmYXVsdCIsImZvcmNlQ2hhbmdlUGFzc3dvcmQiOmZhbHNlLCJleHAiOjE3NjQzMjY5ODksImlhdCI6MTc2NDI5ODE4OSwianRpIjoiNzY0OWRmZTAtM2Q5MS00YTkxLTk5ZDItZDI3N2ZkZjAyZmMwIn0.Y5TRYX7p4J3yp8WHjzmWgZs1qiHOvLXh6EgVZdzmaYA; _gorilla_csrf=MTc2NDI5ODE4OXxJamg2U21ONWVIRm5SMnMzVUZKelRreHBRVTEyTkdjNFFqSktTR2hHV2l0cFNuSklWVEZ5TURsR2RFVTlJZ289fEfiie2HunncsmgFPS7NuRQbPt-WwDS50DSrI4r9rHMd; _pk_ses.1.414a=1
+Accept-Language: en-US,en;q=0.9
+
+---jnFT4ZaZ---D--
+
+---jnFT4ZaZ---E--
+<!DOCTYPE html>\x0a<html lang="en">\x0a<head>\x0a<meta charset="utf-8">\x0a<title>Error</title>\x0a</head>\x0a<body>\x0a<pre>Cannot GET /favicon.ico</pre>\x0a</body>\x0a</html>\x0a
+
+---jnFT4ZaZ---F--
+HTTP/1.1 404
+X-Frame-Options: SAMEORIGIN
+Content-Security-Policy: default-src 'none'
+X-Powered-By: Express
+Connection: keep-alive
+X-XSS-Protection: 1; mode=block
+X-Content-Type-Options: nosniff
+X-Content-Type-Options: nosniff
+Content-Type: text/html; charset=utf-8
+Content-Length: 150
+Date: Fri, 28 Nov 2025 04:26:24 GMT
+Server: nginx
+Referrer-Policy: strict-origin-when-cross-origin
+Permissions-Policy: geolocation=(), microphone=()
+
+---jnFT4ZaZ---H--
+ModSecurity: Warning. Matched "Operator `Rx' with parameter `(?:^([\d.]+|\[[\da-f:]+\]|[\da-f:]+)(:[\d]+)?$)' against variable `REQUEST_HEADERS:Host' (Value: `172.31.19.233:8443' ) [file "/usr/local/nginx/conf/modsec/crs/rules/REQUEST-920-PROTOCOL-ENFORCEMENT.conf"] [line "712"] [id "920350"] [rev ""] [msg "Host header is a numeric IP address"] [data "172.31.19.233:8443"] [severity "4"] [ver "OWASP_CRS/4.16.0-dev"] [maturity "0"] [accuracy "0"] [tag "application-multi"] [tag "language-multi"] [tag "platform-multi"] [tag "attack-protocol"] [tag "paranoia-level/1"] [tag "OWASP_CRS"] [tag "OWASP_CRS/PROTOCOL-ENFORCEMENT"] [tag "capec/1000/210/272"] [tag "PCI/6.5.10"] [hostname "172.31.19.233"] [uri "/favicon.ico"] [unique_id "176430398456.696820"] [ref "o0,18o0,13o13,5v32,18"]
+
+---jnFT4ZaZ---I--
+
+---jnFT4ZaZ---J--
+
+---jnFT4ZaZ---Z--
+
+---HwK28RTt---A--
+[28/Nov/2025:04:30:23 +0000] 176430422323.159911 172.31.16.1 64613 172.18.0.3 443
+---HwK28RTt---B--
+GET /testparam=test HTTP/1.1
+Sec-Fetch-User: ?1
+sec-ch-ua: "Chromium";v="142", "Microsoft Edge";v="142", "Not_A Brand";v="99"
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36 Edg/142.0.0.0
+Sec-Fetch-Site: none
+sec-ch-ua-platform: "Windows"
+Upgrade-Insecure-Requests: 1
+sec-ch-ua-mobile: ?0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
+Sec-Fetch-Mode: navigate
+Connection: keep-alive
+Host: 172.31.19.233:8443
+Sec-Fetch-Dest: document
+Accept-Encoding: gzip, deflate, br, zstd
+Cookie: _pk_id.1.414a=aa705b881cfb5776.1764298144.; portainer_api_key=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwidXNlcm5hbWUiOiJhZG1pbiIsInJvbGUiOjEsInNjb3BlIjoiZGVmYXVsdCIsImZvcmNlQ2hhbmdlUGFzc3dvcmQiOmZhbHNlLCJleHAiOjE3NjQzMjY5ODksImlhdCI6MTc2NDI5ODE4OSwianRpIjoiNzY0OWRmZTAtM2Q5MS00YTkxLTk5ZDItZDI3N2ZkZjAyZmMwIn0.Y5TRYX7p4J3yp8WHjzmWgZs1qiHOvLXh6EgVZdzmaYA; _gorilla_csrf=MTc2NDI5ODE4OXxJamg2U21ONWVIRm5SMnMzVUZKelRreHBRVTEyTkdjNFFqSktTR2hHV2l0cFNuSklWVEZ5TURsR2RFVTlJZ289fEfiie2HunncsmgFPS7NuRQbPt-WwDS50DSrI4r9rHMd; _pk_ses.1.414a=1
+Accept-Language: en-US,en;q=0.9
+
+---HwK28RTt---D--
+
+---HwK28RTt---E--
+<!DOCTYPE html>\x0a<html lang="en">\x0a<head>\x0a<meta charset="utf-8">\x0a<title>Error</title>\x0a</head>\x0a<body>\x0a<pre>Cannot GET /testparam=test</pre>\x0a</body>\x0a</html>\x0a
+
+---HwK28RTt---F--
+HTTP/1.1 404
+X-Frame-Options: SAMEORIGIN
+Content-Security-Policy: default-src 'none'
+X-Powered-By: Express
+Connection: keep-alive
+X-XSS-Protection: 1; mode=block
+X-Content-Type-Options: nosniff
+X-Content-Type-Options: nosniff
+Content-Type: text/html; charset=utf-8
+Content-Length: 153
+Date: Fri, 28 Nov 2025 04:30:23 GMT
+Server: nginx
+Referrer-Policy: strict-origin-when-cross-origin
+Permissions-Policy: geolocation=(), microphone=()
+
+---HwK28RTt---H--
+ModSecurity: Warning. Matched "Operator `Rx' with parameter `(?:^([\d.]+|\[[\da-f:]+\]|[\da-f:]+)(:[\d]+)?$)' against variable `REQUEST_HEADERS:Host' (Value: `172.31.19.233:8443' ) [file "/usr/local/nginx/conf/modsec/crs/rules/REQUEST-920-PROTOCOL-ENFORCEMENT.conf"] [line "712"] [id "920350"] [rev ""] [msg "Host header is a numeric IP address"] [data "172.31.19.233:8443"] [severity "4"] [ver "OWASP_CRS/4.16.0-dev"] [maturity "0"] [accuracy "0"] [tag "application-multi"] [tag "language-multi"] [tag "platform-multi"] [tag "attack-protocol"] [tag "paranoia-level/1"] [tag "OWASP_CRS"] [tag "OWASP_CRS/PROTOCOL-ENFORCEMENT"] [tag "capec/1000/210/272"] [tag "PCI/6.5.10"] [hostname "172.31.19.233"] [uri "/testparam=test"] [unique_id "176430422323.159911"] [ref "o0,18o0,13o13,5v35,18"]
+
+---HwK28RTt---I--
+
+---HwK28RTt---J--
+
+---HwK28RTt---Z--
+
+---jnFT4ZaZ---A--
+[28/Nov/2025:04:30:30 +0000] 176430423035.439410 172.31.16.1 64613 172.18.0.3 443
+---jnFT4ZaZ---B--
+GET /?testparam=test HTTP/1.1
+Sec-Fetch-User: ?1
+sec-ch-ua: "Chromium";v="142", "Microsoft Edge";v="142", "Not_A Brand";v="99"
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36 Edg/142.0.0.0
+Sec-Fetch-Site: none
+sec-ch-ua-platform: "Windows"
+Upgrade-Insecure-Requests: 1
+sec-ch-ua-mobile: ?0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
+Sec-Fetch-Mode: navigate
+Connection: keep-alive
+Host: 172.31.19.233:8443
+Sec-Fetch-Dest: document
+Accept-Encoding: gzip, deflate, br, zstd
+Cookie: _pk_id.1.414a=aa705b881cfb5776.1764298144.; portainer_api_key=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwidXNlcm5hbWUiOiJhZG1pbiIsInJvbGUiOjEsInNjb3BlIjoiZGVmYXVsdCIsImZvcmNlQ2hhbmdlUGFzc3dvcmQiOmZhbHNlLCJleHAiOjE3NjQzMjY5ODksImlhdCI6MTc2NDI5ODE4OSwianRpIjoiNzY0OWRmZTAtM2Q5MS00YTkxLTk5ZDItZDI3N2ZkZjAyZmMwIn0.Y5TRYX7p4J3yp8WHjzmWgZs1qiHOvLXh6EgVZdzmaYA; _gorilla_csrf=MTc2NDI5ODE4OXxJamg2U21ONWVIRm5SMnMzVUZKelRreHBRVTEyTkdjNFFqSktTR2hHV2l0cFNuSklWVEZ5TURsR2RFVTlJZ289fEfiie2HunncsmgFPS7NuRQbPt-WwDS50DSrI4r9rHMd; _pk_ses.1.414a=1
+Accept-Language: en-US,en;q=0.9
+
+---jnFT4ZaZ---D--
+
+---jnFT4ZaZ---E--
+<html>\x0d\x0a<head><title>403 Forbidden</title></head>\x0d\x0a<body>\x0d\x0a<center><h1>403 Forbidden</h1></center>\x0d\x0a<hr><center>nginx</center>\x0d\x0a</body>\x0d\x0a</html>\x0d\x0a<!-- a padding to disable MSIE and Chrome friendly error page -->\x0d\x0a<!-- a padding to disable MSIE and Chrome friendly error page -->\x0d\x0a<!-- a padding to disable MSIE and Chrome friendly error page -->\x0d\x0a<!-- a padding to disable MSIE and Chrome friendly error page -->\x0d\x0a<!-- a padding to disable MSIE and Chrome friendly error page -->\x0d\x0a<!-- a padding to disable MSIE and Chrome friendly error page -->\x0d\x0a
+
+---jnFT4ZaZ---F--
+HTTP/1.1 403
+Server: nginx
+Date: Fri, 28 Nov 2025 04:30:30 GMT
+Content-Length: 548
+Content-Type: text/html
+X-Content-Type-Options: nosniff
+Connection: keep-alive
+X-XSS-Protection: 1; mode=block
+X-Frame-Options: SAMEORIGIN
+Referrer-Policy: strict-origin-when-cross-origin
+Permissions-Policy: geolocation=(), microphone=()
+
+---jnFT4ZaZ---H--
+ModSecurity: Warning. Matched "Operator `Rx' with parameter `(?:^([\d.]+|\[[\da-f:]+\]|[\da-f:]+)(:[\d]+)?$)' against variable `REQUEST_HEADERS:Host' (Value: `172.31.19.233:8443' ) [file "/usr/local/nginx/conf/modsec/crs/rules/REQUEST-920-PROTOCOL-ENFORCEMENT.conf"] [line "712"] [id "920350"] [rev ""] [msg "Host header is a numeric IP address"] [data "172.31.19.233:8443"] [severity "4"] [ver "OWASP_CRS/4.16.0-dev"] [maturity "0"] [accuracy "0"] [tag "application-multi"] [tag "language-multi"] [tag "platform-multi"] [tag "attack-protocol"] [tag "paranoia-level/1"] [tag "OWASP_CRS"] [tag "OWASP_CRS/PROTOCOL-ENFORCEMENT"] [tag "capec/1000/210/272"] [tag "PCI/6.5.10"] [hostname "172.31.19.233"] [uri "/"] [unique_id "176430423035.439410"] [ref "o0,18o0,13o13,5v36,18"]
+ModSecurity: Access denied with code 403 (phase 2). Matched "Operator `Contains' with parameter `test' against variable `ARGS:testparam' (Value: `test' ) [file "/usr/local/nginx/conf/modsec/modsecurity.conf"] [line "9"] [id "12345"] [rev ""] [msg "Test param blocked"] [data ""] [severity "0"] [ver ""] [maturity "0"] [accuracy "0"] [hostname "172.31.19.233"] [uri "/"] [unique_id "176430423035.439410"] [ref "o0,4v16,4"]
+
+---jnFT4ZaZ---I--
+
+---jnFT4ZaZ---J--
+
+---jnFT4ZaZ---Z--
+
