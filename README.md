@@ -1,5 +1,3 @@
-# ModSecurity NGINX WAF - by HSOC
-
 # Containerized WAF with ModSecurity + NGINX
 
 ### Network Ports
