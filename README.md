@@ -13,16 +13,15 @@
 ```bash
 modsecuirty/
 ├── cert-gen.sh                  # TLS cert generator
-├── docker-compose.yml           # Compose file for standalone WAF
-├── docker-compose.override.yml  # WAF in front of app
+├── docker-compose.yml           # Compose file for Reverse Proxy WAF
 ├── modsec-data/
 │   ├── certs/                   # TLS certs
 │   ├── crs/                     # OWASP Core Rule Set
 │   ├── custom-rules.conf        # Your ModSecurity rules
 │   ├── modsecurity.conf         # Main WAF config
 │   ├── nginx.conf               # NGINX config (standalone)
-│   ├── nginx.conf.reverse.proxy # NGINX config (reverse proxy)
 │   └── logs/                    # ModSecurity logs
+│   └── www/                     # NGINX www
 ├── nodeapp/
 │   ├── app.js                   # Node.js backend
 │   └── Dockerfile               # Dockerfile for Node app
@@ -84,7 +83,7 @@ down:
 	docker compose -f docker-compose.yml down 
 
 logs: 
-        docker-compose logs -f
+    docker-compose logs -f
 
 watch:
         docker exec -it modsec /usr/local/bin/watcher.sh
