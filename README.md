@@ -49,18 +49,6 @@ SecRule ARGS "@rx (?i)(union(.*?)select|select.+from)" "id:10003,phase:2,deny,lo
 
 ---
 
-## Dynamic Rule Reload (Watcher)
-
-The `watcher.sh` script watches `custom-rules.conf` and reloads NGINX:
-
-
-No container restart is needed. For this to work:
-
-* Mount rules in `docker-compose.yml`
-* Ensure `modsecurity_rules_file` in `modsecurity.conf` includes them
-
----
-
 ## Security Best Practices Implemented
 
 * `server_tokens off` to hide version info
