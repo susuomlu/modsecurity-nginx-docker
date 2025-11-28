@@ -75,16 +75,16 @@ No container restart is needed. For this to work:
 
 # --------------------------------- Build & Run ---------------------------------
 build: 
-	docker compose -f docker-compose.yml build --no-cache 
+* docker compose -f docker-compose.yml build --no-cache 
 
 up: 
-	docker compose -f docker-compose.yml up -d 
+* docker compose -f docker-compose.yml up -d 
 
 down: 
-	docker compose -f docker-compose.yml down 
+* docker compose -f docker-compose.yml down 
 
 logs: 
-        docker-compose logs -f
+* docker-compose logs -f
 
 watch:
-        docker exec -it modsec /usr/local/bin/watcher.sh
+* docker exec -it modsec /usr/local/bin/watcher.sh
