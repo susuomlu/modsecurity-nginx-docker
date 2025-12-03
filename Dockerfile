@@ -36,7 +36,7 @@ COPY --from=build /usr/local/lib /usr/local/lib
 COPY --from=build /usr/local/modsecurity /usr/local/modsecurity
 COPY --from=build /opt/nginx-1.28.0/objs/ngx_http_modsecurity_module.so /etc/nginx/modules/
 
-COPY nginx.conf /usr/local/nginx/conf/nginx.conf
+COPY ./modsec-data/nginx.conf /usr/local/nginx/conf/nginx.conf
 COPY watcher.sh /usr/local/bin/watcher.sh
 RUN chmod +x /usr/local/bin/watcher.sh
 
