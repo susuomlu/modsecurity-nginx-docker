@@ -13,6 +13,7 @@ services:
       - ./modsec-data/crs:/usr/local/nginx/conf/modsec/crs
       - ./modsec-data/logs:/var/log/modsec
       - ./modsec-data/nginx.conf:/usr/local/nginx/conf/nginx.conf
+      - ./modsec-data/html:/usr/local/nginx/html
       - ./modsec-data/www:/var/www
     depends_on:
       - nodeapp
