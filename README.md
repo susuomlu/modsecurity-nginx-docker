@@ -2,10 +2,7 @@
 ModSecurity 3 + OWASP CRS + NGINX – Production-Ready & Actively Maintained
 
 A complete, secure-by-default reverse proxy + WAF stack that protects any backend (Node.js, PHP, Python, static sites, etc.) with almost zero configuration.
-
-Tested and used in production environments since 2023.
-
-Visit your service securely at: https://<your-ip-or-domain>:8443
+Tested and used in production environments.
 
 ## Features & Security Hardening
 
