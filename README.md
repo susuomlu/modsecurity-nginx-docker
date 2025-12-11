@@ -9,22 +9,35 @@
 ## Directory Structure Explained
 
 ```bash
-modsecuirty/
-├── cert-gen.sh                  # TLS cert generator
-├── docker-compose.yml           # Compose file for resverse WAF
-├── modsec-data/
-│   ├── certs/                   # TLS certs
-│   ├── crs/                     # OWASP Core Rule Set
-│   ├── custom-rules.conf        # Your ModSecurity rules
-│   ├── modsecurity.conf         # Main WAF config
-│   ├── nginx.conf               # NGINX config
-│   └── logs/                    # ModSecurity logs
-│   └── www/                     # NGINX www
-├── nodeapp/
-│   ├── app.js                   # Node.js backend
-│   └── Dockerfile               # Dockerfile for Node app
-├── update-crs.sh                # CRS updater
-├── watcher.sh                   # Auto-reload for rule changes
+── cert-gen.sh
+├── docker-compose.yml
+├── Dockerfile
+├── modsec-data
+│   ├── certs
+│   ├── conf.d
+│   │   └── node.conf
+│   ├── crs
+│   │   ├── crs-setup.conf
+│   │   └── rules
+│   ├── custom-rules.conf
+│   ├── html
+│   │   └── custom_403.html
+│   ├── logs
+│   │   ├── access.log
+│   │   ├── audit.log
+│   │   └── error.log
+│   ├── modsecurity.conf
+│   ├── nginx.conf
+│   ├── ssl
+│   │   ├── server.crt
+│   │   └── server.key
+│   └── www
+├── nodeapp
+│   ├── app.js
+│   └── Dockerfile
+├── README.md
+├── update-crs.sh
+└── watcher.sh
 ```
 
 Visit: `https://<your-ip>:8443`
