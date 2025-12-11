@@ -10,16 +10,15 @@ Tested and used in production environments.
 |------------------------------------------|-------------|
 | ModSecurity 3 + libmodsecurity           | Yes         |
 | Full OWASP Core Rule Set (CRS 4.x)        | Yes Auto-updated |
-| Paranoia Level 1–2 by default (PL2 recommended) | Yes      |
-| Automatic CRS updates (`update-crs.sh`)   | Yes         |
+| CRS updates script (`update-crs.sh`)       | Yes         |
 | Real-time custom rule reloading (no restart) | Yes `watcher.sh` |
 | server_tokens off + NGINX version hidden  | Yes         |
-| Forced HTTPS + HSTS (2 years)             | Yes         |
+| Forced HTTPS + HSTS                      | Yes         |
 | HTTP → HTTPS permanent redirect           | Yes         |
 | Global + per-IP rate limiting (10 r/s default) | Yes   |
 | Secure HTTP headers (X-Frame-Options, HSTS, CSP, etc.) | Yes |
 | Self-signed TLS cert auto-generation      | Yes `cert-gen.sh` |
-| All logs shipped to stdout (Docker/K8s ready) | Yes     |
+| All logs shipped to stdout             | Yes     |
 | Custom 403 error page                     | Yes         |
 | Runs as non-root (user nginx, UID 101)    | Yes         |
 | Tiny final image (~70 MB)                 | Yes         |
