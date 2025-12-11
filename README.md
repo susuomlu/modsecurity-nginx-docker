@@ -6,22 +6,22 @@ Tested and used in production environments.
 
 ## Features & Security Hardening
 
-| Feature                                   | Implemented |
+| Feature                                  | Implemented |
 |------------------------------------------|-------------|
 | ModSecurity 3 + libmodsecurity           | Yes         |
-| Full OWASP Core Rule Set (CRS 4.x)        | Yes Auto-updated |
-| CRS updates script (`update-crs.sh`)       | Yes         |
+| Full OWASP Core Rule Set (CRS 4.x)       | Yes         |
+| CRS updates script (`update-crs.sh`)     | Yes         |
 | Real-time custom rule reloading (no restart) | Yes `watcher.sh` |
-| server_tokens off + NGINX version hidden  | Yes         |
+| server_tokens off + NGINX version hidden | Yes         |
 | Forced HTTPS + HSTS                      | Yes         |
-| HTTP → HTTPS permanent redirect           | Yes         |
+| HTTP → HTTPS permanent redirect          | Yes         |
 | Global + per-IP rate limiting (10 r/s default) | Yes   |
 | Secure HTTP headers (X-Frame-Options, HSTS, CSP, etc.) | Yes |
-| Self-signed TLS cert auto-generation      | Yes `cert-gen.sh` |
-| All logs shipped to stdout             | Yes     |
-| Custom 403 error page                     | Yes         |
-| Runs as non-root (user nginx, UID 101)    | Yes         |
-| Tiny final image (~70 MB)                 | Yes         |
+| Self-signed TLS cert generation     | Yes `cert-gen.sh` |
+| All logs shipped to stdout               | Yes         |
+| Custom 403 error page                    | Yes         |
+| Runs as non-root (user nginx, UID 101)   | Yes         |
+| Tiny final image (~70 MB)                | Yes         |
 
 ## Directory Structure
 ```bash
