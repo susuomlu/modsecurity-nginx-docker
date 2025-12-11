@@ -1,4 +1,3 @@
-version: "3.8"
 services:
   modsec:
     build: .
@@ -7,18 +6,22 @@ services:
       - "8080:80"
       - "8443:443"
     volumes:
-      - ./modsec-data/modsecurity.conf:/usr/local/nginx/conf/modsec/modsecurity.conf
-      - ./modsec-data/custom-rules.conf:/usr/local/nginx/conf/modsec/custom-rules.conf
-      - ./modsec-data/certs:/usr/local/nginx/conf/modsec/certs
-      - ./modsec-data/crs:/usr/local/nginx/conf/modsec/crs
-      - ./modsec-data/logs:/var/log/modsec
-      - ./modsec-data/nginx.conf:/usr/local/nginx/conf/nginx.conf
-      - ./modsec-data/html:/usr/local/nginx/html
+      - ./modsec-data/modsecurity.conf:/etc/nginx/modsec/modsecurity.conf
+      - ./modsec-data/custom-rules.conf:/etc/nginx/modsec/custom-rules.conf
+      - ./modsec-data/crs:/etc/nginx/modsec/crs
+      - ./modsec-data/logs/audit.log:/var/log/modsec/audit.log
+      - ./modsec-data/logs/error.log:/var/log/nginx/error.log
+      - ./modsec-data/logs/access.log:/var/log/nginx/access.log
+      - ./modsec-data/nginx.conf:/etc/nginx/nginx.conf
+      - ./modsec-data/conf.d:/etc/nginx/conf.d
+      - ./modsec-data/html:/var/html
       - ./modsec-data/www:/var/www
+      - ./modsec-data/ssl:/var/ssl
+    environment:
+      - TZ=Asia/Ho_Chi_Minh
     depends_on:
       - nodeapp
     restart: unless-stopped
-
   nodeapp:
     build: ./nodeapp
     container_name: nodeapp
