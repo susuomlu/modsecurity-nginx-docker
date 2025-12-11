@@ -58,15 +58,25 @@ nodeapp/                        # Example protected Node.js app
 
 ```bash
 # 1. Clone & enter directory
-git clone https://github.com/yourname/modsecurity-nginx-waf.git
-cd modsecurity-nginx-waf
+git clone https://github.com/susuomlu/modsecurity-nginx-docker.git
+cd modsecurity-nginx-nginx-main
 
 # 2. Generate self-signed certs (skip if you mount your own in ./modsec-data/certs/)
 ./cert-gen.sh
 
-# 3. Start everything
-docker compose up -d --build
+# 3. Start everything:
+build:
+* docker compose -f docker-compose.yml build --no-cache
+up:
+* docker compose -f docker-compose.yml up -d
+down:
+* docker compose -f docker-compose.yml down
+logs:
+* docker-compose logs -f
+watch:
+* docker exec -it modsec /usr/local/bin/watcher.sh
 ```
+  
 Now visit: https://your-server-ip:8443 (accept self-signed cert warning)
 Your Node.js example app will be available and fully protected by the WAF.
 
