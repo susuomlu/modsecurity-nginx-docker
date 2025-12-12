@@ -54,7 +54,7 @@ nodeapp/                        # Example protected Node.js app
 ├── app.js
 └── Dockerfile
 ```
-## Quick Start (3 commands)
+## Quick Start
 
 ```bash
 # 1. Clone & enter directory
