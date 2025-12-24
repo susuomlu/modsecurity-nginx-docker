@@ -14,13 +14,6 @@ A production-ready Web Application Firewall (WAF) implementation using ModSecuri
 - **Custom error pages** with modern UI
 - **Docker containerization** for portability
 
-## 📋 Prerequisites
-
-- Docker Engine 20.10+
-- Docker Compose 2.0+
-- Open ports: 8080/8443 (or 80/443)
-- Minimum 2GB RAM recommended
-
 ## 🏗️ Architecture
 ```
 ┌─────────────┐         ┌──────────────┐         ┌─────────────┐
