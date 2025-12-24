@@ -9,22 +9,81 @@
 ## Directory Structure Explained
 
 ```bash
-modsecuirty/
-├── cert-gen.sh                  # TLS cert generator
-├── docker-compose.yml           # Compose file for resverse WAF
-├── modsec-data/
-│   ├── certs/                   # TLS certs
-│   ├── crs/                     # OWASP Core Rule Set
-│   ├── custom-rules.conf        # Your ModSecurity rules
-│   ├── modsecurity.conf         # Main WAF config
-│   ├── nginx.conf               # NGINX config
-│   └── logs/                    # ModSecurity logs
-│   └── www/                     # NGINX www
-├── nodeapp/
-│   ├── app.js                   # Node.js backend
-│   └── Dockerfile               # Dockerfile for Node app
-├── update-crs.sh                # CRS updater
-├── watcher.sh                   # Auto-reload for rule changes
+nginx-waf/
+├── cert-gen.sh
+├── docker-compose.yml
+├── Dockerfile
+├── modsec-data
+│   ├── conf.d
+│   │   └── node.conf
+│   ├── crs
+│   │   ├── crs-setup.conf
+│   │   └── rules
+│   │       ├── iis-errors.data
+│   │       ├── java-classes.data
+│   │       ├── java-errors.data
+│   │       ├── lfi-os-files.data
+│   │       ├── php-errors.data
+│   │       ├── php-errors-pl2.data
+│   │       ├── php-function-names-933150.data
+│   │       ├── php-variables.data
+│   │       ├── REQUEST-901-INITIALIZATION.conf
+│   │       ├── REQUEST-905-COMMON-EXCEPTIONS.conf
+│   │       ├── REQUEST-911-METHOD-ENFORCEMENT.conf
+│   │       ├── REQUEST-913-SCANNER-DETECTION.conf
+│   │       ├── REQUEST-920-PROTOCOL-ENFORCEMENT.conf
+│   │       ├── REQUEST-921-PROTOCOL-ATTACK.conf
+│   │       ├── REQUEST-922-MULTIPART-ATTACK.conf
+│   │       ├── REQUEST-930-APPLICATION-ATTACK-LFI.conf
+│   │       ├── REQUEST-931-APPLICATION-ATTACK-RFI.conf
+│   │       ├── REQUEST-932-APPLICATION-ATTACK-RCE.conf
+│   │       ├── REQUEST-933-APPLICATION-ATTACK-PHP.conf
+│   │       ├── REQUEST-934-APPLICATION-ATTACK-GENERIC.conf
+│   │       ├── REQUEST-941-APPLICATION-ATTACK-XSS.conf
+│   │       ├── REQUEST-942-APPLICATION-ATTACK-SQLI.conf
+│   │       ├── REQUEST-943-APPLICATION-ATTACK-SESSION-FIXATION.conf
+│   │       ├── REQUEST-944-APPLICATION-ATTACK-JAVA.conf
+│   │       ├── REQUEST-949-BLOCKING-EVALUATION.conf
+│   │       ├── RESPONSE-950-DATA-LEAKAGES.conf
+│   │       ├── RESPONSE-951-DATA-LEAKAGES-SQL.conf
+│   │       ├── RESPONSE-952-DATA-LEAKAGES-JAVA.conf
+│   │       ├── RESPONSE-953-DATA-LEAKAGES-PHP.conf
+│   │       ├── RESPONSE-954-DATA-LEAKAGES-IIS.conf
+│   │       ├── RESPONSE-955-WEB-SHELLS.conf
+│   │       ├── RESPONSE-959-BLOCKING-EVALUATION.conf
+│   │       ├── RESPONSE-980-CORRELATION.conf
+│   │       ├── restricted-files.data
+│   │       ├── restricted-upload.data
+│   │       ├── scanners-user-agents.data
+│   │       ├── sql-errors.data
+│   │       ├── ssrf.data
+│   │       ├── unix-shell.data
+│   │       ├── web-shells-asp.data
+│   │       ├── web-shells-php.data
+│   │       └── windows-powershell-commands.data
+│   ├── custom-rules.conf
+│   ├── html
+│   │   ├── custom_403.html
+│   │   ├── custom_403.html.ol
+│   │   └── tailwind.css
+│   ├── logs
+│   │   ├── access.log
+│   │   ├── audit.log
+│   │   └── error.log
+│   ├── modsecurity.conf
+│   ├── nginx.conf
+│   └── ssl
+│       ├── cert.pem
+│       ├── privkey.pem
+│       ├── server.crt
+│       └── server.key
+├── nginx-waf-modsec.tar
+├── nodeapp
+│   ├── app.js
+│   └── Dockerfile
+├── README.md
+├── update-crs.sh
+└── watcher.sh
 ```
 
 Visit: `https://<your-ip>:8443`
