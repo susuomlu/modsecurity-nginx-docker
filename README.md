@@ -37,7 +37,7 @@ A production-ready Web Application Firewall (WAF) implementation using ModSecuri
 
 ## 📁 Directory Structure
 ```
-nginx-waf/
+modsecurity-nginx-docker/
 ├── cert-gen.sh                    # SSL certificate generation script
 ├── docker-compose.yml             # Docker orchestration file
 ├── Dockerfile                     # NGINX + ModSecurity container
@@ -83,10 +83,11 @@ nginx-waf/
 
 ### 1. Clone and Navigate
 ```bash
-cd nginx-waf/
+git clone https://github.com/susuomlu/modsecurity-nginx-docker.git
+cd modsecurity-nginx-docker/
 ```
 
-### 2. Generate SSL Certificates
+### 2. Generate SSL Certificates (Optional)
 ```bash
 chmod +x cert-gen.sh
 ./cert-gen.sh
@@ -94,18 +95,18 @@ chmod +x cert-gen.sh
 
 ### 3. Build the Container
 ```bash
-docker compose build --no-cache
+docker compose -f docker-compose.yml build --no-cache
 ```
 
 ### 4. Start the Services
 ```bash
-docker compose up -d
+docker compose -f docker-compose.yml up -d
 ```
 
 ### 5. Verify Deployment
 ```bash
 # Check container status
-docker compose ps
+docker ps -a
 
 # View logs
 docker compose logs -f
@@ -325,7 +326,7 @@ docker compose restart
 
 ### Access Container Shell
 ```bash
-docker exec -it modsec /bin/bash
+docker exec -it modsec /bin/sh
 ```
 
 ## 🎯 Tuning & Optimization
@@ -374,7 +375,7 @@ sudo lsof -i :8443
 
 # Change ports in docker-compose.yml
 ports:
-  - "9443:8443"  # Use 9443 instead
+  - "9443:8443"  # For example, use 9443 instead
 ```
 
 ### Permission Denied on Logs
@@ -389,16 +390,6 @@ chmod -R 755 modsec-data/logs/
 2. Temporarily disable the rule
 3. Whitelist legitimate patterns
 4. Lower paranoia level
-
-### SSL Certificate Issues
-```bash
-# Regenerate certificates
-./cert-gen.sh
-
-# Or use custom certificates
-cp your-cert.pem modsec-data/ssl/cert.pem
-cp your-key.pem modsec-data/ssl/privkey.pem
-```
 
 ## 🔐 Production Recommendations
 
